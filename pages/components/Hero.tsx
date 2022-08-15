@@ -8,6 +8,7 @@ function Hero() {
           <h1 className="max-w-md text-4xl font-bold text-center md:text-5xl md:text-left">
             Providing opportunites for the potential software engineer
           </h1>
+          <p className="max-w-sm text-slate-900 text-center md:text-left"></p>
         </div>
         <div></div>
       </div>
