@@ -1,6 +1,6 @@
 import React,{useState, useEffect} from 'react'
 
-function signup() {
+function Signup() {
   const [email, setEmail] = useState('');
   const [firstname, setFirstname] = useState('');
   const [password, setpassword] = useState('')
@@ -32,4 +32,4 @@ function signup() {
   )
 }
 
-export default signup
+export default Signup

@@ -9,7 +9,7 @@ function Testimonials() {
             </h2>
             <div className="flex flex-col mt-24 md:flex-row md:space-x-6">
                 <div className="flex flex-col items-center p-6 space-y-6 rounded-lg bg-slate-100 md:w-1/3">
-                    <img src="" className='w-16 -mt-14' alt="img of person"  />
+                    {/* <img src="" className='w-16 -mt-14' alt="img of person"  /> */}
                     <h5 className="text-lg font-bold">
                         John Doe
                     </h5>
@@ -18,7 +18,7 @@ function Testimonials() {
                     </p>
                 </div>
                 <div className="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-slate-100 md:flex md:w-1/3">
-                    <img src="" className='w-16 -mt-14' alt="img of person"  />
+                    {/* <img src="" className='w-16 -mt-14' alt="img of person"  /> */}
                     <h5 className="text-lg font-bold">
                         John Doe
                     </h5>
@@ -27,7 +27,7 @@ function Testimonials() {
                     </p>
                 </div>
                 <div className="hidden flex-col items-center p-6 space-y-6 rounded-lg bg-slate-100 md:flex md:w-1/3">
-                    <img src="" className='w-16 -mt-14' alt="img of person"  />
+                    {/* <img src="" className='w-16 -mt-14' alt="img of person"  /> */}
                     <h5 className="text-lg font-bold">
                         John Doe
                     </h5>

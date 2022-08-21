@@ -14,9 +14,10 @@ function Hero() {
           </div>
         </div>
         <div className='md:w-1/2'>
-          <img src="" alt="hero-img" />
+          {/* <img src="" alt="hero-img" /> */}
         </div>
       </div>
+      
     </section>
     )
 }

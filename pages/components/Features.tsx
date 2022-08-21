@@ -6,7 +6,7 @@ function Features() {
       <div className="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row">
         <div className="flex flex-col space-y-12 md:w-1/2">
           <h2 className="text-main max-w-md text-4xl font-bold text-center md:text-left">
-            What's different about Grow
+            What is different about Grow
           </h2>
           <p className="md:max-w-sm text-center text-main md:text-left">
             Grow Lorem ipsum dolor sit amet consectetur, adipisicing elit.

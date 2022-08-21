@@ -7,7 +7,7 @@ function Navbar() {
     <nav className="relative container mx-auto p-6">
       <div className='flex items-center justify-between'>
         <div className='pt-2'>
-          <Link href='/'><img src="" alt='the logo img' /></Link>
+          <Link href='/'>Grow</Link>
         </div>
         <div className='hidden md:flex space-x-6 uppercase'>
           <Link href='/courses'>Courses</Link>
