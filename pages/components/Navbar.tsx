@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import React from 'react'
 
 function Navbar() {
@@ -6,14 +7,21 @@ function Navbar() {
     <nav className="relative container mx-auto p-6">
       <div className='flex items-center justify-between'>
         <div className='pt-2'>
-          <Image src="" alt='the image logo' />
+          <Link href='/'><img src="" alt='the logo img' /></Link>
         </div>
-        <div className='hidden md:flex space-x-6'>
-          <a href=''className='hover:text-black'>Product</a>
-          <a href=''>Pricing</a>
-          <a href=''>About us</a>
+        <div className='hidden md:flex space-x-6 uppercase'>
+          <Link href='/courses'>Courses</Link>
+          <Link href='/pricing'>Pricing</Link>
+          <Link href='/faqs'>FAQs</Link>
         </div>
-        <a href='' className='hidden md:block p-3 px-6 pt-2 text-white bg-slate-800 rounded-full baseline hover:bg-slate-700'>Get started</a>
+        <div className='flex'>
+          <Link href='app/signup'>
+            <div className='hidden md:block startedBtn'>Get Started</div>
+          </Link>
+          <Link href='app/login'>
+            <div className='hidden md:block p-3 px-6 text-black baseline'>Log in</div>
+          </Link>
+        </div>
       </div>
     </nav>
   )

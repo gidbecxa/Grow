@@ -1,3 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components {
+    .font-regular{
+        font-weight: 500;
+    }
+    .text-m{
+        font-size: 1rem
+    }
+    .border-3{
+        border-width: 3px;
+    }
+    /* .startedBtn {
+        @apply p-3 px-6 text-white bg-main rounded-full hover:bg-[#0d262c];
+    } */
+    .startedBtn {
+        @apply font-regular text-m p-3 px-6 text-main border-3 border-[rgb(35,70,79)] hover:scale-105 transition;
+    }
+}
+
+.bg-main{
+    background-color: rgb(35, 70, 79);
+}
+.bg-main-hover{
+    background-color:rgb(88, 122, 131)
+}
+.text-main{
+    color: rgb(10, 20, 22);
+}
+
+body{
+    font-family: 'Poppins'
+}
