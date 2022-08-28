@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import React from 'react'
-import Banner from './components/Banner'
-import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+import Banner from '../components/landingpage/Banner'
+import Footer from '../components/landingpage/Footer'
+import Navbar from '../components/landingpage/Navbar'
 
 function faqs() {
   return (

@@ -15,10 +15,10 @@ function Navbar() {
           <Link href='/faqs'>FAQs</Link>
         </div>
         <div className='flex'>
-          <Link href='app/signup'>
+          <Link href='/signup'>
             <div className='hidden md:block startedBtn'>Get Started</div>
           </Link>
-          <Link href='app/login'>
+          <Link href='/login'>
             <div className='hidden md:block p-3 px-6 text-black baseline'>Log in</div>
           </Link>
         </div>
