@@ -9,10 +9,9 @@ function Features() {
             What is different about Grow
           </h2>
           <p className="md:max-w-sm text-center text-main md:text-left">
-            Grow Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Doloribus voluptatem, modi sapiente officiis impedit perspiciatis
-            error nesciunt sed et beatae cupiditate quam assumenda laborum odio
-            alias nobis omnis asperiores iure?
+            Grow is the leading software developement school and community 
+            for French-speaking Africans. We are commited to helping millions of francophones with
+            little to no coding experience become world-class certified software engineers.
           </p>
         </div>
 
@@ -24,19 +23,18 @@ function Features() {
                   01
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                  Track progress
+                  Intensive, practical bootcamps
                 </h3>
               </div>
             </div>
             <div>
               <h3 className="hidden mb-4 text-lg font-bold md:block">
-                Track progress
+                Intensive, practical bootcamps
               </h3>
               <p className="text-main">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-                provident ut ex velit laborum, sequi maxime excepturi
-                exercitationem dignissimos. A, inventore ipsam deleniti libero
-                voluptatum perferendis aperiam nulla sunt natus!
+                Our training programs are short, rigorous and fully practical.
+                Each program is full of projects and activities, giving you hands-on coding experience, 
+                & helping you to acquire first-class developer skills.
               </p>
             </div>
           </div>
@@ -44,22 +42,21 @@ function Features() {
             <div className="rounded-l-full bg-slate-400 md:bg-transparent">
               <div className="flex items-center space-x-2">
                 <div className="px-4 py-2 text-white md:py-1 bg-main">
-                  01
+                  02
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                  Track progress
+                  Expert tutors & course creators
                 </h3>
               </div>
             </div>
             <div>
               <h3 className="hidden mb-4 text-lg font-bold md:block">
-                Track progress
+                Expert tutors & course creators
               </h3>
               <p className="text-main">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-                provident ut ex velit laborum, sequi maxime excepturi
-                exercitationem dignissimos. A, inventore ipsam deleniti libero
-                voluptatum perferendis aperiam nulla sunt natus!
+                Our courses are created and taught by the very experts of software development.
+                These are professionals who have built and scaled several websites, web and mobile apps
+                widely used and approved.
               </p>
             </div>
           </div>
@@ -67,22 +64,43 @@ function Features() {
             <div className="rounded-l-full bg-slate-400 md:bg-transparent">
               <div className="flex items-center space-x-2">
                 <div className="px-4 py-2 text-white md:py-1 bg-main">
-                  01
+                  03
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                  Track progress
+                  More that courses & bootcamps
                 </h3>
               </div>
             </div>
             <div>
               <h3 className="hidden mb-4 text-lg font-bold md:block">
-                Track progress
+                More that courses & bootcamps
               </h3>
               <p className="text-main">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis
-                provident ut ex velit laborum, sequi maxime excepturi
-                exercitationem dignissimos. A, inventore ipsam deleniti libero
-                voluptatum perferendis aperiam nulla sunt natus!
+                What happens after you training? We want to help you to fulfill that
+                dream of working at a leading tech company or becoming a succesful tech entrepreneur
+                like Mark Zuckerberg and Bill Gates.
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+            <div className="rounded-l-full bg-slate-400 md:bg-transparent">
+              <div className="flex items-center space-x-2">
+                <div className="px-4 py-2 text-white md:py-1 bg-main">
+                  04
+                </div>
+                <h3 className="text-base font-bold md:mb-4 md:hidden">
+                  We are building a community
+                </h3>
+              </div>
+            </div>
+            <div>
+              <h3 className="hidden mb-4 text-lg font-bold md:block">
+              We are building a community
+              </h3>
+              <p className="text-main">
+                What's more exciting than a community of developers? You have a question?
+                You need support? Share with others. Help and learn from others. Team up with others
+                for a project. And yet, enjoy socializing!
               </p>
             </div>
           </div>
