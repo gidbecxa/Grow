@@ -98,7 +98,7 @@ function Features() {
               We are building a community
               </h3>
               <p className="text-main">
-                What's more exciting than a community of developers? You have a question?
+                What&apos;s more exciting than a community of developers? You have a question?
                 You need support? Share with others. Help and learn from others. Team up with others
                 for a project. And yet, enjoy socializing!
               </p>
