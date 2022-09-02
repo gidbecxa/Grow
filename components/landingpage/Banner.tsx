@@ -9,7 +9,7 @@ function Banner() {
                     Kickstart your developer journey now!
                 </h2>
                 <p className="text-white text-lg md:text-xl font-medium text-center md:text-left">
-                    Let's help you get started in 6 weeks! Join our entry-level developer bootcamp, and you're good to go!
+                    Let us help you get started in 6 weeks! Join our entry-level developer bootcamp, and you are good to go!
                 </p>
             </div>
             <div className="flex justify-center items-center text-center space-y-12 md:w-1/2">
