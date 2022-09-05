@@ -17,7 +17,7 @@
         @apply p-3 px-6 text-white bg-main rounded-full hover:bg-[#0d262c];
     } */
     .startedBtn {
-        @apply font-regular text-m p-3 px-6 text-main border-3 border-[rgb(35,70,79)] hover:scale-105 transition;
+        @apply font-regular text-m cursor-pointer p-3 px-6 text-main border-3 border-[rgb(35,70,79)] hover:scale-105 transition;
     }
 }
 

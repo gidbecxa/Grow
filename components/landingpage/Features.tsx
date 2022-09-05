@@ -1,9 +1,14 @@
+import Image from "next/image";
 import React from "react";
+import workout from "../../public/workout.png"
+import suitcase from "../../public/suitcase.png"
+import community from "../../public/crowd-of-users.png"
+import rating from "../../public/rating.png"
 
 function Features() {
   return (
     <section id="features">
-      <div className="container flex flex-col px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row">
+      <div className="container flex flex-col px-4 mx-auto mt-10 mb-20 space-y-12 md:space-y-0 md:flex-row">
         <div className="flex flex-col space-y-12 md:w-1/2">
           <h2 className="text-main max-w-md text-4xl font-bold text-center md:text-left">
             What is different about Grow
@@ -19,8 +24,11 @@ function Features() {
           <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
             <div className="rounded-l-full bg-slate-400 md:bg-transparent">
               <div className="flex items-center space-x-2">
-                <div className="px-4 py-2 text-white md:py-1 bg-main">
-                  01
+                <div className=" bg-main w-10 h-10 flex justify-center items-center">
+                  <Image 
+                    
+                    src={workout}
+                  />
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
                   Intensive, practical bootcamps
@@ -41,8 +49,11 @@ function Features() {
           <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
             <div className="rounded-l-full bg-slate-400 md:bg-transparent">
               <div className="flex items-center space-x-2">
-                <div className="px-4 py-2 text-white md:py-1 bg-main">
-                  02
+              <div className=" bg-main w-10 h-10 flex justify-center items-center">
+                  <Image 
+                    
+                    src={rating}
+                  />
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
                   Expert tutors & course creators
@@ -63,11 +74,14 @@ function Features() {
           <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
             <div className="rounded-l-full bg-slate-400 md:bg-transparent">
               <div className="flex items-center space-x-2">
-                <div className="px-4 py-2 text-white md:py-1 bg-main">
-                  03
+              <div className=" bg-main w-10 h-10 flex justify-center items-center">
+                  <Image 
+                    
+                    src={suitcase}
+                  />
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                  More that courses & bootcamps
+                  More than courses & bootcamps
                 </h3>
               </div>
             </div>
@@ -85,8 +99,11 @@ function Features() {
           <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
             <div className="rounded-l-full bg-slate-400 md:bg-transparent">
               <div className="flex items-center space-x-2">
-                <div className="px-4 py-2 text-white md:py-1 bg-main">
-                  04
+              <div className=" bg-main w-10 h-10 flex justify-center items-center">
+                  <Image 
+                    
+                    src={community}
+                  />
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
                   We are building a community
