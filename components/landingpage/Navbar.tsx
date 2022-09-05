@@ -28,7 +28,7 @@ function Navbar() {
         <div className='flex'>
             <div className='hidden md:block startedBtn'>
           <Link href='/signup'>
-              Get Started
+              Register for free
           </Link>
             </div>
             <div className='hidden md:block p-3 px-6 text-black baseline'>

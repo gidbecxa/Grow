@@ -10,7 +10,7 @@ function Hero() {
           </h1>
           <p className="md:max-w-sm text-main text-center md:text-left">Join our leading intensive bootcamp to get started on your journey to become a professional developer</p>
           <div className="flex justify-center md:justify-start">
-        <a href='' className='startedBtn'>Get started</a>
+        <a href='' className='startedBtn'>Register for free now</a>
           </div>
         </div>
         <div className='md:w-1/2'>
