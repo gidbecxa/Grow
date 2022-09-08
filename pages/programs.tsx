@@ -3,7 +3,7 @@ import Banner from '../components/landingpage/Banner'
 import Footer from '../components/landingpage/Footer'
 import Navbar from '../components/landingpage/Navbar'
 
-function courses() {
+function Programs() {
   return (
     <>
     <Navbar />
@@ -18,4 +18,4 @@ function courses() {
   )
 }
 
-export default courses
+export default Programs

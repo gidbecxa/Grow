@@ -26,7 +26,7 @@ function Features() {
               <div className="flex items-center space-x-2">
                 <div className=" bg-main w-10 h-10 flex justify-center items-center">
                   <Image 
-                    
+                    priority
                     src={workout}
                   />
                 </div>
@@ -51,7 +51,7 @@ function Features() {
               <div className="flex items-center space-x-2">
               <div className=" bg-main w-10 h-10 flex justify-center items-center">
                   <Image 
-                    
+                    priority
                     src={rating}
                   />
                 </div>
@@ -76,7 +76,7 @@ function Features() {
               <div className="flex items-center space-x-2">
               <div className=" bg-main w-10 h-10 flex justify-center items-center">
                   <Image 
-                    
+                    priority
                     src={suitcase}
                   />
                 </div>
@@ -101,7 +101,7 @@ function Features() {
               <div className="flex items-center space-x-2">
               <div className=" bg-main w-10 h-10 flex justify-center items-center">
                   <Image 
-                    
+                    priority
                     src={community}
                   />
                 </div>

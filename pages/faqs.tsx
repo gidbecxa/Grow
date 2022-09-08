@@ -37,7 +37,7 @@ function faqs() {
                   <h3 className="hidden mb-4 text-lg font-bold md:block">
                     Who can join the bootcamp?
                   </h3>
-                  <p className="text-main">
+                  <p className="text-main mr-2">
                     Anyone. No matter your field of study or profession, you can join our bootcamp to get
 an opportunity to become a leading software developer. We assure you that it will be
 much easier and more fun than you think.

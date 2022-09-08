@@ -13,8 +13,8 @@ function Footer() {
                         <Link href='/our-story' className='hover:text-slate-600'>
                             Our Story
                         </Link>
-                        <Link href='/courses' className='hover:text-slate-600'>
-                            Courses
+                        <Link href='/programs' className='hover:text-slate-600'>
+                            programs
                         </Link>
                         <Link href='/faqs' className='hover:text-slate-600'>
                             FAQs

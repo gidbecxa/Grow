@@ -7,14 +7,18 @@ import Footer from '../components/landingpage/Footer'
 import Hero from '../components/landingpage/Hero'
 import Navbar from '../components/landingpage/Navbar'
 import Launch from '../components/landingpage/Launch'
+import Companies from '../components/landingpage/Companies'
+import Community from '../components/landingpage/Community'
 
 const Home: NextPage = () => {
   return (
     <>
     <Navbar />
     <Hero />
+    <Companies />
     <Launch />
     <Features />
+    <Community />
     <Banner />
     <Footer />
     </>
