@@ -19,6 +19,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";
 import registerImg from "../public/register.jpeg";
+import hero from "../public/hero.svg";
 import PersonalDetails from "../components/regform/PersonalDetails";
 import ContactDetails from "../components/regform/ContactDetails";
 import ChooseCourse from "../components/regform/ChooseCourse";
@@ -82,12 +83,15 @@ const Register = () => {
         </div>
         <div className="border-2 border-[rgb(35,70,79)] border-3">
           <div className="flex max-w-[1000px] mx-auto md:p-10">
-            <div className="w-1/3 md:flex hidden">
-              {/* <Image
-                src={registerImg}
-                objectFit="cover"
-                alt="a picture of the CEO and his team"
-              /> */}
+            <div className="w-1/3 md:flex hidden ">
+              <div className="w-full h-full ">
+                <Image
+                layout='responsive'
+                  priority
+                  src={hero}
+                  objectFit='cover'
+                />
+              </div>
             </div>
             <div className="md:w-2/3 p-3 ">
               <Box>

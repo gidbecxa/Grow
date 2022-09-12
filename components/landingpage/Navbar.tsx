@@ -62,14 +62,14 @@ function Navbar({ containerRef }: OpenDrawerProps) {
               </div>
             </div>
             <div className="flex items-center">
-              <div className="hidden md:flex space-x-6 uppercase mr-6">
+              <div className="text-white hidden md:flex space-x-6 uppercase mr-6">
                 <Link href="/programs">Programs</Link>
                 <Link href="/our-story">Our Story</Link>
                 <Link href="/faqs">FAQs</Link>
               </div>
               <div className="flex">
                 <Link href="/register">
-                  <div className=" md:block startedBtn">Register</div>
+                  <div className=" md:block text-white bg-main startedBtn">Register</div>
                 </Link>
                 {/* <Link href="/login">
             <div className=" md:block p-3 px-6 text-black baseline">

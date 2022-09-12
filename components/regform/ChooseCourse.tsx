@@ -95,7 +95,7 @@ const ChooseCourse = ({
           >
             Back
           </button>
-          <button className="text-white bg-main startedBtn"><Link href='/thank-you'>Done 🎉</Link></button>
+          <button className="text-white bg-main startedBtn"><Link href='/'>Done 🎉</Link></button>
         </div>
       </div>
     </TabPanel>

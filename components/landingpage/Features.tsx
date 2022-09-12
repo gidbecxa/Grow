@@ -7,8 +7,8 @@ import rating from "../../public/rating.png"
 
 function Features() {
   return (
-    <section id="features">
-      <div className="container flex flex-col px-4 mx-auto mt-10 mb-20 space-y-12 md:space-y-0 md:flex-row">
+    <section id="features" className="z-20 bg-white">
+      <div className="container flex flex-col px-4 mx-auto pt-10 mb-20 space-y-12 md:space-y-0 md:flex-row">
         <div className="flex flex-col space-y-12 md:w-1/2">
           <h2 className="text-main max-w-md text-4xl font-bold text-center md:text-left">
             What is different about Grow

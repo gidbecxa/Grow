@@ -9,10 +9,12 @@ import Navbar from '../components/landingpage/Navbar'
 import Launch from '../components/landingpage/Launch'
 import Companies from '../components/landingpage/Companies'
 import Community from '../components/landingpage/Community'
+import HeroImg from '../components/landingpage/HeroImg'
 
 const Home: NextPage = () => {
   return (
     <>
+    <HeroImg />
     <Navbar />
     <Hero />
     <Companies />
