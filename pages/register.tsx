@@ -14,7 +14,6 @@ import {
   ModalFooter,
   Button,
 } from "@chakra-ui/react";
-import { useDisclosure } from '@chakra-ui/react'
 // const ModalContext = createContext()
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Box } from "@chakra-ui/react";
@@ -23,8 +22,9 @@ import registerImg from "../public/register.jpeg";
 import PersonalDetails from "../components/regform/PersonalDetails";
 import ContactDetails from "../components/regform/ContactDetails";
 import ChooseCourse from "../components/regform/ChooseCourse";
+import { useDisclosure } from '@chakra-ui/react'
 
-const register = () => {
+const Register = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [tabIndex, setTabIndex] = useState(0);
   const [formData, setFormData] = useState({
