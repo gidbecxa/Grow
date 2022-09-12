@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import hero from '../../public/hero.jpg'
-import trianglemain from '../../public/trianglemain.svg'
-import triangles from '../../public/triangles.svg'
+import hero from '../../public/hero.svg'
+// import trianglemain from '../../public/trianglemain.svg'
+// import triangles from '../../public/triangles.svg'
 
 
 function Hero() {
@@ -22,7 +22,7 @@ function Hero() {
           </div>
         </div>
         <div className='md:w-1/2 flex justify-end'>
-          <div className="md:w-[450px] border-[rgb(35,70,79)] border-3 md:relative">
+          <div className="md:w-[450px] md:relative">
             <div className="w-full h-full">
               <Image
               layout='responsive'
@@ -31,7 +31,7 @@ function Hero() {
                 objectFit='cover'
               />
             </div>
-            <div className="absolute w-[60px] top-0 -left-8 md:block hidden">
+            {/* <div className="absolute w-[60px] top-0 -left-8 md:block hidden">
             <Image
                 src={triangles}
                 priority
@@ -42,7 +42,7 @@ function Hero() {
                 priority
                 src={triangles}
                 />
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

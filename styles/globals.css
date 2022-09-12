@@ -22,7 +22,7 @@
 }
 
 .bg-main{
-    background-color: rgb(35, 70, 79);
+    background-color: #23464f;
 }
 .bg-main-hover{
     background-color:rgb(88, 122, 131)
@@ -33,4 +33,20 @@
 
 body{
     font-family: 'Poppins';
+}
+
+.PhoneInputCountry img {
+    display: none;
+}
+.PhoneInputCountry svg {
+    display: none;
+}
+
+.PhoneInputInput {
+    outline-color: #3182ce;
+    width: 100%;
+    padding: 7px;
+    margin-top: 13px;
+    border-radius: 5px;
+    border: rgb(59 130 246 / 0.5) 1px solid;
 }
