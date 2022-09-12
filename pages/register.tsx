@@ -13,8 +13,9 @@ import {
   ModalCloseButton,
   ModalFooter,
   Button,
-  useDisclosure,
 } from "@chakra-ui/react";
+import { useDisclosure } from '@chakra-ui/hooks'
+const ModalContext = createContext()
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";

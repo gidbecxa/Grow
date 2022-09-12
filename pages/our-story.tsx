@@ -22,7 +22,7 @@ A few months ago, we found a new passion—not
 another passion—to solve a significant problem in our
 environment, common to more than 90% of
 French-speaking Africans.
-> 90% of French-speaking Africans do not have access
+ 90% of French-speaking Africans do not have access
 to sound, effective software development content,
 resources and training since most content and
 resources available on the web for software

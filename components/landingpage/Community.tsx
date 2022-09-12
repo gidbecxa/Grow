@@ -29,7 +29,7 @@ const Community = () => {
       <ModalCloseButton />
       <ModalBody>
         <p>
-          Grow will send you lots of resources to kickstart your career.You'll be invited to our Telegram and Discord channels
+          Grow will send you lots of resources to kickstart your career.You&apos;ll be invited to our Telegram and Discord channels
         </p>
       <FormControl>
   <Input type='email' />
