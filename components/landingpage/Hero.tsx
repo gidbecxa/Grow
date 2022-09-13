@@ -29,7 +29,7 @@ function Hero() {
               layout='responsive'
                 priority
                 src={hero}
-                objectFit='cover'
+              objectFit='cover'
               /> */}
             </div>
             {/* <div className="absolute w-[60px] top-0 -left-8 md:block hidden">

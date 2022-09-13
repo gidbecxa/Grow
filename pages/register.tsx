@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../components/landingpage/Navbar";
 import {
   Tabs,
@@ -23,23 +23,23 @@ import hero from "../public/hero.svg";
 import PersonalDetails from "../components/regform/PersonalDetails";
 import ContactDetails from "../components/regform/ContactDetails";
 import ChooseCourse from "../components/regform/ChooseCourse";
-import { useDisclosure } from '@chakra-ui/react'
+import { useDisclosure } from "@chakra-ui/react";
 
 const Register = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const [tabIndex, setTabIndex] = useState(0);
   const [formData, setFormData] = useState({
-    firstname: '',
-    lastname: '',
+    firstname: "",
+    lastname: "",
     birthday: 0,
-    gender: '',
-    experience: '',
-    email: '',
+    gender: "",
+    experience: "",
+    email: "",
     phonenumber: 0,
-    level: '',
-    program: '',
-    referral: ''
-  })
+    level: "",
+    program: "",
+    referral: "",
+  });
   const handleSliderChange = (event) => {
     setTabIndex(parseInt(event.target.value, 10));
   };
@@ -47,12 +47,12 @@ const Register = () => {
     setTabIndex(parseInt(i, 10));
   };
 
-  const  handleTabsChange = (index) => {
+  const handleTabsChange = (index) => {
     setTabIndex(index);
   };
   useEffect(() => {
-    console.log(formData)
-  })
+    console.log(formData);
+  });
   return (
     <>
       <Navbar />
@@ -79,23 +79,25 @@ const Register = () => {
       </Modal>
       <section id="register" className="container mx-auto mb-32 mt-16">
         <div className="max-w-6xl px-5 mx-auto md:mt-32 mb-10 text-center">
-          <h2 className="md:text-6xl text-4xl font-bold text-center">Register!</h2>
+          <h2 className="md:text-6xl text-4xl font-bold text-center">
+            Register!
+          </h2>
         </div>
-        <div className="border-2 border-[rgb(35,70,79)] border-3">
-          <div className="flex max-w-[1000px] mx-auto md:p-10">
-            <div className="w-1/3 md:flex hidden ">
-              <div className="w-full h-full ">
+        <div className="">
+          <div className="flex max-w-[1000px] h-[600px] mx-auto md:p-10">
+            <div className="relative mr-7 w-1/3 md:flex hidden border-[rgb(35,70,79)] border-3">
+              <div className="bg-main w-full h-full absolute -left-5 -bottom-5">
                 <Image
-                layout='responsive'
+                  layout="responsive"
                   priority
                   src={hero}
-                  objectFit='cover'
+                  objectFit="cover"
                 />
               </div>
             </div>
             <div className="md:w-2/3 p-3 ">
               <Box>
-                  {/* <input
+                {/* <input
                     type="range"
                     min="0"
                     max="2"
@@ -107,31 +109,31 @@ const Register = () => {
                     <CheckCircleIcon />
                     <CheckCircleIcon />
                   </div> */}
-                  <Tabs index={tabIndex} onChange={handleTabsChange}>
-                    <TabList>
-                      <Tab>Personal details</Tab>
-                      <Tab>Contact details</Tab>
-                      <Tab>Choose course</Tab>
-                    </TabList>
-                    <TabPanels>
-                      <PersonalDetails
-                        formData={formData}
-                        setFormData={setFormData}
-                        handleSliderChangeBtn={handleSliderChangeBtn}
-                      />
-                      <ContactDetails
-                        formData={formData}
-                        setFormData={setFormData}
-                        handleSliderChangeBtn={handleSliderChangeBtn}
-                      />
-                      <ChooseCourse
-                        formData={formData}
-                        setFormData={setFormData}
-                        handleSliderChangeBtn={handleSliderChangeBtn}
-                        onOpen={onOpen}
-                        />
-                    </TabPanels>
-                  </Tabs>
+                <Tabs index={tabIndex} >
+                  <TabList>
+                    <Tab>Personal details</Tab>
+                    <Tab>Contact details</Tab>
+                    <Tab>Choose course</Tab>
+                  </TabList>
+                  <TabPanels>
+                    <PersonalDetails
+                      formData={formData}
+                      setFormData={setFormData}
+                      handleSliderChangeBtn={handleSliderChangeBtn}
+                    />
+                    <ContactDetails
+                      formData={formData}
+                      setFormData={setFormData}
+                      handleSliderChangeBtn={handleSliderChangeBtn}
+                    />
+                    <ChooseCourse
+                      formData={formData}
+                      setFormData={setFormData}
+                      handleSliderChangeBtn={handleSliderChangeBtn}
+                      onOpen={onOpen}
+                    />
+                  </TabPanels>
+                </Tabs>
               </Box>
             </div>
           </div>

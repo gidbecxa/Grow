@@ -1,6 +1,7 @@
 import Image from "next/image";
 // import Logo from '../public/grow-logo.png'
 import logo from "../../public/grow-logo.png";
+import whitelogo from "../../public/whitelogo.png";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import {
@@ -18,22 +19,26 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
 
-interface OpenDrawerProps {
-  containerRef: React.RefObject<HTMLDivElement>;
+interface NavbarProps {
+  containerRef: React.RefObject<HTMLDivElement>,
+  navTextColor: string,
+  logoColor: boolean,
 }
 
-function Navbar({ containerRef }: OpenDrawerProps) {
+function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
+  console.log(logoColor, "logo color")
+  console.log(navTextColor, "nav")
   const { isOpen, onOpen, onClose } = useDisclosure();
   const firstField = React.useRef();
   const [isDesktop, setDesktop] = useState(() => {
     if (typeof window !== "undefined") {
-      const bool = window.innerWidth > 700;
+      const bool = window.innerWidth > 920;
       return bool;
     }
   });
 
   const updateMedia = () => {
-    setDesktop(window.innerWidth > 650);
+    setDesktop(window.innerWidth > 917);
   };
 
   useEffect(() => {
@@ -52,17 +57,26 @@ function Navbar({ containerRef }: OpenDrawerProps) {
             <div className="pt-2">
               <div className="md:w-[150px] w-[100px] cursor-pointer">
                 <Link href="/">
+                  {logoColor ? 
                   <Image
+                    className="w-[10vw] block"
+                    src={whitelogo}
+                    alt="Grow"
+                    priority
+                  />
+                    :
+                    <Image
                     className="w-[10vw] block"
                     src={logo}
                     alt="Grow"
                     priority
                   />
+                  }
                 </Link>
               </div>
             </div>
             <div className="flex items-center">
-              <div className="text-white hidden md:flex space-x-6 uppercase mr-6">
+              <div style={{color: navTextColor}} className="text-main flex space-x-6 uppercase mr-6">
                 <Link href="/programs">Programs</Link>
                 <Link href="/our-story">Our Story</Link>
                 <Link href="/faqs">FAQs</Link>
@@ -82,13 +96,13 @@ function Navbar({ containerRef }: OpenDrawerProps) {
         </nav>
       ) : (
         <nav>
-          <div className="flex justify-between container px-4 mx-auto mt-4">
+          <div className="flex justify-between container px-4 mx-auto pt-4">
             <div className="pt-2 px-4">
               <div className=" md:w-[150px] w-[100px] cursor-pointer">
                 <Link href="/">
                   <Image
                     className="w-[10vw] block"
-                    src={logo}
+                    src={whitelogo}
                     alt="Grow"
                     priority
                   />

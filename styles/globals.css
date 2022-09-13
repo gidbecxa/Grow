@@ -32,6 +32,8 @@
 }
 
 body{
+    overflow-x: hidden;
+    position: relative;
     font-family: 'Poppins';
 }
 

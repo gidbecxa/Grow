@@ -12,10 +12,12 @@ import Community from '../components/landingpage/Community'
 import HeroImg from '../components/landingpage/HeroImg'
 
 const Home: NextPage = () => {
+  const navTextColor = "white"
+  const logoColor = true
   return (
     <>
     <HeroImg />
-    <Navbar />
+    <Navbar navTextColor={navTextColor} logoColor={logoColor}/>
     <Hero />
     <Companies />
     {/* <Launch /> */}
