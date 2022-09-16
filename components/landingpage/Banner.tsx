@@ -15,9 +15,9 @@ function Banner() {
                     Let us help you get started in 6 weeks! Join our entry-level developer bootcamp, and you are good to go!
                 </p>
             </div>
-            <div className="flex justify-center items-center text-center space-y-12 md:w-1/2">
+            <div className="flex justify-end items-center text-center space-y-12 md:w-1/2">
                 <Link href='/programs' passHref>
-                    <a href='' className='p-4 px-8 font-regular text-m text-black bg-white baseline hover:scale-105 transition'>Start now!</a>
+                    <a href='' className=' rounded-lg p-4 px-8 font-regular text-m text-black bg-white baseline hover:scale-105 transition'>Start now!</a>
                 </Link>
             </div>
         {/* <div className="absolute md:-top-16 md:w-[500px] w-[400px] -top-24 left-0">

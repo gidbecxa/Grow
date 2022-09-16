@@ -83,7 +83,7 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
               </div>
               <div className="flex">
                 <Link href="/register">
-                  <div className=" md:block text-white bg-main startedBtn">Register</div>
+                  <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Register Now</div>
                 </Link>
                 {/* <Link href="/login">
             <div className=" md:block p-3 px-6 text-black baseline">
@@ -127,8 +127,8 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
               <DrawerBody>
                 <Stack spacing="24px">
                   <Link href="/register">
-                    <div className="text-white bg-main  md:block startedBtn">
-                      Register
+                    <div className="text-white bg-main  border-none md:block startedBtn">
+                      Register Now
                     </div>
                   </Link>
                   <Link href="/">

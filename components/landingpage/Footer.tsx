@@ -3,10 +3,10 @@ import React from 'react'
 
 function Footer() {
   return (
-    <footer className='bg-slate-800'>
+    <footer className='bg-[#1c1c1c]'>
         <div className="container px-6 py-20 mx-auto space-y-8">
                 <div className="flex-col md:flex-row flex md:jusify-around w-[100%]">
-                    <div className="text-center md:mb-0 mb-6 flex flex-col space-y-3 text-white md:w-1/3">
+                    <div className=" md:mb-0 mb-6 flex flex-col space-y-3 text-white md:w-1/3">
                         <Link href='/' className='hover:text-slate-600'>
                             Home
                         </Link>

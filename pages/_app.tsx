@@ -7,6 +7,8 @@ import type { ReactElement, ReactNode } from 'react'
 import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
+import {useEffect} from 'react'
 
 const theme = extendTheme({
   fonts: {
@@ -23,6 +25,20 @@ type AppPropsWithLayout = AppProps & {
 }
 
 export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
+  const router = useRouter()
+  useEffect(() => {
+    router.events.on('routeChangeStart', (url, { shallow }) => {
+      console.log(`App is changing to ${url}`)
+    })
+    router.events.on('routeChangeComplete', (url, { shallow }) => {
+      console.log(`App is Changed to ${url}`)
+    })
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+       <Component/>
+    }
+  }, [])
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return getLayout(

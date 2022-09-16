@@ -90,7 +90,7 @@ const Community = () => {
               certified software engineers.
                 </p>
             </div>
-            <div className="flex justify-center items-center text-center space-y-12 md:w-1/2">
+            <div className="flex justify-end  text-center space-y-12 md:w-1/2">
             <div>
               <button onClick={onOpen} className='startedBtn text-white bg-main'>Join the Grow Community!</button>
             </div>

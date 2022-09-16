@@ -24,7 +24,7 @@ function Programs() {
       <Navbar />
       <div className="max-w-6xl px-5 mx-auto mt-32 text-center mb-52">
         <h2 className="text-6xl font-bold text-center">Programs</h2>
-        <div className="mt-32 flex flex-col md:flex-row h-[400px]">
+        <div className="mt-32 flex flex-col md:flex-row md:h-[400px]">
           <div className="md:w-1/2 ">
             <h2 className="text-5xl font-bold  md:text-left">
               Android developer entry-level
