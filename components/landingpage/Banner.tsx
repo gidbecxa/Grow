@@ -11,12 +11,12 @@ const bannerHeaderVariants = {
 }
 
 const headerCaptionVariants = {
-    visible: { x: 0, opacity: 1, transition: {delay: .4, duration: .5} },
+    visible: { x: 0, opacity: 1, transition: {delay: .1, duration: .5} },
     hidden: {opacity: 0, x: -10}
 }
 
 const headerButtonVariants = {
-    visible: { x: 0, opacity: 1, transition: {delay: .4, duration: .5} },
+    visible: { x: 0, opacity: 1, transition: {delay: .1, duration: .5} },
     hidden: {opacity: 0, x: 10}
 }
 
@@ -35,8 +35,8 @@ function Banner() {
 
 
   return (
-    <section ref={ref} id='banner' className='bg-[#66cee8]'>
-        <div className="container relative flex flex-col py-28 px-4 mx-auto  space-y-12 md:space-y-0 md:flex-row ">
+    <section  id='banner' className='bg-[#66cee8]'>
+        <div  className="container relative flex flex-col py-28 px-4 mx-auto  space-y-12 md:space-y-0 md:flex-row ">
             <div className="flex flex-col space-y-12 md:w-1/2">
                 <motion.h2
                     initial='hidden'
@@ -56,6 +56,7 @@ function Banner() {
             </div>
             <div className="flex justify-end items-center text-center space-y-12 md:w-1/2">
                 <motion.div
+                ref={ref}
                  initial='hidden'
                  variants={headerButtonVariants}
                  animate={controls}

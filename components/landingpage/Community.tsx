@@ -28,12 +28,12 @@ const CommunityHeaderVariants = {
 }
 
 const headerCaptionVariants = {
-  visible: { x: 0, opacity: 1, transition: { delay: .4, duration: .5 } },
+  visible: { x: 0, opacity: 1, transition: { delay: .1, duration: .5 } },
   hidden: { opacity: 0, x: -10 }
 }
 
 const headerButtonVariants = {
-  visible: { x: 0, opacity: 1, transition: { delay: .4, duration: .5 } },
+  visible: { x: 0, opacity: 1, transition: { delay: .1, duration: .5 } },
   hidden: { opacity: 0, x: 10 }
 }
 
@@ -53,7 +53,7 @@ const Community = () => {
 
   return (
     <>
-      <section id="community" ref={ref} className="bg-[#448a9c]">
+      <section id="community"  className="bg-[#448a9c]">
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
@@ -132,6 +132,7 @@ const Community = () => {
           </div>
           <div className="flex justify-end items-center text-center space-y-12 md:w-1/2">
             <motion.div
+            ref={ref}
               initial='hidden'
               variants={headerButtonVariants}
               animate={controls}
