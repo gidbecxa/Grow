@@ -18,6 +18,7 @@ import {
   useDisclosure,
 } from "@chakra-ui/react";
 import { HamburgerIcon } from "@chakra-ui/icons";
+import { useScrollPosition } from "../../hooks"
 
 interface NavbarProps {
   containerRef: React.RefObject<HTMLDivElement>,
@@ -26,10 +27,10 @@ interface NavbarProps {
 }
 
 function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
-  console.log(logoColor, "logo color")
-  console.log(navTextColor, "nav")
   const { isOpen, onOpen, onClose } = useDisclosure();
   const firstField = React.useRef();
+  const scrollPosition  = useScrollPosition()
+  console.log(scrollPosition)
   const [isDesktop, setDesktop] = useState(() => {
     if (typeof window !== "undefined") {
       const bool = window.innerWidth > 920;
@@ -41,23 +42,28 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
     setDesktop(window.innerWidth > 917);
   };
 
+  const classNames = (...classes) => {
+    return classes.filter(Boolean).join(' ')
+  }
+
   useEffect(() => {
     if (typeof window !== "undefined") {
       window.addEventListener("resize", updateMedia);
       return () => window.removeEventListener("resize", updateMedia);
     }
+    // <nav className="sticky container mx-auto p-6">
+
   });
-  console.log("resize", isDesktop);
 
   return (
     <>
       {isDesktop ? (
-        <nav className="relative container mx-auto p-6">
+        <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main shadow' : 'shadow-none', " transition-shadow container mx-auto p-6 top-0 z-10")}>
           <div className="flex items-center justify-between">
             <div className="pt-2">
               <div className="md:w-[150px] w-[100px] cursor-pointer">
                 <Link href="/">
-                  {logoColor ? 
+                  {scrollPosition > 0 ? 
                   <Image
                     className="w-[10vw] block"
                     src={whitelogo}
@@ -72,11 +78,12 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
                     priority
                   />
                   }
+                   
                 </Link>
               </div>
             </div>
             <div className="flex items-center">
-              <div style={{color: navTextColor}} className="text-main flex space-x-6 uppercase mr-6">
+              <div style={{color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor)}} className="text-main flex space-x-6 uppercase mr-6">
                 <Link href="/programs">Programs</Link>
                 <Link href="/our-story">Our Story</Link>
                 <Link href="/faqs">FAQs</Link>

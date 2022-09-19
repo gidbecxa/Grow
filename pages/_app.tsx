@@ -28,10 +28,8 @@ export default function MyApp({ Component, pageProps }: AppPropsWithLayout) {
   const router = useRouter()
   useEffect(() => {
     router.events.on('routeChangeStart', (url, { shallow }) => {
-      console.log(`App is changing to ${url}`)
     })
     router.events.on('routeChangeComplete', (url, { shallow }) => {
-      console.log(`App is Changed to ${url}`)
     })
     // If the component is unmounted, unsubscribe
     // from the event with the `off` method:

@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import React from 'react'
-import accenture from '../../public/accenture.png'
+import accenture from '../../public/accenture.jpg'
 import microsoft from '../../public/microsoft.png'
 import ibm from '../../public/ibm.png'
 import google from '../../public/google.png'
@@ -15,19 +15,19 @@ const Companies = () => {
             </div>
             <div className="flex items-center space-x-6 justify-center">
                 <div className="w-[150px]">
-                    <Image src={accenture} />
+                    <Image  priority src={accenture} />
                 </div>
                 <div className="w-[200px]">
-                <Image src={microsoft} />
+                <Image priority  src={microsoft} />
                 </div>
                 <div className="w-[150px]">
-                <Image src={google} />
+                <Image priority  src={google} />
                 </div>
                 <div className="w-[150px]">
-                <Image src={stripe} />
+                <Image priority  src={stripe} />
                 </div>
                 <div className="w-[130px]">
-                <Image src={ibm} />
+                <Image  priority src={ibm} />
                 </div>
             </div>
         </div>

@@ -51,7 +51,6 @@ const Register = () => {
     setTabIndex(index);
   };
   useEffect(() => {
-    console.log(formData);
   });
   return (
     <>
@@ -84,18 +83,18 @@ const Register = () => {
           </h2>
         </div>
         <div className="">
-          <div className="flex max-w-[1000px] h-[600px] mx-auto md:p-10">
-            <div className="relative mr-7 w-1/3 md:flex hidden border-[rgb(35,70,79)] border-3">
-              <div className="bg-main w-full h-full absolute -left-5 -bottom-5">
+          <div className="flex  mx-auto md:p-10">
+            <div className=" relative mr-7 w-1/2 md:flex hidden bg-[#448a9c] g-main">
+              <div className="bg-white  w-full h-full absolute -left-5 border-[#448a9c] border-3 -bottom-5">
                 <Image
-                  layout="responsive"
+                  layout="fill"
                   priority
                   src={hero}
-                  objectFit="cover"
+                  objectFit="contain"
                 />
               </div>
             </div>
-            <div className="md:w-2/3 p-3 ">
+            <div className="md:w-1/2 p-3 ">
               <Box>
                 {/* <input
                     type="range"

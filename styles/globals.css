@@ -52,3 +52,7 @@ body{
     border-radius: 5px;
     border: rgb(59 130 246 / 0.5) 1px solid;
 }
+input[type="radio"] {
+    width: 100px;
+    height: 100px;
+}

@@ -1,12 +1,16 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Banner from '../components/landingpage/Banner'
 import Footer from '../components/landingpage/Footer'
 import Navbar from '../components/landingpage/Navbar'
+import HeroImg from '../components/landingpage/HeroImg'
+import storyhero from '../public/storyhero1.jpeg'
 
 const OurStory = () => {
+  const navTextColor = '#23464f'
+
   return (
     <>
-    <Navbar />
+    <Navbar  navTextColor={navTextColor}/>
     <div className="max-w-6xl px-5 mx-auto mt-32 text-center flex flex-col md:flex-row mb-32">
         <div className="md:w-1/2 mb-16">
           <h2 className="text-6xl font-bold text-center">
@@ -35,6 +39,7 @@ French-speaking African teens, youths and young
 adults, to help them become world-class software
 engineers and tech entrepreneurs.</p></div>
     </div>
+    <HeroImg src={storyhero}/>
     <Banner />
     <Footer />
     </>

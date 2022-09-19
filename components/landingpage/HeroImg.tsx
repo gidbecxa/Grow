@@ -1,17 +1,17 @@
 import React from 'react'
-import newhero from '../../public/newhero.jpg'
 import Image from 'next/image'
 
-const HeroImg = () => {
+const HeroImg = ({src}) => {
   return (
-    <div className="absolute -z-10 overflow-x-hidden">
+    <div className="sticky absolut top-0 -z-10 overflow-x-hidden">
         <div className="absolute  w-full h-full">
             <div className=" w-full h-full">
               <Image
               priority
               layout='fill'
-              src={newhero}
+              src={src}
               objectFit='cover'
+              objectPosition='left bottom'
               />
             </div>
         </div>

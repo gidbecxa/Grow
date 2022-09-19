@@ -6,7 +6,6 @@ function Login() {
 
   const handleSubmit = (e:any) => {
     e.preventDefault()
-    console.log("button works")
   }
 
   return (

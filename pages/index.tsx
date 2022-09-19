@@ -10,13 +10,17 @@ import Launch from '../components/landingpage/Launch'
 import Companies from '../components/landingpage/Companies'
 import Community from '../components/landingpage/Community'
 import HeroImg from '../components/landingpage/HeroImg'
+import newhero from '../public/newhero3.jpg'
+
 
 const Home: NextPage = () => {
   const navTextColor = "white"
   const logoColor = true
   return (
     <>
-    <HeroImg />
+    <div className="absolute -z-10">
+        <HeroImg src={newhero}/>
+    </div>
     <Navbar navTextColor={navTextColor} logoColor={logoColor}/>
     <Hero />
     <Companies />
