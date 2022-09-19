@@ -1,21 +1,8 @@
 import Link from 'next/link'
-import React, { useRef } from 'react'
+import React, { useRef, useEffect } from 'react'
 import Banner from '../components/landingpage/Banner'
 import Footer from '../components/landingpage/Footer'
 import Navbar from '../components/landingpage/Navbar'
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Box,
-  List,
-  ListItem,
-  ListIcon,
-  OrderedList,
-  UnorderedList,
-} from "@chakra-ui/react";
 import { useInView } from "react-intersection-observer"; //import {useInView} tells the dom when something is in viewport
 import { motion, useAnimation } from "framer-motion"
 
@@ -46,6 +33,14 @@ const featurePointsVariant = [
   {
     visible: { x: 0, opacity: 1, transition: { delay: .8, duration: .6 } },
     hidden: { x: 10, opacity: 0 },
+  },
+  {
+    visible: { x: 0, opacity: 1, transition: { delay: 1, duration: .6 } },
+    hidden: { x: 10, opacity: 0 },
+  },
+  {
+    visible: { x: 0, opacity: 1, transition: { delay: 1.2, duration: .6 } },
+    hidden: { x: 10, opacity: 0 },
   }
 ]
 
@@ -56,54 +51,52 @@ function Faqs() {
   const control = useAnimation();
   const [ref, inView] = useInView();
 
+  useEffect(() => {
+    if (inView) {
+    console.log("in view")
+      control.start("visible"); //when in view,start the visible animation variant
+    } else {
+      control.start("hidden"); //else its hidden
+      console.log("not in view")
+    }
+  }, [control, inView]);
+
+
   return (
     <>
       <Navbar />
-      <section id="faqs" >
+      <section ref={ref} id="faqs" >
         <div className="container flex flex-col px-4 mx-auto my-32 space-y-12 md:space-y-0 md:flex-row">
           <div className="flex flex-col space-y-12 md:w-1/2">
-            <h2 className="text-main max-w-md text-4xl font-bold text-center md:text-left">
+          <motion.h2
+            variants={headerVariant} //pass in your variant
+            initial="hidden"		//pass initial values
+            animate={control}	
+            className="text-main max-w-md text-4xl font-bold text-center md:text-left"	//pass in control as it will be animated when element is in view
+          >
+
               FAQs
-            </h2>
-            <p className="md:max-w-sm text-center text-main md:text-left">
+          </motion.h2>
+          <motion.p
+            variants={headerCaptionVariant}
+            initial='hidden'
+            animate={control}
+            className="md:max-w-sm text-center text-main md:text-left"
+          >
+
               Grow Lorem ipsum dolor sit amet consectetur, adipisicing elit.
               Doloribus voluptatem, modi sapien. <span className="font-regular">
                 <Link href='/help-center'>Contact us here</Link>
               </span>
-            </p>
+          </motion.p>
           </div>
           <div className="flex flex-col space-y-8 md:w-1/2">
-      {/* <Accordion allowToggle>
-
-          <AccordionItem>
-                <h2>
-                  <AccordionButton>
-                    <Box flex="1" textAlign="left">
-                      Description
-                    </Box>
-                    <AccordionIcon />
-                  </AccordionButton>
-                </h2>
-                <AccordionPanel pb={4}>
-                  This program marks your first step into becoming a
-                  professional Android developer. It introduces you to the
-                  fundamentals and essential concepts of the Android operating
-                  system and developing working applications for Android. The
-                  program begins with initiation courses and activities in which
-                  you learn and familiarize yourself with Android development
-                  terminologies, tools, technologies and best practices. You’ll
-                  develop your first Android app and a series of other simple
-                  Android app projects. Through these projects, you’ll get to
-                  implement various Android development principles and
-                  techniques. Towards the end of the course, you’ll learn to
-                  publish your apps to Google Play store. You’ll also learn
-                  about various ways to get your apps promoted to your targeted
-                  audience, and how to monetize your apps.
-                </AccordionPanel>
-              </AccordionItem>
-      </Accordion> */}
-            <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
-              <div className="rounded-l-ful md:bg-transparent">
+          <motion.div
+            initial='hidden'
+            animate={control}
+            variants={featurePointsVariant[0]}
+            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+<div className="rounded-l-ful md:bg-transparent">
                 <div className="flex items-center space-x-2">
                   <h3 className="text-base font-semibold md:mb-4 md:hidden">
                     Who can join the bootcamp?
@@ -120,8 +113,12 @@ function Faqs() {
                   much easier and more fun than you think.
                 </p>
               </div>
-            </div>
-            <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+            </motion.div>
+            <motion.div
+            initial='hidden'
+            animate={control}
+            variants={featurePointsVariant[1]}
+            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
               <div className="rounded-l-ful md:bg-transparent">
                 <div className="flex items-center space-x-2">
                   <h3 className="text-base font-semibold md:mb-4 md:hidden">
@@ -139,9 +136,13 @@ function Faqs() {
                   project-based approach will help you grasp a lot in a short time.
                 </p>
               </div>
-            </div>
-            <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
-              <div className="rounded-l-ful md:bg-transparent">
+            </motion.div>
+            <motion.div
+            initial='hidden'
+            animate={control}
+            variants={featurePointsVariant[2]}
+            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+<div className="rounded-l-ful md:bg-transparent">
                 <div className="flex items-center space-x-2">
                   <h3 className="text-base font-semibold md:mb-4 md:hidden">
                     What if I have no experience with the use of a computer?
@@ -158,9 +159,13 @@ function Faqs() {
                   the basic use of a computer. We also have online resources that will be of help.
                 </p>
               </div>
-            </div>
-            <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
-              <div className="rounded-l-ful md:bg-transparent">
+            </motion.div>
+            <motion.div
+            initial='hidden'
+            animate={control}
+            variants={featurePointsVariant[3]}
+            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+<div className="rounded-l-ful md:bg-transparent">
                 <div className="flex items-center space-x-2">
                   <h3 className="text-base font-semibold md:mb-4 md:hidden">
                     What if I have a job or another commitment?
@@ -178,9 +183,13 @@ function Faqs() {
                   recorded videos will be shared so that anyone can catch up with any missed classes.
                 </p>
               </div>
-            </div>
-            <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
-              <div className="rounded-l-ful md:bg-transparent">
+            </motion.div>
+            <motion.div
+            initial='hidden'
+            animate={control}
+            variants={featurePointsVariant[4]}
+            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+<div className="rounded-l-ful md:bg-transparent">
                 <div className="flex items-center space-x-2">
                   <h3 className="text-base font-semibold md:mb-4 md:hidden">
                     Can I follow my lectures remotely?
@@ -198,9 +207,13 @@ function Faqs() {
                   are possible, with the best experience.
                 </p>
               </div>
-            </div>
-            <div className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
-              <div className="rounded-l-ful md:bg-transparent">
+            </motion.div>
+            <motion.div
+            initial='hidden'
+            animate={control}
+            variants={featurePointsVariant[5]}
+            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+<div className="rounded-l-ful md:bg-transparent">
                 <div className="flex items-center space-x-2">
                   <h3 className="text-base font-semibold md:mb-4 md:hidden">
                     Will I get a certificate at the end of my training?
@@ -216,7 +229,7 @@ function Faqs() {
                   period
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

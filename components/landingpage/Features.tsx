@@ -59,11 +59,10 @@ function Features() {
             ref={ref}				//pass the ref to tell rio what is being checked
             variants={headerVariant} //pass in your variant
             initial="hidden"		//pass initial values
-            animate={control}		//pass in control as it will be animated when element is in view
+            animate={control}	
+            className="text-main max-w-md text-4xl font-bold text-center md:text-left"	//pass in control as it will be animated when element is in view
           >
-            <h2 className="text-main max-w-md text-4xl font-bold text-center md:text-left">
               What is different about Grow
-            </h2>
           </motion.h2>
           <motion.p
             ref={ref}

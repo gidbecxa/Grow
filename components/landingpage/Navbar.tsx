@@ -65,12 +65,19 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
                 <Link href="/">
                   {scrollPosition > 0 ? 
                   <Image
-                    className="w-[10vw] block"
-                    src={whitelogo}
-                    alt="Grow"
-                    priority
+                  className="w-[10vw] block"
+                  src={whitelogo}
+                  alt="Grow"
+                  priority
                   />
-                    :
+                  :
+                  logoColor ? 
+                  <Image
+                  className="w-[10vw] block"
+                  src={whitelogo}
+                  alt="Grow"
+                  priority />
+                  :
                     <Image
                     className="w-[10vw] block"
                     src={logo}
