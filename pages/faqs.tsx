@@ -51,7 +51,7 @@ const featurePointsVariant = [
 
 
 
-function faqs() {
+function Faqs() {
   const checkNav = useRef(true)
   const control = useAnimation();
   const [ref, inView] = useInView();
@@ -226,4 +226,4 @@ function faqs() {
   )
 }
 
-export default faqs
+export default Faqs

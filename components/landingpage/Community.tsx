@@ -113,7 +113,7 @@ const Community = () => {
           <div className="flex flex-col space-y-12 md:w-1/2">
             <motion.h2
               initial='hidden'
-              variants={bannerHeaderVariants}
+              variants={CommunityHeaderVariants}
               animate={controls}
               className="text-white max-w-lg text-4xl md:text-5xl font-bold text-center md:text-left"
             >
