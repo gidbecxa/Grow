@@ -109,23 +109,41 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
           </div>
         </nav>
       ) : (
-        <nav>
-          <div className="flex justify-between container px-4 mx-auto pt-4">
+        <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main' : '', 'top-0  z-10 flex justify-center items-center')}>
+          <div className=' flex justify-between container px-4 mx-auto py-4 z-10'>
             <div className="pt-2 px-4">
               <div className=" md:w-[150px] w-[100px] cursor-pointer">
                 <Link href="/">
+                {scrollPosition > 0 ? 
                   <Image
+                  className="w-[10vw] block"
+                  src={whitelogo}
+                  alt="Grow"
+                  priority
+                  />
+                  :
+                  logoColor ? 
+                  <Image
+                  className="w-[10vw] block"
+                  src={whitelogo}
+                  alt="Grow"
+                  priority />
+                  :
+                    <Image
                     className="w-[10vw] block"
-                    src={whitelogo}
+                    src={logo}
                     alt="Grow"
                     priority
                   />
+                  }
                 </Link>
               </div>
             </div>
-            <Button color="#23464f" onClick={onOpen}>
-              <HamburgerIcon />
-            </Button>
+            <div >
+              <Button color="#23464f" onClick={onOpen} >
+                <HamburgerIcon />
+              </Button>
+            </div>
           </div>
           <Drawer
             isOpen={isOpen}
@@ -138,24 +156,24 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
             <DrawerContent>
               <DrawerCloseButton />
               <DrawerHeader borderBottomWidth="1px">Grow 1.0</DrawerHeader>
-              <DrawerBody>
+              <DrawerBody className="mt-4">
                 <Stack spacing="24px">
                   <Link href="/register">
-                    <div className="text-white bg-main  border-none md:block startedBtn">
+                    <div className="text-white bg-[#66cee8] border-none md:block startedBtn">
                       Register Now
                     </div>
                   </Link>
                   <Link href="/">
-                    <div className=" md:block startedBtn">Home</div>
+                    <div className=" md:block  border-none  startedBtn">Home</div>
                   </Link>
                   <Link href="/programs">
-                    <div className=" md:block startedBtn">Programs</div>
+                    <div className=" md:block border-none   startedBtn">Programs</div>
                   </Link>
                   <Link href="/our-story">
-                    <div className=" md:block startedBtn">Our story</div>
+                    <div className=" md:block  border-none  startedBtn">Our story</div>
                   </Link>
                   <Link href="/faqs">
-                    <div className=" md:block startedBtn">FAQs</div>
+                    <div className=" md:block  border-none  startedBtn">FAQs</div>
                   </Link>
                 </Stack>
               </DrawerBody>

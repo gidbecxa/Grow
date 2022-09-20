@@ -112,6 +112,7 @@ const Community = () => {
         <div className="container relative flex flex-col py-28 px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row ">
           <div className="flex flex-col space-y-12 md:w-1/2">
             <motion.h2
+            ref={ref}
               initial='hidden'
               variants={CommunityHeaderVariants}
               animate={controls}
@@ -130,9 +131,9 @@ const Community = () => {
               certified software engineers.
             </motion.p>
           </div>
-          <div className="flex justify-end items-center text-center space-y-12 md:w-1/2">
+          <div className="flex justify-center md:justify-end items-center text-center space-y-12 md:w-1/2">
             <motion.div
-            ref={ref}
+            
               initial='hidden'
               variants={headerButtonVariants}
               animate={controls}

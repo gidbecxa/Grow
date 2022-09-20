@@ -39,6 +39,7 @@ function Banner() {
         <div  className="container relative flex flex-col py-28 px-4 mx-auto  space-y-12 md:space-y-0 md:flex-row ">
             <div className="flex flex-col space-y-12 md:w-1/2">
                 <motion.h2
+                ref={ref}
                     initial='hidden'
                     variants={bannerHeaderVariants}
                     animate={controls}
@@ -54,9 +55,9 @@ function Banner() {
                     Let us help you get started in 6 weeks! Join our entry-level developer bootcamp, and you are good to go!
                 </motion.p>
             </div>
-            <div className="flex justify-end items-center text-center space-y-12 md:w-1/2">
+            <div className="flex justify-center md:justify-end items-center text-center space-y-12 md:w-1/2">
                 <motion.div
-                ref={ref}
+                
                  initial='hidden'
                  variants={headerButtonVariants}
                  animate={controls}
