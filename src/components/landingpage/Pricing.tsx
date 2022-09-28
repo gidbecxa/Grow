@@ -87,7 +87,7 @@ const Pricing = () => {
               </div>
             </div>
             <div className='flex justify-between items-center'>
-              <h3 className='text-lg'>Frais d'inscription</h3>
+              <h3 className='text-lg'>Frais d&#39;inscription</h3>
               <p>15 000 FCFA</p>
             </div>
           </div>
@@ -99,7 +99,7 @@ const Pricing = () => {
               </div>
               <div className='border-2 border-black py-4 flex items-center justify-around'>
                 <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Niveau d'Entrée </p>
+                  <p className='font-bold'>Niveau d&#39;Entrée </p>
                   <p className='text-xs'>08 semaines</p>
                 </div>
                 <p>33 600 FCFA</p>
@@ -194,7 +194,7 @@ const Pricing = () => {
               </div>
             </div>
             <div className='flex justify-between items-center'>
-              <h3 className='text-lg'>Frais d'inscription</h3>
+              <h3 className='text-lg'>Frais d&#39;inscription</h3>
               <p>15 000 FCFA</p>
             </div>
           </div>
@@ -206,7 +206,7 @@ const Pricing = () => {
               </div>
               <div className='border-2 border-black py-4 flex items-center justify-around'>
                 <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Niveau d'Entrée </p>
+                  <p className='font-bold'>Niveau d&#39;Entrée </p>
                   <p className='text-xs'>06 semaines</p>
                 </div>
                 <p>30 200 FCFA</p>
@@ -283,7 +283,7 @@ const Pricing = () => {
             </div>
             </div>
             <div className='flex justify-between items-center'>
-              <h3 className='text-lg'>Frais d'inscription</h3>
+              <h3 className='text-lg'>Frais d&#39;inscription</h3>
               <p>15 000 FCFA</p>
             </div>
           </div>
@@ -295,7 +295,7 @@ const Pricing = () => {
               </div>
               <div className='border-2 border-black py-4 flex items-center justify-around'>
                 <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Niveau d'Entrée </p>
+                  <p className='font-bold'>Niveau d&#39;Entrée </p>
                   <p className='text-xs'>06 semaines</p>
                 </div>
                 <p>30 200 FCFA</p>
@@ -372,7 +372,7 @@ const Pricing = () => {
             </div>
             </div>
             <div className='flex justify-between items-center'>
-              <h3 className='text-lg'>Frais d'inscription</h3>
+              <h3 className='text-lg'>Frais d&#39;inscription</h3>
               <p>15 000 FCFA</p>
             </div>
           </div>
@@ -384,7 +384,7 @@ const Pricing = () => {
               </div>
               <div className='border-2 border-black py-4 flex items-center justify-around'>
                 <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Niveau d'Entrée </p>
+                  <p className='font-bold'>Niveau d&#39;Entrée </p>
                   <p className='text-xs'>06 semaines</p>
                 </div>
                 <p>30 200 FCFA</p>

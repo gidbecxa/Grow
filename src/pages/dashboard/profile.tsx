@@ -25,12 +25,12 @@ const Profile: NextPageWithLayout = () => {
   const {data: session} = useSession()
   // console.log(session.user.email)
   useEffect(() => {
-    const useFetchStudentProgress = async () => {
+    const fetchStudentProgress = async () => {
       // // const response = await fireStore.get(session.user.email , session.user.email)
       console.log("response", response.data())
     }
 
-    useFetchStudentProgress()
+    fetchStudentProgress()
   }, [])
 
   return (
