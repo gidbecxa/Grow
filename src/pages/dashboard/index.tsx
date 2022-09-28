@@ -13,10 +13,10 @@ const Dashboard: NextPageWithLayout = () => {
   const [validateUser, setValidateUser] = useState()
   const router = useRouter()
 
-  console.log("session", session.user.email)
+  // console.log("session", session.user.email)
   useEffect(() => {
     const getData = async () => {
-      const docRef = doc(db, "users", session.user?.email || '')
+      // const docRef = doc(db, "users", session.user?.email || '')
       
       try {
             const doc = await getDoc(docRef)
@@ -41,7 +41,7 @@ const Dashboard: NextPageWithLayout = () => {
       <>
         DASH
         HEllo {session ? 
-        <p>{session.user.email}</p> 
+        // <p>{session.user.email}</p> 
         : 
         <p>loading</p>
         }
