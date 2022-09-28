@@ -135,7 +135,7 @@ const Register = () => {
           <ModalCloseButton />
           <ModalBody>
             <p>
-              Other levels will be able once the Entry-level has concluded the course duration. If you can't wait, you can join the waitlist and also automatically get an invite to our Community.
+              Other levels will be able once the Entry-level has concluded the course duration. If you can&#39;t wait, you can join the waitlist and also automatically get an invite to our Community.
             </p>
             <FormControl mt={9}>
               <FormLabel>Your Email</FormLabel>
@@ -167,7 +167,6 @@ const Register = () => {
                 <Image
                 priority
                   layout="fill"
-                  priority
                   src={hero}
                   objectFit="contain"
                 />
