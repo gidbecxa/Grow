@@ -42,6 +42,7 @@ const Dashboard: NextPageWithLayout = () => {
         DASH
         HEllo {session ? 
         // <p>{session.user.email}</p> 
+        <p>dummy</p>
         : 
         <p>loading</p>
         }
