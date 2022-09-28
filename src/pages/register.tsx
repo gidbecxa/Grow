@@ -66,9 +66,9 @@ const Register = () => {
   const onSubmitRegForm = async () => {
     setLoading(true)
     try {
-      const response = await setDoc(doc(db, "users", formData.email), formData);
+      const response = await setDoc(doc(db, "Newusers", formData.email), formData);
       console.log(response)
-      handleSubmit()
+      // handleSubmit()
       if (state.succeeded) {
         setAlert("block")
         setLoading(false)
@@ -76,6 +76,8 @@ const Register = () => {
       // signIn('google', { callbackUrl: 'http://localhost:3000/dashboard' })
     } catch (err) {
       console.log("firestore error", err)
+      setLoading(false)
+
     }
 
   }
