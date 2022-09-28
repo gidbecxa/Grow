@@ -48,7 +48,7 @@ const Pricing = () => {
     <section 
     ref={ref}
     id='pricing' className=''>
-      <div className="max-w-6xl px-5 mx-auto md:mt-32 mb-10 text-center">
+      <div className="max-w-6xl px-5 mx-auto md:mt-32  text-center">
           <h2 className="md:text-6xl text-4xl font-bold text-center">
             Our Programs
           </h2>
