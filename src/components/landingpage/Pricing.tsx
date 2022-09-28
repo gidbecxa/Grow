@@ -53,7 +53,7 @@ const Pricing = () => {
             Our Programs
           </h2>
         </div>
-      <div className="container mx-auto px-4 py-28">
+      <div className="container mx-auto px-4 pb-28">
         <motion.div 
         ref={ref}
         initial='hidden'

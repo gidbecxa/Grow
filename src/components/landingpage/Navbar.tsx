@@ -95,14 +95,14 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
                 <Link href="#pricing">Programs</Link>
                 <Link href="/our-story">Our Story</Link>
                 <Link href="/faqs">FAQs</Link>
-                {session?
+                {true?
               null    
               :
               <div className="cursor-pointer" onClick={() => signIn('google', {callbackUrl: 'http://localhost:3000/dashboard'})}>Login</div>
               }
               </div>
               <div className="flex">
-                {!session ? 
+                {false ? 
                 <Link href="/dashboard">
                 <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">GO TO DASHBOARD</div>
               </Link>
@@ -171,7 +171,7 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
               <DrawerHeader borderBottomWidth="1px">Grow 1.0</DrawerHeader>
               <DrawerBody className="mt-4">
                 <Stack spacing="24px">
-                {session ? 
+                {false ? 
                 <Link href="/dashboard">
                 <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">GO TO DASHBOARD</div>
               </Link>
@@ -192,7 +192,7 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
                   <Link href="/faqs">
                     <div className=" md:block  border-none  startedBtn">FAQs</div>
                   </Link>
-                  {session?
+                  {false?
               null    
               :
               <div onClick={() => signIn('google', {callbackUrl: 'http://localhost:3000/dashboard'})}>Login</div>
