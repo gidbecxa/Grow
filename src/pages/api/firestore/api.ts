@@ -2,22 +2,23 @@ import { doc, setDoc, getDoc, addDoc, updateDoc, CollectionReference, WithFieldV
 import { db } from "../../../firebase";
 
 type PathProps = {
-    path1: string,
-    path2: string
+    path1: string;
+    path2: string;
+    data: any;
 }
 
 const fireStore = {
-    post: ({path1, path2}: PathProps) => fireStoreApi.get(doc(db, path1, path2)),
-    put: ({path1, path2}: PathProps) => fireStoreApi.get(doc(db, path1, path2)),
-    get: ({path1, path2}: PathProps) => fireStoreApi.get(doc(db, path1, path2)),
-    update: ({path1, path2}: PathProps) => fireStoreApi.get(doc(db, path1, path2)),
+    get: (path1: string, path2: string ) => fireStoreApi.get(doc(db, path1, path2)),
+    post: (path1: string, path2: string ) => fireStoreApi.get(doc(db, path1, path2)),
+    put: (path1: string, path2: string, data: any) => fireStoreApi.put(doc(db, path1, path2), data),
+    // update: ({path1, path2}: PathProps) => fireStoreApi.get(doc(db, path1, path2)),
 }
 
 const fireStoreApi = {
-    post: <T>(reference: CollectionReference, data: WithFieldValue) => addDoc(reference, data),
     get: <T>(reference: DocumentReference) => getDoc(reference),
+    post: <T>(reference: CollectionReference, data: WithFieldValue) => addDoc(reference, data),
+    put: <T>(reference: DocumentReference, data: WithFieldValue) => setDoc(reference, data),
     // update: <T>(reference: CollectionReference, data: UpdateData) => updateDoc(reference, data),
-    put: <T>(reference: CollectionReference, data: WithFieldValue) => setDoc(reference, data),
 }
 
 export default fireStore;

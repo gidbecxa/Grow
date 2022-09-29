@@ -5,6 +5,7 @@ import fireStore from "../pages/api/firestore/api";
 import { db } from "../firebase";
 import Navbar from "../components/landingpage/Navbar";
 import { useSession, signIn, signOut } from "next-auth/react"
+import { useFormspark } from "@formspark/use-formspark"
 import {
   Tabs,
   TabList,
@@ -41,7 +42,6 @@ import { useDisclosure } from "@chakra-ui/react";
 import { async } from "@firebase/util";
 
 const Register = () => {
-  const [state, handleSubmit] = useForm('xdojgvkq');
   const [alert, setAlert] = useState("none")
   const { data: session, status } = useSession()
   const [loading, setLoading] = useState(false)
@@ -60,26 +60,37 @@ const Register = () => {
     program: "",
     referral: "",
   });
-
-
+  const [state, handleSubmit] = useForm('xdojgvkq');
+  const [submit, submitting] = useFormspark({
+    formId: 'fNPOoNAN'
+  })
 
   const onSubmitRegForm = async () => {
     setLoading(true)
     try {
-      const response = await setDoc(doc(db, "Newusers", formData.email), formData);
-      console.log(response)
-      // handleSubmit()
-      if (state.succeeded) {
-        setAlert("block")
-        setLoading(false)
-      }
-      // signIn('google', { callbackUrl: 'http://localhost:3000/dashboard' })
+      fireStore.put("Newusers", formData.email, formData)
+      // const response = await setDoc(doc(db, "Newusers", formData.email), formData);
+      // await submit({ formData })
+      setAlert("block")
+      setLoading(false)
+      setFormData({
+        firstname: "",
+        lastname: "",
+        birthday: 0,
+        gender: "",
+        experience: "",
+        email: "",
+        phonenumber: 0,
+        level: "",
+        program: "",
+        referral: "",
+      })
     } catch (err) {
+      // signIn('google', { callbackUrl: 'http://localhost:3000/dashboard' })
       console.log("firestore error", err)
       setLoading(false)
 
     }
-
   }
   const handleSliderChange = (event) => {
     setTabIndex(parseInt(event.target.value, 10));
@@ -101,19 +112,19 @@ const Register = () => {
   return (
     <>
       <Navbar />
-    <div style={{display: alert}}>
-      <Alert
-      zIndex='10'
-      position='sticky'
-      top='96px'
-        status='success'
-        variant='subtle'
-        flexDirection='column'
-        alignItems='center'
-        justifyContent='center'
-        textAlign='center'
-        height='200px'
-      >
+      <div style={{ display: alert, position: "sticky", top: "0", zIndex: "10" }}>
+        <Alert
+          zIndex='10'
+          // position='sticky'
+          // top='96px'
+          status='success'
+          variant='subtle'
+          flexDirection='column'
+          alignItems='center'
+          justifyContent='center'
+          textAlign='center'
+          height='200px'
+        >
           <AlertIcon boxSize='40px' mr={0} />
           <AlertTitle mt={4} mb={1} fontSize='lg'>
             Application submitted!
@@ -122,14 +133,14 @@ const Register = () => {
             Thanks for submitting your application. Our team will get back to you soon.
           </AlertDescription>
           <CloseButton
-          alignSelf='flex-start'
-          position='relative'
-          right={-1}
-          top={-1}
-          onClick={onCloseAlert}
-        />
+            alignSelf='flex-start'
+            position='relative'
+            right={-1}
+            top={-1}
+            onClick={onCloseAlert}
+          />
         </Alert>
-    </div>
+      </div>
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent>
@@ -167,7 +178,7 @@ const Register = () => {
             <div className=" relative mr-7 w-1/2 md:flex hidden bg-[#448a9c] g-main">
               <div className="bg-white  w-full h-full absolute -left-5 border-[#448a9c] border-3 -bottom-5">
                 <Image
-                priority
+                  priority
                   layout="fill"
                   src={hero}
                   objectFit="contain"
@@ -175,19 +186,8 @@ const Register = () => {
               </div>
             </div>
             <div className="md:w-1/2 p-3 ">
+
               <Box>
-                {/* <input
-                    type="range"
-                    min="0"
-                    max="2"
-                    value={tabIndex}
-                    onChange={handleSliderChange}
-                  />
-                  <div>
-                    <CheckCircleIcon />
-                    <CheckCircleIcon />
-                    <CheckCircleIcon />
-                  </div> */}
                 <Tabs index={tabIndex} isFitted variant='enclosed'>
                   <TabList>
                     <Tab >Personal details</Tab>
@@ -196,11 +196,13 @@ const Register = () => {
                   </TabList>
                   <TabPanels>
                     <PersonalDetails
+                      loading={loading}
                       formData={formData}
                       setFormData={setFormData}
                       handleSliderChangeBtn={handleSliderChangeBtn}
                     />
                     <ContactDetails
+                      loading={loading}
                       formData={formData}
                       setFormData={setFormData}
                       handleSliderChangeBtn={handleSliderChangeBtn}

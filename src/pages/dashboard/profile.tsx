@@ -26,7 +26,7 @@ const Profile: NextPageWithLayout = () => {
   // console.log(session.user.email)
   useEffect(() => {
     const fetchStudentProgress = async () => {
-      // // const response = await fireStore.get(session.user.email , session.user.email)
+      const response = await fireStore.get()
       console.log("response", response.data())
     }
 

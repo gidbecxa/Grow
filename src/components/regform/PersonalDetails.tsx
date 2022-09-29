@@ -10,7 +10,7 @@ import {
     HStack
 } from "@chakra-ui/react"
 
-const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData }) => {
+const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData, loading }) => {
   
   return (
     <TabPanel>
@@ -20,6 +20,7 @@ const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData }) => {
             <FormControl isRequired>
               <FormLabel>First name</FormLabel>
               <Input
+              isDisabled={loading}
               type='name'
                 value={formData.firstname}
                 onChange={(event) =>
@@ -30,6 +31,7 @@ const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData }) => {
               <FormLabel>Last name</FormLabel>
               <Input
               value={formData.lastname}
+              isDisabled={loading}
               onChange={(event) =>
                 setFormData({...formData, lastname: event.target.value})}
                 placeholder="Last name"
@@ -40,6 +42,7 @@ const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData }) => {
             <FormLabel>Birthday</FormLabel>
             <Input
             value={formData.birthday}
+            isDisabled={loading}
             onChange={(event) =>
               setFormData({...formData, birthday: event.target.value})}
               placeholder="Your birthday"
@@ -59,9 +62,9 @@ const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData }) => {
                   defaultValue="Itachi"
                 spacing="24px"
               >
-                <Radio value="Male">Male</Radio>
-                <Radio value="Female">Female</Radio>
-                <Radio value="Other">Others</Radio>
+                <Radio isDisabled={loading} value="Male">Male</Radio>
+                <Radio isDisabled={loading} value="Female">Female</Radio>
+                <Radio isDisabled={loading} value="Other">Others</Radio>
               </HStack>
             </RadioGroup>
           </FormControl>
@@ -76,9 +79,9 @@ const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData }) => {
                 onChange={(event) =>
                   setFormData({...formData, experience: event.target.value})}
               >
-                <Radio value="Yes">Yes</Radio>
-                <Radio value="No">No</Radio>
-                <Radio value="Yes, but a little">Yes, but a little</Radio>
+                <Radio isDisabled={loading}  value="Yes">Yes</Radio>
+                <Radio isDisabled={loading} value="No">No</Radio>
+                <Radio isDisabled={loading} value="Yes, but a little">Yes, but a little</Radio>
               </HStack>
             </RadioGroup>
           </FormControl>
