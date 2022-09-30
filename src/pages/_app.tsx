@@ -8,7 +8,7 @@ import type { NextPage } from 'next'
 import type { AppProps } from 'next/app'
 import { ChakraProvider } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 import { SessionProvider } from "next-auth/react"
 
 
@@ -26,7 +26,7 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout
 }
 
-export default function MyApp({ Component, pageProps : { session, ...pageProps }}: AppPropsWithLayout) {
+export default function MyApp({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLayout) {
   const router = useRouter()
   useEffect(() => {
     router.events.on('routeChangeStart', (url, { shallow }) => {
@@ -36,16 +36,16 @@ export default function MyApp({ Component, pageProps : { session, ...pageProps }
     // If the component is unmounted, unsubscribe
     // from the event with the `off` method:
     return () => {
-       <Component/>
+      <Component />
     }
   }, [])
   const getLayout = Component.getLayout ?? ((page) => page)
 
   return getLayout(
-  //   <SessionProvider session={session}>
-  //  </SessionProvider>
+    <SessionProvider session={session}>
       <ChakraProvider theme={theme}>
         <Component {...pageProps} />
       </ChakraProvider>
+    </SessionProvider>
   )
 }
