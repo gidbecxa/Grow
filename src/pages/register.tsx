@@ -198,7 +198,7 @@ const Register = () => {
                     <Tab >Choose course</Tab>
                   </TabList>
                   <TabPanels>
-                    {/* <PersonalDetails
+                    <PersonalDetails
                       loading={loading}
                       formData={formData}
                       setFormData={setFormData}
@@ -217,7 +217,7 @@ const Register = () => {
                       setFormData={setFormData}
                       handleSliderChangeBtn={handleSliderChangeBtn}
                       onOpen={onOpen}
-                    /> */}
+                    />
                   </TabPanels>
                 </Tabs>
               </Box>
