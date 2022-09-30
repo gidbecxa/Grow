@@ -85,11 +85,11 @@ const ChooseCourse = ({
           </FormControl>
           <FormControl as="fieldset" isRequired>
             <FormLabel as="legend">How did you find this program</FormLabel>
-            <CheckboxGroup
+            <RadioGroup
               colorScheme="green"
               defaultValue={["naruto", "kakashi"]}
             >
-              <Stack
+              <HStack
                 value={formData.referral}
                 onChange={(event) =>
                   setFormData({ ...formData, referral: event.target.value })}
@@ -99,8 +99,8 @@ const ChooseCourse = ({
                 <Radio isDisabled={loading} value="Twitter">Twitter</Radio>
                 <Radio isDisabled={loading} value="Grow member">Grow member</Radio>
                 <Radio isDisabled={loading}  value="Other">Other</Radio>
-              </Stack>
-            </CheckboxGroup>
+              </HStack>
+            </RadioGroup>
           </FormControl>
           <div className="mt-3 flex justify-between">
             <button

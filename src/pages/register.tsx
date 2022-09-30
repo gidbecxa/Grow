@@ -70,7 +70,8 @@ const Register = () => {
     try {
       fireStore.put("Newusers", formData.email, formData)
       // const response = await setDoc(doc(db, "Newusers", formData.email), formData);
-      // await submit({ formData })
+      const data = formData
+      await submit({ data })
       setAlert("block")
       setLoading(false)
       setFormData({
@@ -85,6 +86,7 @@ const Register = () => {
         program: "",
         referral: "",
       })
+      setTabIndex(parseInt(0, 10));
     } catch (err) {
       // signIn('google', { callbackUrl: 'http://localhost:3000/dashboard' })
       console.log("firestore error", err)
@@ -130,7 +132,7 @@ const Register = () => {
             Application submitted!
           </AlertTitle>
           <AlertDescription maxWidth='sm'>
-            Thanks for submitting your application. Our team will get back to you soon.
+            Thanks for submitting your application. Our team will get back to you soon via email.
           </AlertDescription>
           <CloseButton
             alignSelf='flex-start'

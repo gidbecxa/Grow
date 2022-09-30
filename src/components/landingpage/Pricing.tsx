@@ -8,6 +8,7 @@ import {
 } from '@chakra-ui/react'
 import { motion, useAnimation } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
+import Link from 'next/Link'
 
 const bannerCards = [
   {
@@ -47,7 +48,7 @@ const Pricing = () => {
   return (
     <section
       ref={ref}
-      id='pricing' className=''>
+      id='pricing' className='mt-8'>
       <div className="max-w-6xl px-5 mx-auto md:mt-32 mb-3 text-center">
         <h2 className="md:text-6xl text-4xl font-bold text-center">
           Our Programs
@@ -149,8 +150,6 @@ const Pricing = () => {
                   <p className="text-xs">(paiement en entier)</p>
                 </div>
               </div>
-
-
             </div>
           </div>
         </motion.div>
@@ -218,54 +217,82 @@ const Pricing = () => {
             </div>
           </div>
           <div className='md:w-2/3 h-full  px-9 md:px-28 py-3'>
+
+
             <div>
-              <div className='font-semibold  p-2 flex justify-around text-xl'>
-                <h3>Niveux</h3>
-                <h3>Price</h3>
-              </div>
-              <div className='border-2 border-black py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Niveau d&#39;Entrée </p>
-                  <p className='text-xs'>06 semaines</p>
-                </div>
-                <p>30 200 FCFA</p>
-              </div>
-              <div className='border-2 border-black border-t-0 py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Junior developer</p>
-                  <p className='text-xs'>06 semaines</p>
-                </div>
-                <p>78 000 FCFA</p>
-              </div>
-              <div className='border-2 border-black border-t-0 py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Intermédiaire developer</p>
-                  <p className='text-xs'>08 semaines</p>
-                </div>
-                <p>78 000 FCFA</p>
-              </div>
-              <div className='border-2 border-black border-t-0 py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Senior developer </p>
-                  <p className='text-xs'>10 semaines</p>
-                </div>
-                <p>78 800 FCFA</p>
-              </div>
-              <div className=' py-4 flex items-center justify-around'>
-                {/* <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Frais global  &nbsp;</p>
-                </div> */}
-                <div className='flex justify-center items-center flex-col'>
-                  <p><span className='font-bold'>Frais global &nbsp; &nbsp; &nbsp;</span>271 600 FCFA</p>
-                  {/* <p>271 600 FCFA</p> */}
-                  <div className=' flex justify-center flex-col items-center'>
-                    <p className='mt-4 text-3xl font-bold'>241 300 FCFA </p>
-                    <p>(paiement en entier)</p>
+              <div className='py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <h3 className='text-xl font-semibold'>Niveaux</h3>
                   </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <h3 className='text-xl font-semibold'>Price</h3>
                 </div>
               </div>
 
+              <div className='border-2 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Niveau d&#39;Entrée </p>
+                    <p className='text-xs'>06 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>30 200 FCFA</p>
+                </div>
+              </div>
+              <div className='border-2 border-t-0 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Junior developer</p>
+                    <p className='text-xs'>06 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>78 000 FCFA</p>
+                </div>
+              </div>
+              <div className='border-2 border-t-0 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Intermédiaire developer</p>
+                    <p className='text-xs'>08 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>78 000 FCFA</p>
+                </div>
+              </div>
+              <div className='border-2 border-t-0 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Senior developer</p>
+                    <p className='text-xs'>10 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>78 800 FCFA</p>
+                </div>
+              </div>
+              <div className='py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Frais global </p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>271 600 FCFA</p>
+                  <p className=''><span className="text-3xl font-bold">241 300 </span>FCFA </p>
+                  <p className="text-xs">(paiement en entier)</p>
+                </div>
+              </div>
+
+
             </div>
+
+
+
           </div>
         </motion.div>
         <motion.div
@@ -308,53 +335,77 @@ const Pricing = () => {
           </div>
           <div className='md:w-2/3 h-full px-9 md:px-28 py-3'>
             <div>
-              <div className='font-semibold  p-2 flex justify-around text-xl'>
-                <h3>Niveux</h3>
-                <h3>Price</h3>
-              </div>
-              <div className='border-2 border-black py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Niveau d&#39;Entrée </p>
-                  <p className='text-xs'>06 semaines</p>
-                </div>
-                <p>30 200 FCFA</p>
-              </div>
-              <div className='border-2 border-black border-t-0 py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Junior developer</p>
-                  <p className='text-xs'>06 semaines</p>
-                </div>
-                <p>75 400 FCFA</p>
-              </div>
-              <div className='border-2 border-black border-t-0 py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Intermédiaire developer</p>
-                  <p className='text-xs'>08 semaines</p>
-                </div>
-                <p>90 600 FCFA</p>
-              </div>
-              <div className='border-2 border-black border-t-0 py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Senior developer </p>
-                  <p className='text-xs'>08 semaines</p>
-                </div>
-                <p>90 600 FCFA</p>
-              </div>
-              <div className=' py-4 flex items-center justify-around'>
-                {/* <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Frais global  &nbsp;</p>
-                </div> */}
-                <div className='flex justify-center items-center flex-col'>
-                  <p><span className='font-bold'>Frais global &nbsp; &nbsp; &nbsp;</span>301 600 FCFA</p>
-                  {/* <p>271 600 FCFA</p> */}
-                  <div className=' flex justify-center flex-col items-center'>
-                    <p className='mt-4 text-3xl font-bold'>282 200 FCFA </p>
-                    <p>(paiement en entier)</p>
+              <div className='py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <h3 className='text-xl font-semibold'>Niveaux</h3>
                   </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <h3 className='text-xl font-semibold'>Price</h3>
                 </div>
               </div>
 
+              <div className='border-2 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Niveau d&#39;Entrée </p>
+                    <p className='text-xs'>06 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>33 200 FCFA</p>
+                </div>
+              </div>
+              <div className='border-2 border-t-0 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Junior developer</p>
+                    <p className='text-xs'>06 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>75 400 FCFA</p>
+                </div>
+              </div>
+              <div className='border-2 border-t-0 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Intermédiaire developer</p>
+                    <p className='text-xs'>08 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>90 600 FCFA</p>
+                </div>
+              </div>
+              <div className='border-2 border-t-0 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Senior developer</p>
+                    <p className='text-xs'>08 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>90 600 FCFA</p>
+                </div>
+              </div>
+              <div className='py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Frais global </p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>301 600 FCFA</p>
+                  <p className=''><span className="text-3xl font-bold">282 200 </span>FCFA </p>
+                  <p className="text-xs">(paiement en entier)</p>
+                </div>
+              </div>
+
+
             </div>
+
           </div>
         </motion.div>
         <motion.div
@@ -396,52 +447,79 @@ const Pricing = () => {
             </div>
           </div>
           <div className='md:w-2/3 h-full  px-9 md:px-28 py-3'>
+
+
+
+
             <div>
-              <div className='font-semibold  p-2 flex justify-around text-xl'>
-                <h3>Niveux</h3>
-                <h3>Price</h3>
-              </div>
-              <div className='border-2 border-black py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Niveau d&#39;Entrée </p>
-                  <p className='text-xs'>06 semaines</p>
-                </div>
-                <p>30 200 FCFA</p>
-              </div>
-              <div className='border-2 border-black border-t-0 py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Junior developer</p>
-                  <p className='text-xs'>06 semaines</p>
-                </div>
-                <p>96 500 FCFA</p>
-              </div>
-              <div className='border-2 border-black border-t-0 py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Intermédiaire developer</p>
-                  <p className='text-xs'>08 semaines</p>
-                </div>
-                <p>97 500 FCFA</p>
-              </div>
-              <div className='border-2 border-black border-t-0 py-4 flex items-center justify-around'>
-                <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Senior developer </p>
-                  <p className='text-xs'>08 semaines</p>
-                </div>
-                <p>97 500 FCFA</p>
-              </div>
-              <div className=' py-4 flex items-center justify-around'>
-                {/* <div className='flex justify-center items-center flex-col'>
-                  <p className='font-bold'>Frais global  &nbsp;</p>
-                </div> */}
-                <div className='flex justify-center items-center flex-col'>
-                  <p><span className='font-bold'>Frais global &nbsp; &nbsp; &nbsp;</span>271 600 FCFA</p>
-                  {/* <p>271 600 FCFA</p> */}
-                  <div className=' flex justify-center flex-col items-center'>
-                    <p className='mt-4 text-3xl font-bold'>241 300 FCFA </p>
-                    <p>(paiement en entier)</p>
+              <div className='py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <h3 className='text-xl font-semibold'>Niveaux</h3>
                   </div>
                 </div>
+                <div className="pl-5 w-1/2">
+                  <h3 className='text-xl font-semibold'>Price</h3>
+                </div>
               </div>
+
+              <div className='border-2 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Niveau d&#39;Entrée </p>
+                    <p className='text-xs'>06 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>30 200 FCFA</p>
+                </div>
+              </div>
+              <div className='border-2 border-t-0 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Junior developer</p>
+                    <p className='text-xs'>06 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>96 500 FCFA</p>
+                </div>
+              </div>
+              <div className='border-2 border-t-0 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Intermédiaire developer</p>
+                    <p className='text-xs'>08 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>97 500 FCFA</p>
+                </div>
+              </div>
+              <div className='border-2 border-t-0 border-black py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Senior developer</p>
+                    <p className='text-xs'>08 semaines</p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>97 500 FCFA</p>
+                </div>
+              </div>
+              <div className='py-4 flex items-center justify-around'>
+                <div className="pl-5 w-1/2">
+                  <div className='flex  flex-col'>
+                    <p className='font-bold'>Frais global </p>
+                  </div>
+                </div>
+                <div className="pl-5 w-1/2">
+                  <p>271 600 FCFA</p>
+                  <p className=''><span className="text-3xl font-bold">241 300 </span>FCFA </p>
+                  <p className="text-xs">(paiement en entier)</p>
+                </div>
+              </div>
+
 
             </div>
           </div>

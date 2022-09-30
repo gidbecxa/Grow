@@ -63,10 +63,12 @@ const Community = () => {
               <p>
                 Grow will send you lots of resources to kickstart your career.You&apos;ll be invited to our Telegram and Discord channels
               </p>
-              <FormControl>
-                <Input type='email' />
-                <FormHelperText>Enter your email</FormHelperText>
-              </FormControl>
+              <div className="mt-4">
+                <FormControl>
+                  <Input type='email' />
+                  <FormHelperText>Enter your email</FormHelperText>
+                </FormControl>
+              </div>
             </ModalBody>
             <ModalFooter>
               <Button colorScheme='blue' mr={3} onClick={onClose}>
@@ -138,7 +140,13 @@ const Community = () => {
               variants={headerButtonVariants}
               animate={controls}
             >
-              <button onClick={onOpen} className='bg-white startedBtn text-main border-none ' >Join the Grow Community!</button>
+              <Link href='/register'>
+                <button
+                // onClick={onOpen}
+                className='bg-white startedBtn text-main border-none ' >
+                Join the Grow Community!
+                </button>
+              </Link>
             </motion.div>
           </div>
           <div className="absolute md:-top-16 md:w-[500px] w-[400px] -top-24 left-0">

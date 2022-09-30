@@ -92,7 +92,7 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
             </div>
             <div className="flex items-center">
               <div style={{color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor)}} className="text-main flex space-x-6 uppercase mr-6">
-                <Link href="/programs">Programs</Link>
+                <Link href="/#pricing">Programs</Link>
                 <Link href="/our-story">Our Story</Link>
                 <Link href="/faqs">FAQs</Link>
                 {true?
@@ -183,7 +183,7 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
                   <Link href="/">
                     <div className=" md:block  border-none  startedBtn">Home</div>
                   </Link>
-                  <Link href="/programs">
+                  <Link href="/#pricing">
                     <div className=" md:block border-none   startedBtn">Programs</div>
                   </Link>
                   <Link href="/our-story">
