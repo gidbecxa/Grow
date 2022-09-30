@@ -33,6 +33,18 @@ const ContactDetails = ({ handleSliderChangeBtn, setFormData, formData, loading 
             />
             <FormHelperText>We&apos;ll never share your email.</FormHelperText>
           </FormControl>
+          <FormControl isRequired>
+            <FormLabel >Which country do you currently reside in</FormLabel>
+            <Input
+            isDisabled={loading}
+              type="name"
+              value={formData.country}
+              onChange={(event) =>
+                setFormData({ ...formData, country: event.target.value })
+              }
+              placeholder="Country of residence"
+            />
+          </FormControl>
           <FormControl as="fieldset" isRequired>
             <FormLabel as="legend">Phone number</FormLabel>
             <p className="font-bold">choose country code</p>

@@ -78,6 +78,7 @@ const Register = () => {
         firstname: "",
         lastname: "",
         birthday: 0,
+        country: "",
         gender: "",
         experience: "",
         email: "",
