@@ -58,70 +58,7 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
 
   return (
     <>
-      {isDesktop ? (
-        <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main shadow' : 'shadow-none', " transition-shadow  mx-auto p-6 top-0 z-10")}>
-          <div className=" flex items-center justify-between">
-            <div className="pt-2">
-              <div className="md:w-[150px] w-[100px] cursor-pointer">
-                <Link href="/">
-                  {scrollPosition > 0 ? 
-                  <Image
-                  className="w-[10vw] block"
-                  src={whitelogo}
-                  alt="Grow"
-                  priority
-                  />
-                  :
-                  logoColor ? 
-                  <Image
-                  className="w-[10vw] block"
-                  src={whitelogo}
-                  alt="Grow"
-                  priority />
-                  :
-                    <Image
-                    className="w-[10vw] block"
-                    src={logo}
-                    alt="Grow"
-                    priority
-                  />
-                  }
-                   
-                </Link>
-              </div>
-            </div>
-            <div className="flex items-center">
-              <div style={{color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor)}} className="text-main flex space-x-6 uppercase mr-6">
-                <Link href="/#pricing">Programs</Link>
-                <Link href="/our-story">Our Story</Link>
-                <Link href="/faqs">FAQs</Link>
-                {true?
-              null    
-              :
-              <div className="cursor-pointer" onClick={() => signIn('google', {callbackUrl: 'http://localhost:3000/dashboard'})}>Login</div>
-              }
-              </div>
-              <div className="flex">
-                {false ? 
-                <Link href="/dashboard">
-                <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">GO TO DASHBOARD</div>
-              </Link>
-                :
-                <Link href="/register">
-                <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Register Now</div>
-              </Link>
-              }
-                
-                {/* <Link href="/login">
-            <div className=" md:block p-3 px-6 text-black baseline">
-                Log in
-            </div>
-                </Link> */}
-              </div>
-            </div>
-          </div>
-        </nav>
-      ) : (
+      {!isDesktop ? (
         <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main' : '', 'top-0  z-10 flex justify-center items-center')}>
           <div className=' flex justify-between container px-4 mx-auto py-4 z-10'>
             <div className="pt-2 px-4">
@@ -210,6 +147,70 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
             </DrawerContent>
           </Drawer>
         </nav>
+      ) : (
+        <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main shadow' : 'shadow-none', " transition-shadow  mx-auto p-6 top-0 z-10")}>
+          <div className=" flex items-center justify-between">
+            <div className="pt-2">
+              <div className="md:w-[150px] w-[100px] cursor-pointer">
+                <Link href="/">
+                  {scrollPosition > 0 ? 
+                  <Image
+                  className="w-[10vw] block"
+                  src={whitelogo}
+                  alt="Grow"
+                  priority
+                  />
+                  :
+                  logoColor ? 
+                  <Image
+                  className="w-[10vw] block"
+                  src={whitelogo}
+                  alt="Grow"
+                  priority />
+                  :
+                    <Image
+                    className="w-[10vw] block"
+                    src={logo}
+                    alt="Grow"
+                    priority
+                  />
+                  }
+                   
+                </Link>
+              </div>
+            </div>
+            <div className="flex items-center">
+              <div style={{color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor)}} className="text-main flex space-x-6 uppercase mr-6">
+                <Link href="/#pricing">Programs</Link>
+                <Link href="/our-story">Our Story</Link>
+                <Link href="/faqs">FAQs</Link>
+                {true?
+              null    
+              :
+              <div className="cursor-pointer" onClick={() => signIn('google', {callbackUrl: 'http://localhost:3000/dashboard'})}>Login</div>
+              }
+              </div>
+              <div className="flex">
+                {false ? 
+                <Link href="/dashboard">
+                <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">GO TO DASHBOARD</div>
+              </Link>
+                :
+                <Link href="/register">
+                <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Register Now</div>
+              </Link>
+              }
+                
+                {/* <Link href="/login">
+            <div className=" md:block p-3 px-6 text-black baseline">
+                Log in
+            </div>
+                </Link> */}
+              </div>
+            </div>
+          </div>
+        </nav>
+       
       )}
     </>
   );
