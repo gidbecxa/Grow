@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 function Footer() {
   return (
@@ -19,10 +20,13 @@ function Footer() {
                         <Link href='/faqs' className='hover:text-slate-600'>
                             FAQs
                         </Link>
+                        <Link href='https://twitter.com/aiselyHQ' className='cursor-pointer hover:text-slate-600'>
+                            <TwitterIcon />
+                        </Link>
                     </div>
                     <div className="flex flex-col justify-end md:w-1/3">
                         <div className="te text-gray-600 md:block text-center">
-                            Created by <span className="text-xl "><Link href='https://twitter.com/AiselyHQ'>Aisely</Link></span>
+                            Created by <span className="text-xl "><Link href='https://twitter.com/gbecsen/status/1579800852122177536'>Aisely</Link></span>
                         </div>
                         <div className="te text-gray-600 md:block text-center">
                             &copy; 2022 Aisely, All Rights Reserved

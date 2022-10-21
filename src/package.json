@@ -23,6 +23,7 @@
     "@mui/material": "^5.10.4",
     "@next/bundle-analyzer": "^12.3.0",
     "firebase": "^9.9.4",
+    "firecrud-react": "^1.0.1",
     "framer-motion": "^6.5.1",
     "next": "^12.3.0",
     "next-auth": "^4.10.3",

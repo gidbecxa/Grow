@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useForm } from '@formspree/react';
-import { doc, setDoc, getDoc } from "firebase/firestore";
 import fireStore from "../pages/api/firestore/api";
-import { db } from "../firebase";
 import Navbar from "../components/landingpage/Navbar";
 import { useSession, signIn, signOut } from "next-auth/react"
 import { useFormspark } from "@formspark/use-formspark"
@@ -29,29 +27,27 @@ import {
   AlertDescription,
   CloseButton,
 } from "@chakra-ui/react";
-// const ModalContext = createContext()
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import { Box } from "@chakra-ui/react";
 import Image from "next/image";
-import registerImg from "../public/register.jpeg";
 import hero from "../public/hero.svg";
 import PersonalDetails from "../components/regform/PersonalDetails";
 import ContactDetails from "../components/regform/ContactDetails";
 import ChooseCourse from "../components/regform/ChooseCourse";
 import { useDisclosure } from "@chakra-ui/react";
-import { async } from "@firebase/util";
+import Head from 'next/head'
 
 const Register = () => {
   const [alert, setAlert] = useState("none")
   const { data: session, status } = useSession()
   const [loading, setLoading] = useState(false)
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const [disable, setDisable] = useState()
   const [tabIndex, setTabIndex] = useState(0);
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
     birthday: 0,
+    country: '',
     gender: "",
     experience: "",
     email: "",
@@ -60,7 +56,6 @@ const Register = () => {
     program: "",
     referral: "",
   });
-  const [state, handleSubmit] = useForm('xdojgvkq');
   const [submit, submitting] = useFormspark({
     formId: 'fNPOoNAN'
   })
@@ -69,7 +64,6 @@ const Register = () => {
     setLoading(true)
     try {
       fireStore.put("Newusers", formData.email, formData)
-      // const response = await setDoc(doc(db, "Newusers", formData.email), formData);
       const data = formData
       await submit({ data })
       setAlert("block")
@@ -114,6 +108,12 @@ const Register = () => {
 
   return (
     <>
+    <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <meta name="description" content="Grow is a French-speaking developer school and community for French-speaking Africans, to help French-speaking Africans launch their professional careers in web and mobile development." />
+        <title>Register</title>
+      </Head>
       <Navbar />
       <div style={{ display: alert, position: "sticky", top: "0", zIndex: "10" }}>
         <Alert
@@ -164,9 +164,6 @@ const Register = () => {
             <Button colorScheme="blue" mr={3} onClick={onClose}>
               Join
             </Button>
-            {/* <Button colorScheme="blue" mr={3} onClick={onClose}>
-              Close
-            </Button> */}
           </ModalFooter>
         </ModalContent>
       </Modal>

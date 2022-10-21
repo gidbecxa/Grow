@@ -1,3 +1,4 @@
+// @ts-nocheck - may need to be at the start of file
 import React, { useEffect, useState } from "react";
 import {
     TabPanel,
@@ -10,7 +11,8 @@ import {
     HStack
 } from "@chakra-ui/react"
 
-const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData, loading }) => {
+
+const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData, loading }: any) => {
   
   return (
     <TabPanel>

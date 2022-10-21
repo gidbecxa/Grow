@@ -1,11 +1,12 @@
+import {  DocumentData } from "firebase/firestore"; 
+import  fireStore  from '../pages/api/firestore/api'
 import { useState } from 'react'
-import { fetchStudentProgress } from '../pages/api/firestore/userApi'
 
 
 export const useFetchStudentProgress = () => {
-    const [studentProgress, setStudentProgress] = useState()
+    const [studentProgress, setStudentProgress] = useState<DocumentData>()
     const initFetchStudentProgress = async () => {
-        const response = await fetchStudentProgress()
+        const response = await fireStore.get('Newusers', 'paul.emechebe@gmail.com')
         setStudentProgress(response)
     }
 

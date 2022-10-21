@@ -4,12 +4,20 @@ import Footer from '../components/landingpage/Footer'
 import Navbar from '../components/landingpage/Navbar'
 import HeroImg from '../components/landingpage/HeroImg'
 import storyhero from '../public/storyhero1.jpeg'
+import Head from 'next/head'
 
 const OurStory = () => {
   const navTextColor = '#23464f'
 
   return (
     <>
+    <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <meta name="description" content="Grow is a French-speaking developer school and community for French-speaking Africans, to help French-speaking Africans launch their professional careers in web and mobile development." />
+        <title>Our story</title>
+      </Head>
+
     <Navbar  navTextColor={navTextColor}/>
     <div className="max-w-6xl px-5 mx-auto mt-32 text-center flex flex-col md:flex-row mb-32">
         <div className="md:w-1/2 mb-16">

@@ -5,6 +5,8 @@ import Footer from '../components/landingpage/Footer'
 import Navbar from '../components/landingpage/Navbar'
 import { useInView } from "react-intersection-observer"; //import {useInView} tells the dom when something is in viewport
 import { motion, useAnimation } from "framer-motion"
+import Head from 'next/head'
+
 
 // FRAMER MOTION VARIANTS
 const headerVariant = {
@@ -64,6 +66,12 @@ function Faqs() {
 
   return (
     <>
+    <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <meta name="description" content="Grow is a French-speaking developer school and community for French-speaking Africans, to help French-speaking Africans launch their professional careers in web and mobile development." />
+        <title>Our story</title>
+      </Head>
       <Navbar />
       <section ref={ref} id="faqs" >
         <div className="container flex flex-col px-4 mx-auto my-32 space-y-12 md:space-y-0 md:flex-row">

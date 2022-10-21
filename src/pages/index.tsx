@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -12,25 +13,58 @@ import Companies from '../components/landingpage/Companies'
 import Community from '../components/landingpage/Community'
 import HeroImg from '../components/landingpage/HeroImg'
 import newhero from '../public/newhero3.jpg'
+import linkCard from '../public/link-card.png'
 
+
+// import fireStore from './api/firestore/api'
+import { useFirestore } from 'firecrud-react'
+import { db } from '../firebase'
 
 const Home: NextPage = () => {
+  const { fireStore } = useFirestore(db)
+  useEffect(() => {
+    const getData = async () => {
+      const res = await fireStore.get("Newusers", "paul.emechebe@gmail.com")
+      console.log("firecrud-react works", res.data())
+    }
+
+    getData()
+  })
+
   const navTextColor = "white"
   const logoColor = true
   return (
     <>
-    <div className="absolute -z-10">
-        <HeroImg src={newhero}/>
-    </div>
-    <Navbar navTextColor={navTextColor} logoColor={logoColor}/>
-    <Hero />
-    <Companies />
-    {/* <Launch /> */}
-    <Features />
-    <Pricing />
-    <Community />
-    <Banner />
-    <Footer />
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <meta name="description" content="Grow is a French-speaking developer school and community for French-speaking Africans." />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary" key="twcard" />
+        <meta name="twitter:creator" content="@AiselyHQ" key="twhandle" />
+
+        {/* Open Graph */}
+        <meta property="og:url" content="https://ecolegrow.tech/" key="ogurl" />
+        <meta property="og:image" content="" key="ogimage" />
+        <meta property="og:site_name" content="Grow" key="ogsitename" />
+        <meta property="og:title" content="Grow" key="ogtitle" />
+        <meta property="og:description" content="Grow is a French-speaking developer school and community for French-speaking Africans." key="ogdesc" />
+
+        <title>Grow</title>
+      </Head>
+      <div className="absolute -z-10">
+        <HeroImg src={newhero} />
+      </div>
+      <Navbar navTextColor={navTextColor} logoColor={logoColor} />
+      <Hero />
+      <Companies />
+      {/* <Launch /> */}
+      <Features />
+      <Pricing />
+      <Community />
+      <Banner />
+      <Footer />
     </>
   )
 }
