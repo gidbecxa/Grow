@@ -59,12 +59,19 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
   return (
     <>
       {!isDesktop ? (
-        <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main' : '', 'top-0  z-10 flex justify-center items-center')}>
+        // <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main' : '', ' top-0  z-10 flex justify-center items-center')}>
+        <nav className={'sticky bg-main top-0  z-10 flex justify-center items-center'}>
           <div className=' flex justify-between container px-4 mx-auto py-4 z-10'>
             <div className="pt-2 px-4">
               <div className=" md:w-[150px] w-[100px] cursor-pointer">
                 <Link href="/">
-                {scrollPosition > 0 ? 
+                <Image
+                  className="w-[10vw] block"
+                  src={whitelogo}
+                  alt="Grow"
+                  priority
+                  />
+                {/* {scrollPosition > 0 ? 
                   <Image
                   className="w-[10vw] block"
                   src={whitelogo}
@@ -85,7 +92,7 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
                     alt="Grow"
                     priority
                   />
-                  }
+                  } */}
                 </Link>
               </div>
             </div>
@@ -118,16 +125,16 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
               </Link>
               }
                   <Link href="/">
-                    <div className=" md:block  border-none  startedBtn">Home</div>
+                    <div className=" md:block  border-none  startedBtn1 ">Home</div>
                   </Link>
                   <Link href="/#pricing">
-                    <div className=" md:block border-none   startedBtn">Programs</div>
+                    <div className=" md:block border-none   startedBtn1">Programs</div>
                   </Link>
                   <Link href="/our-story">
-                    <div className=" md:block  border-none  startedBtn">Our story</div>
+                    <div className=" md:block  border-none  startedBtn1">Our story</div>
                   </Link>
                   <Link href="/faqs">
-                    <div className=" md:block  border-none  startedBtn">FAQs</div>
+                    <div className=" md:block  border-none  startedBtn1">FAQs</div>
                   </Link>
                   {false?
               null    
@@ -148,12 +155,19 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
           </Drawer>
         </nav>
       ) : (
-        <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main shadow' : 'shadow-none', " transition-shadow  mx-auto p-6 top-0 z-10")}>
+        // <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main shadow' : 'shadow-none', " transition-shadow  mx-auto p-6 top-0 z-10")}>
+        <nav className={"sticky bg-main   mx-auto p-6 top-0 z-10"}>
           <div className=" flex items-center justify-between">
             <div className="pt-2">
               <div className="md:w-[150px] w-[100px] cursor-pointer">
                 <Link href="/">
-                  {scrollPosition > 0 ? 
+                <Image
+                  className="w-[10vw] block"
+                  src={whitelogo}
+                  alt="Grow"
+                  priority
+                  />
+                  {/* {scrollPosition > 0 ? 
                   <Image
                   className="w-[10vw] block"
                   src={whitelogo}
@@ -174,13 +188,13 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
                     alt="Grow"
                     priority
                   />
-                  }
+                  } */}
                    
                 </Link>
               </div>
             </div>
             <div className="flex items-center">
-              <div style={{color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor)}} className="text-main flex space-x-6 uppercase mr-6">
+              <div style={{color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor)}} className="text-white flex space-x-6 uppercase mr-6">
                 <Link href="/#pricing">Programs</Link>
                 <Link href="/our-story">Our Story</Link>
                 <Link href="/faqs">FAQs</Link>

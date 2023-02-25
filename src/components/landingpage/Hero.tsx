@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import hero from '../../public/hero.svg'
+import newHeroImg from '../../public/newHeroImg.jpg'
 import { motion } from 'framer-motion'
 // import trianglemain from '../../public/trianglemain.svg'
 // import triangles from '../../public/triangles.svg'
@@ -9,10 +9,10 @@ import { motion } from 'framer-motion'
 
 function Hero() {
   return (
-    <section id='hero' className='z-10'>
+    <section id='hero' className='z-10 bg-[#23464F]'>
       
-      <div className="container z-10 flex flex-col-reverse md:flex-row items-center px-6 pb-20 mx-auto mt-10 space-y-0 md:space-y-0 ">
-        <div className='flex flex-col space-y-12 md:w-1/2'>
+      <div className=" container pt-3 z-10 flex flex-col md:flex-row items-center px-6 pb-20 mx-auto  space-y-0 md:space-y-0 ">
+        <div className='mt-5 md:mt-0 flex flex-col space-y-12 md:w-1/2'>
           <motion.h1
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
@@ -57,29 +57,17 @@ function Hero() {
         </motion.div>
           </div>
         </div>
-        <div className='md:w-1/2 flex justify-end'>
-          <div className="md:w-[450px] md:relative">
-            <div className="w-full h-full">
-              {/* <Image
-              layout='responsive'
-                priority
-                src={hero}
-              objectFit='cover'
-              /> */}
+        <div className='hidden pr-20 md:w-1/2 md:flex justify-end'>
+         <div className='relative'>
+
+          <div className='z-[1000] absolute -left-[60px] -top-[20px] w-20 h-20 rounded-t-3xl rounded-bl-3xl bg-[#FF4F4F] '></div>
+          <div className='relative overflow-hidden border rounded-bl-3xl  w-96 h-[20rem]'>
+            <div className='absolute -right-[45px]  overflow-hidden w-[480px] '>
+              <Image layout='responsive' src={newHeroImg}/>
             </div>
-            {/* <div className="absolute w-[60px] top-0 -left-8 md:block hidden">
-            <Image
-                src={triangles}
-                priority
-                />
-            </div>
-            <div className="absolute w-[60px] bottom-6 -right-8 md:block hidden ">
-              <Image
-                priority
-                src={triangles}
-                />
-            </div> */}
           </div>
+          <div className='absolute -right-[60px] -bottom-[30px] w-32 h-32 rounded-t-3xl rounded-bl-3xl bg-[#66CEE8] '></div>
+         </div>
         </div>
       </div>
       

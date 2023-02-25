@@ -19,6 +19,7 @@ import linkCard from '../public/link-card.png'
 // import fireStore from './api/firestore/api'
 import { useFirestore } from 'firecrud-react'
 import { db } from '../firebase'
+import NewPricing from '../components/landingpage/NewPricing'
 
 const Home: NextPage = () => {
   const { fireStore } = useFirestore(db)
@@ -53,15 +54,16 @@ const Home: NextPage = () => {
 
         <title>Grow</title>
       </Head>
-      <div className="absolute -z-10">
-        <HeroImg src={newhero} />
-      </div>
-      <Navbar navTextColor={navTextColor} logoColor={logoColor} />
+      <Navbar
+      //  navTextColor={navTextColor}
+        // logoColor={logoColor}
+         />
       <Hero />
       <Companies />
       {/* <Launch /> */}
       <Features />
-      <Pricing />
+      {/* <Pricing /> */}
+      <NewPricing />
       <Community />
       <Banner />
       <Footer />
