@@ -17,13 +17,12 @@ const NewPricing = () => {
 
     return (
         <section id='pricing'>
-            <div className=" flex gap-10 flex-col items-center max-w-6xl px-5 mx-auto md:mt-32 mb-3 text-center">
-                <h2 className="md:text-5xl text-4xl font-bold text-center">
-                    Something for everyone
+            <div className=" flex gap-5 flex-col items-center max-w-6xl px-5 mx-auto md:mt-32 mb-3 text-center">
+                <h2 className="md:text-4xl text-4xl font-semibold text-center">
+                    Affordable programs for all
                 </h2>
-                <p onClick={onSwitch} className=" text-center md:w-1/3">
-                    choose among these courses to get started
-                    in your tech career
+                <p onClick={onSwitch} className=" text-center md:w-1/2">
+                    Choose one of our top-tier programs to kickstart your tech career
                 </p>
 
             </div>
@@ -39,19 +38,18 @@ const NewPricing = () => {
                     <p className={onToggle ? `font-semibold  `:`font-semibold text-gray-400 `}>Instalments</p>
 
             </div>
-            <div className='flex items-center flex-col md:flex-row justify-center gap-5 '>
+            <div className='flex items-center flex-col md:flex-row justify-center gap-10'>
                 <div className={['px-6 flex gap-10 items-center  flex-col  border w-72 h-[40rem] rounded-t-3xl rounded-br-3xl', !onToggle ? 'border-[#66CEE8]' : 'border-[#FF4F4F]' ].join(' ')}>
                     <div className='mt-10 flex items-center flex-col'>
                         <h2 className='mb-3 text-3xl text-center'>Frontend</h2>
-                        <p className='text-sm w-3/4 text-center text-gray-500'>Let’s help you begin your
-                            professional career as a
+                        <p className='text-sm w-3/4 text-center text-gray-500'>Let’s help you begin a successful career as a
                             frontend developer</p>
                     </div>
                     <div className='flex items-center flex-col relative'>
                         <p className='absolute -left-[11px]'>$</p>
                         <p className='text-5xl font-semibold'>
                             {
-                                !onToggle ? <>393.0</> : <>440</>
+                                !onToggle ? <>394</> : <>440</>
                             }
                         </p>
                         <p className={[' font-semibold text-xs  -right-[48px] bottom-2', !onToggle ? 'absolute' : ''].join(" ")}>
@@ -116,7 +114,7 @@ const NewPricing = () => {
 
                                     <TickCircle w="18" h="16" />
                                     <p className='text-xs text-gray-500'>
-                                        React.js / Next.js, Node.js
+                                        React.js/Next.js, Node.js
                                     </p>
 
                                 </div>
@@ -136,7 +134,7 @@ const NewPricing = () => {
 
                                     <TickCircle w="20" h="18" />
                                     <p className='text-xs text-gray-500'>
-                                        Hosting and Cloud deployments
+                                        Hosting and Cloud deployment (Netlify, Vercel, Firebase...)
                                     </p>
 
                                 </div>
@@ -150,7 +148,7 @@ const NewPricing = () => {
                 <div className={['px-6 flex gap-10 items-center  flex-col border-[#66CEE8] w-80 h-[44rem] border-[2px] rounded-3xl', !onToggle ? 'border-[#66CEE8]' : 'border-[#FF4F4F]'].join(" ")}>
                 <div className='mt-10 flex items-center flex-col'>
                         <h2 className='mb-3 text-3xl text-center'>FullStack</h2>
-                        <p className='text-sm w-3/4 text-center text-gray-500'>Let’s help you begin your professional career as a full-stack developer</p>
+                        <p className='text-sm w-3/4 text-center text-gray-500'>Let’s help you begin a successful career as a full-stack developer</p>
                     </div>
                     <div className='flex items-center flex-col relative'>
                         <p className='absolute -left-[11px]'>$</p>
@@ -181,7 +179,7 @@ const NewPricing = () => {
 
                                     <TickCircle w="18" h="16" />
                                     <p className='text-xs text-gray-500'>
-                                        8 weeks internship
+                                        6 weeks internship
                                     </p>
 
                                 </div>
@@ -241,7 +239,7 @@ const NewPricing = () => {
 
                                     <TickCircle w="20" h="18" />
                                     <p className='text-xs text-gray-500'>
-                                        Hosting and Cloud deployments (frontend and backend)
+                                        Hosting and Cloud deployment (frontend and backend)
                                     </p>
 
                                 </div>
@@ -255,13 +253,13 @@ const NewPricing = () => {
                 <div className={['px-6 flex gap-10 items-center  flex-col  border w-72 h-[40rem] rounded-t-3xl rounded-bl-3xl', !onToggle ? 'border-[#66CEE8]' : 'border-[#FF4F4F]' ].join(' ')}>
                 <div className='mt-10 flex items-center flex-col'>
                         <h2 className='mb-3 text-3xl text-center'>Backend</h2>
-                        <p className='text-sm w-3/4 text-center text-gray-500'>Let’s help you begin your professional career as a backend developer</p>
+                        <p className='text-sm w-3/4 text-center text-gray-500'>Let’s help you begin aa successful career as a backend developer</p>
                     </div>
                     <div className='flex items-center flex-col relative'>
                         <p className='absolute -left-[11px]'>$</p>
                         <p className='text-5xl font-semibold'>
                         {
-                                !onToggle ? <>393.0</> : <>440</>
+                                !onToggle ? <>394</> : <>440</>
                             }
                             
                         </p>
