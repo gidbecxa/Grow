@@ -24,6 +24,11 @@
     }
 }
 
+.text-hero {
+    font-size: 3.65rem;
+    line-height: 1;
+}
+
 .prevent-select {
     -webkit-user-select: none;
     /* Safari */
