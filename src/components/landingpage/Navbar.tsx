@@ -127,11 +127,11 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
                   <Link href="/">
                     <div className=" md:block  border-none  startedBtn1 ">Home</div>
                   </Link>
-                  <Link href="/#pricing">
-                    <div className=" md:block border-none   startedBtn1">Programs</div>
-                  </Link>
                   <Link href="/our-story">
                     <div className=" md:block  border-none  startedBtn1">Our story</div>
+                  </Link>
+                  <Link href="/#pricing">
+                    <div className=" md:block border-none   startedBtn1">Programs</div>
                   </Link>
                   <Link href="/faqs">
                     <div className=" md:block  border-none  startedBtn1">FAQs</div>
@@ -156,7 +156,7 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
         </nav>
       ) : (
         // <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main shadow' : 'shadow-none', " transition-shadow  mx-auto p-6 top-0 z-10")}>
-        <nav className={"sticky bg-main   mx-auto p-6 top-0 z-10"}>
+        <nav className={"sticky bg-main   mx-auto py-4 px-6 top-0 z-10"}>
           <div className=" flex items-center justify-between">
             <div className="pt-2">
               <div className="md:w-[150px] w-[100px] cursor-pointer">
@@ -195,6 +195,7 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
             </div>
             <div className="flex items-center">
               <div style={{color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor)}} className="text-white flex space-x-6 uppercase mr-6">
+              <Link href="/our-story">Our Story</Link>
                 <Link href="/#pricing">Programs</Link>
                 <Link href="/contact">Contact us</Link>
                 <Link href="/our-story">Our Story</Link>

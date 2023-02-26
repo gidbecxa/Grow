@@ -17,9 +17,10 @@ function Hero() {
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: .7 }}
-            className="text-white max-w-lg text-5xl font-bold text-center md:leading-15 md:text-6xl md:text-left"
+            //className="text-white max-w-lg text-5xl font-bold text-center md:leading-15 md:text-6xl md:text-left"
+            className="text-white max-w-[100%] relative top-[0.6rem] text-5xl font-bold text-center md:leading-15 md:text-[3.5rem] md:text-left"
           >
-            Creating opportunites <br/> for the aspiring <br/> software engineer
+            Transform your future <br/> as a software engineer <br/> with our developer BootCamp
           </motion.h1>
           {/* <motion.h1
             initial={{ opacity: 0, x: -10 }}
@@ -41,9 +42,10 @@ function Hero() {
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: .5, duration: .7 }}
-            className="md:max-w-sm text-white text-center md:text-left"
+            //className="md:max-w-sm text-white text-center md:text-left"
+            className="md:max-w-lg text-[1.15rem] text-white text-center md:text-left"
           >
-            Join our leading intensive bootcamp to get started on your journey to become a professional developer
+            Join us today and unlock a world of opportunities as a software engineer. Let's build your future together!
           </motion.p>
           <div className="flex justify-center md:justify-start">
         <motion.div
@@ -61,7 +63,7 @@ function Hero() {
          <div className='relative'>
 
           <div className='z-[1000] absolute -left-[60px] -top-[20px] w-20 h-20 rounded-t-3xl rounded-bl-3xl bg-[#FF4F4F] '></div>
-          <div className='relative overflow-hidden border rounded-bl-3xl  w-96 h-[20rem]'>
+          <div className='relative overflow-hidden border rounded-bl-[25%]  w-96 h-[20rem]'>
             <div className='absolute -right-[45px]  overflow-hidden w-[480px] '>
               <Image layout='responsive' priority src={newHeroImg}/>
             </div>

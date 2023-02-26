@@ -43,7 +43,7 @@ function Features() {
 
   useEffect(() => {
     if (inView) {
-    console.log("in view")
+      console.log("in view")
       control.start("visible"); //when in view,start the visible animation variant
     } else {
       control.start("hidden"); //else its hidden
@@ -59,10 +59,10 @@ function Features() {
             ref={ref}				//pass the ref to tell rio what is being checked
             variants={headerVariant} //pass in your variant
             initial="hidden"		//pass initial values
-            animate={control}	
+            animate={control}
             className="text-main max-w-md text-4xl font-bold text-center md:text-left"	//pass in control as it will be animated when element is in view
           >
-              What is different about Grow
+            What is different about Grow
           </motion.h2>
           <motion.p
             ref={ref}
@@ -93,18 +93,16 @@ function Features() {
                   />
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                  Intensive, practical bootcamps
+                  Unlock your potential and build a thriving career in Tech
                 </h3>
               </div>
             </div>
             <div>
               <h3 className="hidden mb-4 text-lg font-bold md:block">
-                Intensive, practical bootcamps
+                Unlock your potential and build a thriving career in Tech
               </h3>
               <p className="text-main">
-                Our training programs are short, rigorous and fully practical.
-                Each program is full of projects and activities, giving you hands-on coding experience,
-                & helping you to acquire first-class developer skills.
+                Looking to kickstart your career as a software engineer? Our developer bootcamp offers a comprehensive learning experience that equips you with the skills and knowledge you need to succeed in the tech industry.
               </p>
             </div>
           </motion.div>
@@ -123,18 +121,16 @@ function Features() {
                   />
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                Expert tutors & course creators
+                Expert instructors, cutting-edge programs, and hands-on projects
                 </h3>
               </div>
             </div>
             <div>
               <h3 className="hidden mb-4 text-lg font-bold md:block">
-              Expert tutors & course creators
+                Expert instructors, cutting-edge programs, and hands-on projects
               </h3>
               <p className="text-main">
-              Our courses are created and taught by the very experts of software development.
-                These are professionals who have built and scaled several websites, web and mobile apps
-                widely used and approved.
+              Our mission is to empower aspiring software engineers with the resources needed to achieve their goals. With expert instructors, cutting-edge curriculum, and hands-on projects, our bootcamp provides a transformative learning experience that prepares you for success in the fast-paced world of software development.
               </p>
             </div>
           </motion.div>
@@ -153,18 +149,16 @@ function Features() {
                   />
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                More than courses & bootcamps
+                Career support beyond the bootcamp
                 </h3>
               </div>
             </div>
             <div>
               <h3 className="hidden mb-4 text-lg font-bold md:block">
-              More that courses & bootcamps
+              Career support beyond the bootcamp
               </h3>
               <p className="text-main">
-              What happens after you training? We want to help you to fulfill that
-                dream of working at a leading tech company or becoming a succesful tech entrepreneur
-                like Mark Zuckerberg and Bill Gates.
+                We're dedicated to helping you achieve your career goals as a software engineer. We offer career guidance, job placement assistance, and mentorship opportunities to help you succeed in the tech industry. Our support doesn't end with the bootcamp - we're committed to your long-term success.
               </p>
             </div>
           </motion.div>
@@ -183,22 +177,22 @@ function Features() {
                   />
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                We are building a community
+                  We are building a community
                 </h3>
               </div>
             </div>
             <div>
               <h3 className="hidden mb-4 text-lg font-bold md:block">
-              We are building a community
+                We are building a community
               </h3>
               <p className="text-main">
-              What&apos;s more exciting than a community of developers? You have a question?
+                What&apos;s more exciting than a community of developers? You have a question?
                 You need support? Share with others. Help and learn from others. Team up with others
                 for a project. And yet, enjoy socializing!
               </p>
             </div>
           </motion.div>
-          
+
         </div>
       </div>
     </section>

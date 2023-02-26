@@ -1,6 +1,6 @@
 import React from 'react'
 
-const TickCircle = ({w,h}) => {
+const TickCircle = ({ w, h }) => {
     return (
         <svg width={w} height={h} viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_311_158)">
