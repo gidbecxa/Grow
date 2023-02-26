@@ -196,6 +196,7 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
             <div className="flex items-center">
               <div style={{color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor)}} className="text-white flex space-x-6 uppercase mr-6">
                 <Link href="/#pricing">Programs</Link>
+                <Link href="/contact">Contact us</Link>
                 <Link href="/our-story">Our Story</Link>
                 <Link href="/faqs">FAQs</Link>
                 {true?

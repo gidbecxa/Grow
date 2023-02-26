@@ -153,7 +153,7 @@ function Features() {
                   />
                 </div>
                 <h3 className="text-base font-bold md:mb-4 md:hidden">
-                More that courses & bootcamps
+                More than courses & bootcamps
                 </h3>
               </div>
             </div>

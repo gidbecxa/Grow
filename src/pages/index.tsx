@@ -20,6 +20,7 @@ import linkCard from '../public/link-card.png'
 import { useFirestore } from 'firecrud-react'
 import { db } from '../firebase'
 import NewPricing from '../components/landingpage/NewPricing'
+import NewFeatures from '../components/landingpage/NewFeatures'
 
 const Home: NextPage = () => {
   const { fireStore } = useFirestore(db)
@@ -61,7 +62,8 @@ const Home: NextPage = () => {
       <Hero />
       <Companies />
       {/* <Launch /> */}
-      <Features />
+      <NewFeatures />
+      {/* <Features /> */}
       {/* <Pricing /> */}
       <NewPricing />
       <Community />

@@ -63,7 +63,7 @@ function Hero() {
           <div className='z-[1000] absolute -left-[60px] -top-[20px] w-20 h-20 rounded-t-3xl rounded-bl-3xl bg-[#FF4F4F] '></div>
           <div className='relative overflow-hidden border rounded-bl-3xl  w-96 h-[20rem]'>
             <div className='absolute -right-[45px]  overflow-hidden w-[480px] '>
-              <Image layout='responsive' src={newHeroImg}/>
+              <Image layout='responsive' priority src={newHeroImg}/>
             </div>
           </div>
           <div className='absolute -right-[60px] -bottom-[30px] w-32 h-32 rounded-t-3xl rounded-bl-3xl bg-[#66CEE8] '></div>
