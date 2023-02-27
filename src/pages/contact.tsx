@@ -12,7 +12,7 @@ const contact = () => {
                     <div className='w-1/2'>
                         <div>
                             <p className='text-[#23464F] text-xs ml-1 font-semibold mb-1'>Contact us</p>
-                            <h1 className='text-5xl font-semibold'>Let's Get in touch</h1>
+                            <h1 className='text-5xl font-semibold'>Let's get in touch</h1>
                         </div>
                         <div className='mt-10 flex flex-col gap-5'>
                             <div>
@@ -21,8 +21,8 @@ const contact = () => {
                             </div>
                             <div>
                                 <h2 className='text-2xl font-semibold mb-1'>Phone Number</h2>
-                                <p>+229 59 09 59 09, +229 96 11 83 35</p>
-                                <p>WhatsApp: +229 59 09 59 09</p>
+                                <p>&#40;+229&#41; 59 09 59 09, <br /> &#40;+229&#41; 96 11 83 35</p>
+                                <p>WhatsApp: &#40;+229&#41; 59 09 59 09</p>
                             </div>
                             <div>
                                 <h2 className='text-2xl font-semibold mb-1'>Email Address</h2>
@@ -33,10 +33,10 @@ const contact = () => {
                     <div className='w-1/2 max-w-[600px] p-5  relative'>
 
                         <form action="">
-                            <div className=' border bg-[#23464F] p-12 flex rounded-t-lg rounded-bl-lg flex-col gap-10'>
+                            <div className=' border-[#23464f] bg-[#23464F] p-12 flex rounded-t-lg rounded-bl-lg flex-col gap-10'>
                                 <input type="text" className='w-full rounded-lg p-5 outline-none' placeholder='Name' />
                                 <input type="text" className='w-full rounded-lg p-5 outline-none' placeholder='Email' />
-                                <input type="text" className='w-full rounded-lg p-5 outline-none' placeholder='Your Phone' />
+                                <input type="text" className='w-full rounded-lg p-5 outline-none' placeholder='Your WhatsApp Number' />
                                 <textarea placeholder='Your message' className='outline-none p-5 h-32 resize-none rounded-lg'></textarea>
                                 <button type='submit' className="text-white bg-[#66cee8] border-none startedBtn">Send Message</button>
                             </div>

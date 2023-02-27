@@ -140,7 +140,7 @@ const Community = () => {
               <Link href='/register'>
                 <button
                   // onClick={onOpen}
-                  className='bg-white startedBtn text-main border-none ' >
+                  className='bg-white startedBtn text-main border-none mr-2' >
                   Join now
                 </button>
               </Link>
