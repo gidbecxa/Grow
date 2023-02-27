@@ -111,7 +111,7 @@ const Community = () => {
             </div>
           </div>
           </div> */}
-        <div className="container relative flex flex-col py-28 px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row ">
+        <div className="container relative flex flex-col py-28 px-12 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row ">
           <div className="flex flex-col space-y-12 md:w-1/2">
             <motion.h2
               ref={ref}

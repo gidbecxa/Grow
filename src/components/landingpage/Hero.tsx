@@ -11,7 +11,7 @@ function Hero() {
   return (
     <section id='hero' className='z-10 bg-[#23464F]'>
       
-      <div className=" container pt-3 z-10 flex flex-col md:flex-row items-center px-6 pb-20 mx-auto  space-y-0 md:space-y-0 ">
+      <div className=" container pt-3 z-10 flex flex-col md:flex-row items-center px-12 pb-20 mx-auto  space-y-0 md:space-y-0 ">
         <div className='mt-5 md:mt-0 flex flex-col space-y-12 md:w-1/2'>
           <motion.h1
             initial={{ opacity: 0, x: -10 }}

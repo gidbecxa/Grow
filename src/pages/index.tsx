@@ -57,13 +57,14 @@ const Home: NextPage = () => {
       </Head>
       <Navbar
       //  navTextColor={navTextColor}
-        // logoColor={logoColor}
-         />
+      // logoColor={logoColor}
+      />
       <Hero />
       <Companies />
       {/* <Launch /> */}
-      <NewFeatures />
+
       {/* <Features /> */}
+      <NewFeatures />
       {/* <Pricing /> */}
       <NewPricing />
       <Community />
