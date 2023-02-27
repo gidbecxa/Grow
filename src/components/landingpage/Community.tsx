@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import Link from 'next/link'
 import communitysection from "../../public/communitysection.jpg";
@@ -53,7 +53,7 @@ const Community = () => {
 
   return (
     <>
-      <section id="community"  className="bg-[#448a9c]">
+      <section id="community" className="bg-[#448a9c]">
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
@@ -114,7 +114,7 @@ const Community = () => {
         <div className="container relative flex flex-col py-28 px-4 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row ">
           <div className="flex flex-col space-y-12 md:w-1/2">
             <motion.h2
-            ref={ref}
+              ref={ref}
               initial='hidden'
               variants={CommunityHeaderVariants}
               animate={controls}
@@ -126,25 +126,22 @@ const Community = () => {
               initial='hidden'
               variants={headerCaptionVariants}
               animate={controls}
-              className="text-white text-lg md:text-xl font-medium text-center md:text-left">
-              Grow is the leading software developement school and community for
-              French-speaking Africans. We are commited to helping millions of
-              francophones with little to no coding experience become world-class
-              certified software engineers.
+              className="text-white text-lg md:text-lg font-medium text-center md:text-left">
+              Join our community today and <br /> unlock your potential  to become a part <br />of the next generation of African tech leaders!
             </motion.p>
           </div>
           <div className="flex justify-center md:justify-end items-center text-center space-y-12 md:w-1/2">
             <motion.div
-            
+
               initial='hidden'
               variants={headerButtonVariants}
               animate={controls}
             >
               <Link href='/register'>
                 <button
-                // onClick={onOpen}
-                className='bg-white startedBtn text-main border-none ' >
-                Join the Grow Community!
+                  // onClick={onOpen}
+                  className='bg-white startedBtn text-main border-none ' >
+                  Join now
                 </button>
               </Link>
             </motion.div>

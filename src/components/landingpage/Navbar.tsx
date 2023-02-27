@@ -27,11 +27,11 @@ interface NavbarProps {
   logoColor: boolean,
 }
 
-function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
-  const {data: session} = useSession()
+function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
+  const { data: session } = useSession()
   const { isOpen, onOpen, onClose } = useDisclosure();
   const firstField = React.useRef();
-  const scrollPosition  = useScrollPosition()
+  const scrollPosition = useScrollPosition()
   const [isDesktop, setDesktop] = useState(() => {
     if (typeof window !== "undefined") {
       const bool = window.innerWidth > 920;
@@ -65,13 +65,13 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
             <div className="pt-2 px-4">
               <div className=" md:w-[150px] w-[100px] cursor-pointer">
                 <Link href="/">
-                <Image
-                  className="w-[10vw] block"
-                  src={whitelogo}
-                  alt="Grow"
-                  priority
+                  <Image
+                    className="w-[10vw] block"
+                    src={whitelogo}
+                    alt="Grow"
+                    priority
                   />
-                {/* {scrollPosition > 0 ? 
+                  {/* {scrollPosition > 0 ? 
                   <Image
                   className="w-[10vw] block"
                   src={whitelogo}
@@ -115,15 +115,15 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
               <DrawerHeader borderBottomWidth="1px">Grow 1.0</DrawerHeader>
               <DrawerBody className="mt-4">
                 <Stack spacing="24px">
-                {false ? 
-                <Link href="/dashboard">
-                <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">GO TO DASHBOARD</div>
-              </Link>
-                :
-                <Link href="/register">
-                <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Register Now</div>
-              </Link>
-              }
+                  {false ?
+                    <Link href="/dashboard">
+                      <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">GO TO DASHBOARD</div>
+                    </Link>
+                    :
+                    <Link href="/register">
+                      <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Register Now</div>
+                    </Link>
+                  }
                   <Link href="/">
                     <div className=" md:block  border-none  startedBtn1 ">Home</div>
                   </Link>
@@ -131,16 +131,16 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
                     <div className=" md:block  border-none  startedBtn1">Our story</div>
                   </Link>
                   <Link href="/#pricing">
-                    <div className=" md:block border-none   startedBtn1">Programs</div>
+                    <div className=" md:block border-none   startedBtn1">Tuition</div>
                   </Link>
                   <Link href="/faqs">
                     <div className=" md:block  border-none  startedBtn1">FAQs</div>
                   </Link>
-                  {false?
-              null    
-              :
-              <div onClick={() => signIn('google', {callbackUrl: 'http://localhost:3000/dashboard'})}>Login</div>
-              }
+                  {false ?
+                    null
+                    :
+                    <div onClick={() => signIn('google', { callbackUrl: 'http://localhost:3000/dashboard' })}>Login</div>
+                  }
                 </Stack>
               </DrawerBody>
               <DrawerFooter borderTopWidth="1px">
@@ -161,11 +161,11 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
             <div className="pt-2">
               <div className="md:w-[150px] w-[100px] cursor-pointer">
                 <Link href="/">
-                <Image
-                  className="w-[10vw] block"
-                  src={whitelogo}
-                  alt="Grow"
-                  priority
+                  <Image
+                    className="w-[10vw] block"
+                    src={whitelogo}
+                    alt="Grow"
+                    priority
                   />
                   {/* {scrollPosition > 0 ? 
                   <Image
@@ -189,34 +189,34 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
                     priority
                   />
                   } */}
-                   
+
                 </Link>
               </div>
             </div>
             <div className="flex items-center">
-              <div style={{color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor)}} className="text-white flex space-x-6 uppercase mr-6">
-              <Link href="/our-story">Our Story</Link>
-                <Link href="/#pricing">Programs</Link>
-                <Link href="/contact">Contact us</Link>
+              <div style={{ color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor) }} className="text-white flex space-x-6 uppercase mr-6">
                 <Link href="/our-story">Our Story</Link>
+                <Link href="/#pricing">Tuition</Link>
+                <Link href="/contact">Contact us</Link>
+                {/* <Link href="/our-story">Our Story</Link> */}
                 <Link href="/faqs">FAQs</Link>
-                {true?
-              null    
-              :
-              <div className="cursor-pointer" onClick={() => signIn('google', {callbackUrl: 'http://localhost:3000/dashboard'})}>Login</div>
-              }
+                {true ?
+                  null
+                  :
+                  <div className="cursor-pointer" onClick={() => signIn('google', { callbackUrl: 'http://localhost:3000/dashboard' })}>Login</div>
+                }
               </div>
               <div className="flex">
-                {false ? 
-                <Link href="/dashboard">
-                <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">GO TO DASHBOARD</div>
-              </Link>
-                :
-                <Link href="/register">
-                <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Register Now</div>
-              </Link>
-              }
-                
+                {false ?
+                  <Link href="/dashboard">
+                    <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">GO TO DASHBOARD</div>
+                  </Link>
+                  :
+                  <Link href="/register">
+                    <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Register Now</div>
+                  </Link>
+                }
+
                 {/* <Link href="/login">
             <div className=" md:block p-3 px-6 text-black baseline">
                 Log in
@@ -226,7 +226,7 @@ function Navbar({ containerRef, navTextColor, logoColor}: NavbarProps) {
             </div>
           </div>
         </nav>
-       
+
       )}
     </>
   );
