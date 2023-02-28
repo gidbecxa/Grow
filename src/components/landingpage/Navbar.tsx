@@ -169,10 +169,10 @@ function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
         </nav>
       ) : (
         // <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main shadow' : 'shadow-none', " transition-shadow  mx-auto p-6 top-0 z-10")}>
-        <nav className={"sticky bg-main   mx-auto py-4 px-6 top-0 z-10"}>
+        <nav className={"sticky bg-main   mx-auto py-4 px-20 top-0 z-10"}>
           <div className=" flex items-center justify-between">
             <div className="pt-2">
-              <div className="md:w-[150px] w-[100px] cursor-pointer">
+              <div className="md:w-[150px] w-[100px] cursor-pointer ml-2">
                 <Link href="/">
                   <Image
                     className="w-[10vw] block"
@@ -206,7 +206,7 @@ function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center">
+            <div className="flex items-center mr-3">
               <div style={{ color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor) }} className="text-white flex space-x-6 uppercase mr-6">
                 <Link href="/our-story">Our Story</Link>
                 <Link href="/#pricing">Tuition</Link>

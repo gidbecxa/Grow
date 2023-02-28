@@ -150,7 +150,7 @@ const SendAutofill = () => {
                 <button
                 onClick={SendAutofill}
                   // onClick={onOpen}
-                  className='bg-white startedBtn text-main border-none ' >
+                  className='bg-white startedBtn text-main border-none mr-2' >
                   Join now
                 </button>
               </Link>
