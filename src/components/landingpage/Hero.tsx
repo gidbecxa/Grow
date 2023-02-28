@@ -20,7 +20,7 @@ function Hero() {
             //className="text-white max-w-lg text-5xl font-bold text-center md:leading-15 md:text-6xl md:text-left"
             className="text-white max-w-[100%] relative top-[0.6rem] text-5xl font-bold text-center md:leading-15 md:text-[3.5rem] md:text-left"
           >
-            Transform your future <br/> as a software engineer <br/> with our developer BootCamp
+            Transform your future <br className='md:block hidden'/> as a software engineer <br className='md:block hidden'/> with our developer BootCamp
           </motion.h1>
           {/* <motion.h1
             initial={{ opacity: 0, x: -10 }}

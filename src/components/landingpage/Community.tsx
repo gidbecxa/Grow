@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from 'next/link'
 import communitysection from "../../public/communitysection.jpg";
+import { useAtom } from "jotai"
+import { autofillAtom } from "../../pages";
 import triangles from "../../public/triangles.svg";
 import {
   FormControl,
@@ -41,7 +43,14 @@ const Community = () => {
   const { isOpen, onOpen, onClose } = useDisclosure()
   const { inView, ref } = useInView()
   const controls = useAnimation()
+  const [autofill, setAutofill] = useAtom(autofillAtom)
 
+const SendAutofill = () => {
+  console.log("work mffffffffffffffffffffffffffffff")
+  setAutofill("I would like to join the Grow community")
+  console.log(autofill)
+}
+  
   useEffect(() => {
     if (inView) {
       controls.start('visible')
@@ -137,8 +146,9 @@ const Community = () => {
               variants={headerButtonVariants}
               animate={controls}
             >
-              <Link href='/register'>
+              <Link href='/contact'>
                 <button
+                onClick={SendAutofill}
                   // onClick={onOpen}
                   className='bg-white startedBtn text-main border-none ' >
                   Join now

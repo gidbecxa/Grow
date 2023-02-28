@@ -97,7 +97,7 @@ function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
               </div>
             </div>
             <div >
-              <Button color="#23464f" onClick={onOpen} >
+              <Button color="white" onClick={onOpen} >
                 <HamburgerIcon />
               </Button>
             </div>
@@ -112,7 +112,17 @@ function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
             <DrawerOverlay />
             <DrawerContent>
               <DrawerCloseButton />
-              <DrawerHeader borderBottomWidth="1px">Grow 1.0</DrawerHeader>
+              <div className="w-1/2 px-5 pt-4">
+                <Link href="/">
+                  <Image
+                    // className="order block"
+                    src={logo}
+                    alt="Grow"
+                    priority
+                  />
+                </Link>
+              </div>
+              {/* <DrawerHeader borderBottomWidth="1px">Grow</DrawerHeader> */}
               <DrawerBody className="mt-4">
                 <Stack spacing="24px">
                   {false ?
@@ -124,33 +134,36 @@ function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
                       <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Register Now</div>
                     </Link>
                   }
-                  <Link href="/">
+                  {/* <Link href="/">
                     <div className=" md:block  border-none  startedBtn1 ">Home</div>
-                  </Link>
+                  </Link> */}
                   <Link href="/our-story">
                     <div className=" md:block  border-none  startedBtn1">Our story</div>
                   </Link>
                   <Link href="/#pricing">
-                    <div className=" md:block border-none   startedBtn1">Tuition</div>
+                    <div className=" md:block border-none   startedBtn1">Courses</div>
+                  </Link>
+                  <Link href="/contact">
+                    <div className=" md:block border-none   startedBtn1">Contact</div>
                   </Link>
                   <Link href="/faqs">
                     <div className=" md:block  border-none  startedBtn1">FAQs</div>
                   </Link>
-                  {false ?
+                  {!false ?
                     null
                     :
                     <div onClick={() => signIn('google', { callbackUrl: 'http://localhost:3000/dashboard' })}>Login</div>
                   }
                 </Stack>
               </DrawerBody>
-              <DrawerFooter borderTopWidth="1px">
+              {/* <DrawerFooter borderTopWidth="1px">
                 <Button variant="outline" mr={3} onClick={onClose}>
                   Cancel
                 </Button>
-                {/* <Button backgroundColor="#23464f" color="white">
+                <Button backgroundColor="#23464f" color="white">
                 Login
-              </Button> */}
-              </DrawerFooter>
+              </Button>
+              </DrawerFooter> */}
             </DrawerContent>
           </Drawer>
         </nav>

@@ -1,15 +1,76 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useFormspark } from "@formspark/use-formspark";
 import Navbar from '../components/landingpage/Navbar'
-
+import {
+    Alert,
+    AlertIcon,
+    AlertTitle,
+    AlertDescription,
+    CloseButton,
+} from "@chakra-ui/react";
+import { useAtom } from 'jotai'
+import { autofillAtom } from './index';
 
 const contact = () => {
+    const [autofill, setAutofill] = useAtom(autofillAtom)
+    const [submit, submitting] = useFormspark({
+        formId: "m6auOy2s",
+    });
+    console.log(autofill, "fkjdfjafoiljadoaifj")
+    const [alert, setAlert] = useState("none")
+    const [formData, setFormData] = useState({
+        firstname: "",
+        email: "",
+        phone: "",
+        msg: ""
+    })
+    // console.log(formData)
+    const onCloseAlert = () => {
+        console.log("alert show", alert)
+        setAlert("none")
+    }
+    const onSubmit = async (e) => {
+        e.preventDefault();
+        await submit({ formData })
+        setAlert("block")
+
+    }
     return (
         <>
             <Navbar />
+            <div style={{ display: alert, position: "sticky", top: "0", zIndex: "10" }}>
+                <Alert
+                    zIndex='10'
+                    // position='sticky'
+                    // top='96px'
+                    status='success'
+                    variant='subtle'
+                    flexDirection='column'
+                    alignItems='center'
+                    justifyContent='center'
+                    textAlign='center'
+                    height='200px'
+                >
+                    <AlertIcon boxSize='40px' mr={0} />
+                    <AlertTitle mt={4} mb={1} fontSize='lg'>
+                        Application submitted!
+                    </AlertTitle>
+                    <AlertDescription maxWidth='sm'>
+                        Thanks for submitting your application. Our team will get back to you soon via email.
+                    </AlertDescription>
+                    <CloseButton
+                        alignSelf='flex-start'
+                        position='relative'
+                        right={-1}
+                        top={-1}
+                        onClick={onCloseAlert}
+                    />
+                </Alert>
+            </div>
             <section>
-                <div className='p-20 flex '>
+                <div className='p-20 flex md:gap-0 gap-10 flex-col md:flex-row'>
 
-                    <div className='w-1/2'>
+                    <div className='md:w-1/2'>
                         <div>
                             <p className='text-[#23464F] text-xs ml-1 font-semibold mb-1'>Contact us</p>
                             <h1 className='text-5xl font-semibold'>Let's Get in touch</h1>
@@ -30,14 +91,28 @@ const contact = () => {
                             </div>
                         </div>
                     </div>
-                    <div className='w-1/2 max-w-[600px] p-5  relative'>
+                    <div className='md:w-1/2 max-w-[600px] p-5  relative'>
 
-                        <form action="">
+                        <form onSubmit={onSubmit}>
                             <div className=' border bg-[#23464F] p-12 flex rounded-t-lg rounded-bl-lg flex-col gap-10'>
-                                <input type="text" className='w-full rounded-lg p-5 outline-none' placeholder='Name' />
-                                <input type="text" className='w-full rounded-lg p-5 outline-none' placeholder='Email' />
-                                <input type="text" className='w-full rounded-lg p-5 outline-none' placeholder='Your Phone' />
-                                <textarea placeholder='Your message' className='outline-none p-5 h-32 resize-none rounded-lg'></textarea>
+                                <input
+                                    type="text"
+                                    value={formData.firstname}
+                                    onChange={(event) => setFormData({ ...formData, firstname: event.target.value })}
+                                    className='w-full rounded-lg p-5 outline-none'
+                                    placeholder='Name' />
+                                <input type="text"
+                                    value={formData.email}
+                                    onChange={(event) => setFormData({ ...formData, email: event.target.value })}
+                                    className='w-full rounded-lg p-5 outline-none' placeholder='Email' />
+                                <input type="text"
+                                    value={formData.phone}
+                                    onChange={(event) => setFormData({ ...formData, phone: event.target.value })}
+                                    className='w-full rounded-lg p-5 outline-none' placeholder='Your Phone' />
+                                <textarea
+                                    value={ autofill ? autofill : formData.msg}
+                                    onChange={(event) => setFormData({ ...formData, msg: event.target.value })}
+                                    placeholder='Your message' className='outline-none p-5 h-32 resize-none rounded-lg'></textarea>
                                 <button type='submit' className="text-white bg-[#66cee8] border-none startedBtn">Send Message</button>
                             </div>
                         </form>
