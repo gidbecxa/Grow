@@ -24,7 +24,7 @@ import { db } from '../firebase'
 import NewPricing from '../components/landingpage/NewPricing'
 import NewFeatures from '../components/landingpage/NewFeatures'
 
-export const autofillAtom = atom("yg")
+export const autofillAtom = atom("")
 
 const Home: NextPage = () => {
   // const { fireStore } = useFirestore(db)
