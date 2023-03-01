@@ -10,10 +10,10 @@ const Companies = () => {
   return (
     <section id='companies' className="z-20 bg-white">
         <div className="container mx-auto py-20">
-            <div className="flex justify-center pb-10 mt-10 text-center">
+            <div className="flex p-5 justify-center pb-10 mt-10 text-center">
                 <p>Our training will equip you with top-level coding skills needed to land a job in leading companies</p>
             </div>
-            <div className="flex items-center space-x-6 justify-center">
+            <div className="flex p-5 items-center space-x-6 justify-center">
                 <div className="w-[150px]">
                     <Image  priority src={accenture} />
                 </div>

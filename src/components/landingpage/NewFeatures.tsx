@@ -14,8 +14,8 @@ const NewFeatures = () => {
           <h1 className='text-main max-w-md text-4xl font-bold text-center md:text-left '>Stand out with Grow: What sets us apart</h1>
           {/* <p className='md:max-w-sm text-center text-main md:text-left'>Grow is the leading software developement school and community for French-speaking Africans. We are commited to helping millions of francophones with little to no coding experience become world-class certified software engineers.</p> */}
         </div>
-        <div className='flex  flex-wrap gap-12 md:w-[60%] justify-center md:justify-end'>
-          <div className='rounded-lg shadow-md w-72 h-72 p-5 flex flex-col justify-center gap-10 bg-[#FFBDBD]'>
+        <div className='flex  flex-wrap lg:gap-12 md:gap-7 sm:gap-5 md:w-[60%] justify-center md:justify-end'>
+          <div className='rounded-lg shadow-md w-72 h-72 p-5 flex flex-col justify-center md:gap-10 bg-[#FFBDBD]'>
             {/* <div className=" bg-main rounded-full  w-10 h-10 flex justify-center items-center">
                   <Image
                     priority

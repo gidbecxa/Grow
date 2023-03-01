@@ -1,40 +1,77 @@
 import Link from 'next/link'
 import React from 'react'
 import TwitterIcon from '@mui/icons-material/Twitter';
+import GithubIcon from '@mui/icons-material/Github';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Footer() {
-  return (
-    <footer className='bg-[#1c1c1c]'>
-        <div className="container px-6 py-20 mx-auto space-y-8">
-                <div className="flex-col md:flex-row flex md:jusify-around w-[100%]">
-                    <div className=" md:mb-0 mb-6 flex flex-col space-y-3 text-white md:w-1/3">
-                        <Link href='/' className='hover:text-slate-600'>
-                            Home
-                        </Link>
-                        <Link href='/our-story' className='hover:text-slate-600'>
-                            Our Story
-                        </Link>
-                        <Link href='/#pricing' className='hover:text-slate-600'>
-                            programs
-                        </Link>
-                        <Link href='/faqs' className='hover:text-slate-600'>
-                            FAQs
-                        </Link>
-                        <Link href='https://twitter.com/aiselyHQ' className='cursor-pointer hover:text-slate-600'>
-                            <TwitterIcon />
-                        </Link>
-                    </div>
-                    <div className="flex flex-col justify-end md:w-1/3">
-                        <div className="te text-gray-600 md:block text-center">
-                            Created by <span className="text-xl "><Link href='https://twitter.com/gbecsen/status/1579800852122177536'>Aisely</Link></span>
+    return (
+        <footer className='bg-[#1c1c1c]'>
+            <div className="container flex flex-col justify-between relative px-6 py-20 mx-auto ">
+                <div className="flex-col flex md:jusify-start md:gap-10 justify-start w-[100%]">
+                    <div className=''>
+                        <p className="text-white mb-4">Find us</p>
+                        <div className="text-sm  md:mb-0 mb-6 flex flex-row gap-5 text-white md:w-1/3">
+
+                            <Link target={'_blank'}  href='https://twitter.com/aiselyHQ'>
+                                <div className="cursor-pointer">
+
+                                    <TwitterIcon />
+                                </div>
+                            </Link>
+                            <Link target={'_blank'}  href='https://github.com/Le-BootCamp-Grow'>
+                                <div className="cursor-pointer">
+
+                                    <GithubIcon />
+                                </div>
+                            </Link>
+                            <Link target={'_blank'}  href='https://www.facebook.com/lebootcampgrow'>
+                                <div className="cursor-pointer">
+
+                                    <FacebookIcon />
+                                </div>
+                            </Link>
+                            <Link target={'_blank'}  href='https://www.linkedin.com/company/grow-by-aisely/'>
+                                <div className="cursor-pointer">
+
+                                    <LinkedInIcon />
+                                </div>
+                            </Link>
+
                         </div>
-                        <div className="te text-gray-600 md:block text-center">
-                            &copy; 2022 Aisely, All Rights Reserved
-                        </div>
                     </div>
+                    <div className=" flex flex-col justify-end md:w-1/3">
+                        <p className="text-white mb-4">Quick links</p>
+
+                        <div className='text-white text-xs gap-3 flex flex-co'>
+                            <Link href='/' className='hover:text-slate-600'>
+                                Home
+                            </Link>
+                            <Link href='/our-story' className='hover:text-slate-600'>
+                                Our Story
+                            </Link>
+                            <Link href='/#pricing' className='hover:text-slate-600'>
+                                Programs
+                            </Link>
+                            <Link href='/faqs' className='hover:text-slate-600'>
+                                FAQs
+                            </Link>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div className='h-full mt-10 text-xs '>
+                    <div className="te text-gray-600 md:block text-center">
+                        Created by <span className="font-semibold"><Link href='https://twitter.com/gbecsen/status/1579800852122177536'>Aisely</Link></span>
+                    </div>
+                    <div className="te text-gray-600 md:block text-center">
+                        &copy; 2022 Aisely, All Rights Reserved
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+        </footer>
     )
 }
 
