@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
 import TwitterIcon from '@mui/icons-material/Twitter';
-import GithubIcon from '@mui/icons-material/Github';
+// import GithubIcon from '@mui/icons-material/Github';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
@@ -23,7 +23,7 @@ function Footer() {
                             <Link target={'_blank'}  href='https://github.com/Le-BootCamp-Grow'>
                                 <div className="cursor-pointer">
 
-                                    <GithubIcon />
+                                    {/* <GithubIcon /> */}
                                 </div>
                             </Link>
                             <Link target={'_blank'}  href='https://www.facebook.com/lebootcampgrow'>

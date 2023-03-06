@@ -18,9 +18,9 @@ function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: .7 }}
             //className="text-white max-w-lg text-5xl font-bold text-center md:leading-15 md:text-6xl md:text-left"
-            className="text-white max-w-[100%] relative top-[0.6rem] text-5xl font-bold text-center md:leading-15 md:text-[3.5rem] md:text-left"
+            className="text-white max-w-[100%] relative top-[0.6rem] text-5xl font-bold text-center md:leading-15 md:text-[3.25rem] md:text-left"
           >
-            Transform your future <br className='md:block hidden'/> as a software engineer <br className='md:block hidden'/> with our developer BootCamp
+            Transformez votre avenir en tant que<br className='md:block hidden'/> développeur grâce à notre bootcamp<br className='md:block hidden'/>   pour développeurs
           </motion.h1>
           {/* <motion.h1
             initial={{ opacity: 0, x: -10 }}
@@ -43,9 +43,9 @@ function Hero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: .5, duration: .7 }}
             //className="md:max-w-sm text-white text-center md:text-left"
-            className="md:max-w-lg text-[1.15rem] text-white text-center md:text-left"
+            className="md:max-w-2xl text-[1.15rem] text-white text-center md:text-left"
           >
-            Join us today and unlock a world of opportunities as a software engineer. Let's build your future together!
+            Rejoignez-nous aujourd'hui et accédez à un monde d'opportunités en tant qu'ingénieur logiciel. Ensemble, bâtissons votre avenir !
           </motion.p>
           <div className="flex justify-center md:justify-start">
         <motion.div
@@ -54,7 +54,7 @@ function Hero() {
         transition={{ delay: .8, duration: .7 }}
         >
           <Link href='/programs' passHref>
-            <a href="" className="text-white bg-[#66cee8] border-none startedBtn">Join now!</a>
+            <a href="" className="text-white bg-[#66cee8] border-none startedBtn">Rejoignez-nous!</a>
           </Link>
         </motion.div>
           </div>

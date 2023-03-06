@@ -131,20 +131,20 @@ function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
                     </Link>
                     :
                     <Link href="/register">
-                      <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Register Now</div>
+                      <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Rejoignez-nous</div>
                     </Link>
                   }
                   {/* <Link href="/">
                     <div className=" md:block  border-none  startedBtn1 ">Home</div>
                   </Link> */}
                   <Link href="/our-story">
-                    <div className=" md:block  border-none  startedBtn1">Our story</div>
+                    <div className=" md:block  border-none  startedBtn1">À Propos</div>
                   </Link>
                   <Link href="/#pricing">
-                    <div className=" md:block border-none   startedBtn1">Courses</div>
+                    <div className=" md:block border-none   startedBtn1">Tuition</div>
                   </Link>
                   <Link href="/contact">
-                    <div className=" md:block border-none   startedBtn1">Contact</div>
+                    <div className=" md:block border-none   startedBtn1">Contact Us</div>
                   </Link>
                   <Link href="/faqs">
                     <div className=" md:block  border-none  startedBtn1">FAQs</div>
@@ -208,9 +208,9 @@ function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
             </div>
             <div className="flex items-center mr-3">
               <div style={{ color: classNames(scrollPosition > 0 ? '#ffffff' : navTextColor) }} className="text-white flex space-x-6 uppercase mr-6">
-                <Link href="/our-story">Our Story</Link>
-                <Link href="/#pricing">Tuition</Link>
-                <Link href="/contact">Contact us</Link>
+                <Link href="/our-story">À PROPOS</Link>
+                <Link href="/#pricing">Scolarité</Link>
+                <Link href="/contact">Contactez-nous</Link>
                 {/* <Link href="/our-story">Our Story</Link> */}
                 <Link href="/faqs">FAQs</Link>
                 {true ?
@@ -226,7 +226,7 @@ function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
                   </Link>
                   :
                   <Link href="/register">
-                    <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Register Now</div>
+                    <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Rejoignez-nous</div>
                   </Link>
                 }
 
