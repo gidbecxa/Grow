@@ -140,7 +140,7 @@ const NewPricing = () => {
                             </li>
                         </ul>
                     </div>
-                    <Link href='/programs' passHref>
+                    <Link href='/contact' passHref>
                         <a href="" className="text-white bg-[#66cee8] border-none startedBtn">En Savoir plus</a>
                     </Link>
                 </div>
@@ -245,7 +245,7 @@ const NewPricing = () => {
                             </li>
                         </ul>
                     </div>
-                    <Link href='/programs' passHref>
+                    <Link href='/contact' passHref>
                         <a href="" className="text-white bg-[#FF4F4F] border-none startedBtn">En Savoir Plus</a>
                     </Link>
                 </div>
@@ -352,7 +352,7 @@ const NewPricing = () => {
                             </li>
                         </ul>
                     </div>
-                    <Link href='/programs' passHref>
+                    <Link href='/contact' passHref>
                         <a href="" className="text-white bg-[#66cee8] border-none startedBtn">En Savoir Plus</a>
                     </Link>
                 </div>
