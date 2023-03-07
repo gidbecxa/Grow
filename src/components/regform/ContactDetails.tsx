@@ -29,12 +29,12 @@ const ContactDetails = ({ handleSliderChangeBtn, setFormData, formData, loading 
               onChange={(event) =>
                 setFormData({ ...formData, email: event.target.value })
               }
-              placeholder="Email"
+              placeholder="Votre email ici"
             />
-            <FormHelperText>We&apos;ll never share your email.</FormHelperText>
+            <FormHelperText>Nous ne partagerons jamais votre adresse email</FormHelperText>
           </FormControl>
           <FormControl isRequired>
-            <FormLabel >Which country do you currently reside in</FormLabel>
+            <FormLabel >Quel est votre pays de résidence actuel ?</FormLabel>
             <Input
             isDisabled={loading}
               type="name"
@@ -46,8 +46,8 @@ const ContactDetails = ({ handleSliderChangeBtn, setFormData, formData, loading 
             />
           </FormControl>
           <FormControl as="fieldset" isRequired>
-            <FormLabel as="legend">Phone number</FormLabel>
-            <p className="font-bold">choose country code</p>
+            <FormLabel as="legend">Numéro</FormLabel>
+            <p className="font-semibold">Choisir code du pays</p>
             <PhoneInput
               required
               international
@@ -58,16 +58,16 @@ const ContactDetails = ({ handleSliderChangeBtn, setFormData, formData, loading 
           </FormControl>
           <div className="mt-3 flex justify-between">
             <button
-              className="px-9 startedBtn"
+              className="px-9 text-white bg-main startedBtn"
               onClick={(e) => handleSliderChangeBtn(0, e)}
             >
-              Back
+              Retour
             </button>
             <button
               type="submit"
               className="px-9 text-white bg-main startedBtn"
             >
-              Next
+              Suivant
             </button>
           </div>
         </div>

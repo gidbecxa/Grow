@@ -20,28 +20,28 @@ const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData, loading
         <div className="space-y-8">
           <div className="flex space-x-2">
             <FormControl isRequired>
-              <FormLabel>First name</FormLabel>
+              <FormLabel>Prénom</FormLabel>
               <Input
               isDisabled={loading}
               type='name'
                 value={formData.firstname}
                 onChange={(event) =>
                   setFormData({...formData, firstname: event.target.value})}
-                placeholder="First name" />
+                placeholder="Votre prénom ici" />
             </FormControl>
             <FormControl isRequired>
-              <FormLabel>Last name</FormLabel>
+              <FormLabel>Nom de famille</FormLabel>
               <Input
               value={formData.lastname}
               isDisabled={loading}
               onChange={(event) =>
                 setFormData({...formData, lastname: event.target.value})}
-                placeholder="Last name"
+                placeholder="Votre nom de famille ici"
               />
             </FormControl>
           </div>
           <FormControl isRequired>
-            <FormLabel>Birthday</FormLabel>
+            <FormLabel>Date de Naissance</FormLabel>
             <Input
             value={formData.birthday}
             isDisabled={loading}
@@ -54,7 +54,7 @@ const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData, loading
             {/* <FormHelperText>We&apos;ll never share your email.</FormHelperText> */}
           </FormControl>
           <FormControl as="fieldset" isRequired>
-            <FormLabel as="legend">Gender</FormLabel>
+            <FormLabel as="legend">Sexe</FormLabel>
             <RadioGroup
               >
               <HStack
@@ -64,15 +64,15 @@ const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData, loading
                   defaultValue="Itachi"
                 spacing="24px"
               >
-                <Radio isDisabled={loading} value="Male">Male</Radio>
-                <Radio isDisabled={loading} value="Female">Female</Radio>
-                <Radio isDisabled={loading} value="Other">Others</Radio>
+                <Radio isDisabled={loading} value="Male">Homme</Radio>
+                <Radio isDisabled={loading} value="Female">Femme</Radio>
+                <Radio isDisabled={loading} value="Other">Autre</Radio>
               </HStack>
             </RadioGroup>
           </FormControl>
           <FormControl as="fieldset" isRequired>
             <FormLabel as="legend">
-              Do you have previous coding experience
+            Avez-vous une expérience préalable du code ?
             </FormLabel>
             <RadioGroup defaultValue="No">
               <HStack
@@ -81,9 +81,9 @@ const PersonalDetails = ({ handleSliderChangeBtn, formData, setFormData, loading
                 onChange={(event) =>
                   setFormData({...formData, experience: event.target.value})}
               >
-                <Radio isDisabled={loading}  value="Yes">Yes</Radio>
-                <Radio isDisabled={loading} value="No">No</Radio>
-                <Radio isDisabled={loading} value="Yes, but a little">Yes, but a little</Radio>
+                <Radio isDisabled={loading}  value="Yes">Oui</Radio>
+                <Radio isDisabled={loading} value="No">Non</Radio>
+                <Radio isDisabled={loading} value="Yes, but a little">Oui, mais peu</Radio>
               </HStack>
             </RadioGroup>
           </FormControl>

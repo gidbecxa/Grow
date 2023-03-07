@@ -45,12 +45,12 @@ const Community = () => {
   const controls = useAnimation()
   const [autofill, setAutofill] = useAtom(autofillAtom)
 
-const SendAutofill = () => {
-  console.log("work mffffffffffffffffffffffffffffff")
-  setAutofill("I would like to join the Grow community")
-  console.log(autofill)
-}
-  
+  const SendAutofill = () => {
+    console.log("work mffffffffffffffffffffffffffffff")
+    setAutofill("Bonjour! Je suis Gideon de Cotonou. J'aimerais faire partir de votre communauté de développeur.")
+    console.log(autofill)
+  }
+
   useEffect(() => {
     if (inView) {
       controls.start('visible')
@@ -129,14 +129,14 @@ const SendAutofill = () => {
               animate={controls}
               className="text-white max-w-lg text-4xl md:text-5xl font-bold text-center md:text-left"
             >
-              Join the Grow Community
+              Rejoignez la communauté Grow
             </motion.h2>
             <motion.p
               initial='hidden'
               variants={headerCaptionVariants}
               animate={controls}
               className="text-white text-lg md:text-lg font-medium text-center md:text-left">
-              Join our community today and <br /> unlock your potential  to become a part <br />of the next generation of African tech leaders!
+              Rejoignez notre communauté aujourd'hui et ouvrez<br />  votre potentiel pour faire partie de la prochaine génération<br /> de responsables technologiques africains !
             </motion.p>
           </div>
           <div className="flex justify-center md:justify-end items-center text-center space-y-12 md:w-1/2">
@@ -148,10 +148,10 @@ const SendAutofill = () => {
             >
               <Link href='/contact'>
                 <button
-                onClick={SendAutofill}
+                  onClick={SendAutofill}
                   // onClick={onOpen}
                   className='bg-white startedBtn text-main border-none mr-2' >
-                  Join now
+                 Rejoignez nous
                 </button>
               </Link>
             </motion.div>

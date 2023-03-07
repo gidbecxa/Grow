@@ -30,7 +30,7 @@ const ChooseCourse = ({
       <form action="" onSubmit={(e) => handleSliderChangeBtn(1, e)}>
         <div className="space-y-8">
           <FormControl as="fieldset" isRequired>
-            <FormLabel as="legend">Select your level</FormLabel>
+            <FormLabel as="legend">Choississez votre niveau</FormLabel>
             <RadioGroup defaultValue="Itachi">
               <HStack spacing={5}>
                 <div
@@ -39,9 +39,9 @@ const ChooseCourse = ({
                     setFormData({ ...formData, level: event.target.value })
                   }
                   className="flex space-x-8 justify-between"
-                  
+
                 >
-                  <Radio value="Entry-level" isDisabled={loading}>Entry-level</Radio>
+                  <Radio value="Entry-level" isDisabled={loading}>Niveau d'entréé</Radio>
                   <Radio value="" isDisabled>
                     Junior
                   </Radio>
@@ -57,14 +57,14 @@ const ChooseCourse = ({
               </HStack>
             </RadioGroup>
             <FormHelperText fontWeight={200} mt={7}>
-              Only Entry-level is available.{" "}
+              Seul le niveau d'entrée est disponible.{" "}
               <span onClick={onOpen} className="cursor-pointer underline">
-                Learn more
+                En Savoir Plus
               </span>
             </FormHelperText>
           </FormControl>
           <FormControl as="fieldset" isRequired>
-            <FormLabel as="legend">Select a program</FormLabel>
+            <FormLabel as="legend">Choississez un programme</FormLabel>
             <RadioGroup defaultValue="Itachi">
               <Stack
                 className='flex'
@@ -73,7 +73,7 @@ const ChooseCourse = ({
                   setFormData({ ...formData, program: event.target.value })}
                 spacing="24px"
               >
-                <Select isDisabled={loading} placeholder='Select program'>
+                <Select isDisabled={loading} placeholder='Choississez un programme'>
                   <option value='Android development'>Android development</option>
                   <option value='Frontend development'>Frontend development</option>
                   <option value='Backend development'>Backend development</option>
@@ -83,8 +83,8 @@ const ChooseCourse = ({
               </Stack>
             </RadioGroup>
           </FormControl>
-          <FormControl as="fieldset" isRequired>
-            <FormLabel as="legend">How did you find this program</FormLabel>
+          <FormControl as="fieldset">
+            <FormLabel as="legend">Comment avez-vous trouvé notre bootcamp ?</FormLabel>
             <RadioGroup
               colorScheme="green"
               defaultValue={["naruto", "kakashi"]}
@@ -95,25 +95,25 @@ const ChooseCourse = ({
                   setFormData({ ...formData, referral: event.target.value })}
                 spacing={[1, 5]}
                 direction={["column", "row"]}>
-                <Radio isDisabled={loading}  value="LinkedIn">LinkedIn</Radio>
+                <Radio isDisabled={loading} value="LinkedIn">LinkedIn</Radio>
                 <Radio isDisabled={loading} value="Twitter">Twitter</Radio>
-                <Radio isDisabled={loading} value="Grow member">Grow member</Radio>
-                <Radio isDisabled={loading}  value="Other">Other</Radio>
+                <Radio isDisabled={loading} value="Grow member">Un apprenant Grow</Radio>
+                <Radio isDisabled={loading} value="Other">Other</Radio>
               </HStack>
             </RadioGroup>
           </FormControl>
           <div className="mt-3 flex justify-between">
             <button
-              className="px-9 startedBtn"
+              className="px-9 text-white bg-main startedBtn"
               onClick={(e) => handleSliderChangeBtn(1, e)}
             >
-              Back
+              Retour
             </button>
             <button className="text-white bg-main startedBtn"
-              style={{display: loading ? 'none' : 'block'}}
+              style={{ display: loading ? 'none' : 'block' }}
               onClick={onSubmitRegForm}
               disabled={loading}>
-              Done 🎉
+              Terminer 🎉
             </button>
             {loading ? <Spinner mt={4} label='submiting...' color='red.500' /> : null}
           </div>
