@@ -11,7 +11,7 @@ import {
 import { useAtom } from 'jotai'
 import { autofillAtom } from './index';
 
-const contact = () => {
+const Contact = () => {
     const [autofill, setAutofill] = useAtom(autofillAtom)
     const [submit, submitting] = useFormspark({
         formId: "m6auOy2s",
@@ -126,4 +126,4 @@ const contact = () => {
     )
 }
 
-export default contact
+export default Contact

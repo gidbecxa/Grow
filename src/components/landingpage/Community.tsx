@@ -136,7 +136,7 @@ const Community = () => {
               variants={headerCaptionVariants}
               animate={controls}
               className="text-white text-lg md:text-lg font-medium text-center md:text-left">
-              Rejoignez notre communauté aujourd'hui et ouvrez<br />  votre potentiel pour faire partie de la prochaine génération<br /> de responsables technologiques africains !
+              Rejoignez notre communauté aujourd&apos;hui et ouvrez<br />  votre potentiel pour faire partie de la prochaine génération<br /> de responsables technologiques africains !
             </motion.p>
           </div>
           <div className="flex justify-center md:justify-end items-center text-center space-y-12 md:w-1/2">

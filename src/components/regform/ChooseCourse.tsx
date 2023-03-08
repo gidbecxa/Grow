@@ -41,7 +41,7 @@ const ChooseCourse = ({
                   className="flex space-x-8 justify-between"
 
                 >
-                  <Radio value="Entry-level" isDisabled={loading}>Niveau d'entréé</Radio>
+                  <Radio value="Entry-level" isDisabled={loading}>Niveau d&apos;entréé</Radio>
                   <Radio value="" isDisabled>
                     Junior
                   </Radio>
@@ -57,7 +57,7 @@ const ChooseCourse = ({
               </HStack>
             </RadioGroup>
             <FormHelperText fontWeight={200} mt={7}>
-              Seul le niveau d'entrée est disponible.{" "}
+              Seul le niveau d&apos;entrée est disponible.{" "}
               <span onClick={onOpen} className="cursor-pointer underline">
                 En Savoir Plus
               </span>

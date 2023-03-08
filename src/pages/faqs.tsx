@@ -55,7 +55,7 @@ function Faqs() {
 
   useEffect(() => {
     if (inView) {
-    console.log("in view")
+      console.log("in view")
       control.start("visible"); //when in view,start the visible animation variant
     } else {
       control.start("hidden"); //else its hidden
@@ -66,175 +66,161 @@ function Faqs() {
 
   return (
     <>
-    <Head>
+      <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="description" content="Grow is a French-speaking developer school and community for French-speaking Africans, to help French-speaking Africans launch their professional careers in web and mobile development." />
-        <title>Our story</title>
+        <title>FAQs</title>
       </Head>
       <Navbar />
       <section ref={ref} id="faqs" >
         <div className="container flex flex-col px-4 mx-auto my-32 space-y-12 md:space-y-0 md:flex-row">
           <div className="flex flex-col space-y-12 md:w-1/2">
-          <motion.h2
-            variants={headerVariant} //pass in your variant
-            initial="hidden"		//pass initial values
-            animate={control}	
-            className="text-main max-w-md text-4xl font-bold text-center md:text-left"	//pass in control as it will be animated when element is in view
-          >
+            <motion.h2
+              variants={headerVariant} //pass in your variant
+              initial="hidden"		//pass initial values
+              animate={control}
+              className="text-main max-w-md text-4xl font-bold text-center md:text-left"	//pass in control as it will be animated when element is in view
+            >
 
               FAQs
-          </motion.h2>
-          <motion.p
-            variants={headerCaptionVariant}
-            initial='hidden'
-            animate={control}
-            className="md:max-w-sm text-center text-main md:text-left"
-          >
+            </motion.h2>
+            <motion.p
+              variants={headerCaptionVariant}
+              initial='hidden'
+              animate={control}
+              className="md:max-w-sm text-center text-main md:text-left"
+            >
 
-              Grow Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Doloribus voluptatem, modi sapien. <span className="font-regular">
+              Quelques questions courantes qui nous ont été posées. <span className="font-regular">
                 <Link href='/help-center'>Contact us here</Link>
               </span>
-          </motion.p>
+            </motion.p>
           </div>
           <div className="flex flex-col space-y-8 md:w-1/2">
-          <motion.div
-            initial='hidden'
-            animate={control}
-            variants={featurePointsVariant[0]}
-            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
-<div className="rounded-l-ful md:bg-transparent">
-                <div className="flex items-center space-x-2">
-                  <h3 className="text-base font-semibold md:mb-4 md:hidden">
-                    Who can join the bootcamp?
-                  </h3>
-                </div>
-              </div>
-              <div>
-                <h3 className="hidden mb-4 text-lg font-bold md:block">
-                  Who can join the bootcamp?
-                </h3>
-                <p className="text-main mr-2">
-                  Anyone. No matter your field of study or profession, you can join our bootcamp to get
-                  an opportunity to become a leading software developer. We assure you that it will be
-                  much easier and more fun than you think.
-                </p>
-              </div>
-            </motion.div>
             <motion.div
-            initial='hidden'
-            animate={control}
-            variants={featurePointsVariant[1]}
-            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+              initial='hidden'
+              animate={control}
+              variants={featurePointsVariant[0]}
+              className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
               <div className="rounded-l-ful md:bg-transparent">
                 <div className="flex items-center space-x-2">
                   <h3 className="text-base font-semibold md:mb-4 md:hidden">
-                    What level of software development experience do I need?
+                    Qui peut participer au bootcamp ?
                   </h3>
                 </div>
               </div>
               <div>
                 <h3 className="hidden mb-4 text-lg font-bold md:block">
-                  What level of software development experience do I need?
+                  Qui peut participer au bootcamp ?
                 </h3>
-                <p className="text-main">
-                  To join our entry-level bootcamp, you need no previous experience at all in software
-                  development. The bootcamp starts with the very basics of programming, and our
-                  project-based approach will help you grasp a lot in a short time.
+                <p className="text-main mr-2">
+                  Tout le monde. Quel que soit votre domaine d&apos;étude ou votre profession, vous pouvez rejoindre notre bootcamp pour avoir l&apos;opportunité de devenir un développeur de logiciels de premier plan. Nous vous assurons que ce sera plus facile et plus amusant que vous ne le pensez.
                 </p>
               </div>
             </motion.div>
             <motion.div
-            initial='hidden'
-            animate={control}
-            variants={featurePointsVariant[2]}
-            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
-<div className="rounded-l-ful md:bg-transparent">
+              initial='hidden'
+              animate={control}
+              variants={featurePointsVariant[1]}
+              className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+              <div className="rounded-l-ful md:bg-transparent">
                 <div className="flex items-center space-x-2">
                   <h3 className="text-base font-semibold md:mb-4 md:hidden">
-                    What if I have no experience with the use of a computer?
+                  Quel niveau d&apos;expérience dois-je avoir en matière de code ?
                   </h3>
                 </div>
               </div>
               <div>
                 <h3 className="hidden mb-4 text-lg font-bold md:block">
-                  What if I have no experience with the use of a computer?
+                  Quel niveau d&apos;expérience dois-je avoir en matière de code ?
                 </h3>
                 <p className="text-main">
-                  We’ll definitely help you out. For those who do not know how to use a computer, we
-                  have a separate short-term class to help you out. We will help you learn and grasp
-                  the basic use of a computer. We also have online resources that will be of help.
+                  Pour participer à notre bootcamp de niveau débutant, vous n&apos;avez besoin d&apos;aucune expérience préalable dans le développement de logiciels. Le bootcamp commence par les bases de la programmation et notre approche par projet vous aidera à comprendre beaucoup de choses en peu de temps.
                 </p>
               </div>
             </motion.div>
             <motion.div
-            initial='hidden'
-            animate={control}
-            variants={featurePointsVariant[3]}
-            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
-<div className="rounded-l-ful md:bg-transparent">
+              initial='hidden'
+              animate={control}
+              variants={featurePointsVariant[2]}
+              className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+              <div className="rounded-l-ful md:bg-transparent">
                 <div className="flex items-center space-x-2">
                   <h3 className="text-base font-semibold md:mb-4 md:hidden">
-                    What if I have a job or another commitment?
+                    Que faire si je n&apos;ai aucune expérience de l&apos;utilisation d&apos;un ordinateur ?
                   </h3>
                 </div>
               </div>
               <div>
                 <h3 className="hidden mb-4 text-lg font-bold md:block">
-                  What if I have a job or another commitment?
+                  Que faire si je n&apos;ai aucune expérience de l&apos;utilisation d&apos;un ordinateur ?
                 </h3>
                 <p className="text-main">
-                  Since our classes are mostly physical, for now, we have two sessions each day.
-                  There is a morning session and an evening session. You can attend whichever will
-                  be more convenient for you. However, classes will be recorded and the links to the
-                  recorded videos will be shared so that anyone can catch up with any missed classes.
+                  Nous vous aiderons certainement. Pour ceux qui ne savent pas utiliser un ordinateur, nous avons un cours séparé de courte durée pour vous aider. Nous vous aiderons à apprendre et à comprendre l&apos;utilisation de base d&apos;un ordinateur. Nous disposons également de ressources qui vous seront utiles.
                 </p>
               </div>
             </motion.div>
             <motion.div
-            initial='hidden'
-            animate={control}
-            variants={featurePointsVariant[4]}
-            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
-<div className="rounded-l-ful md:bg-transparent">
+              initial='hidden'
+              animate={control}
+              variants={featurePointsVariant[3]}
+              className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+              <div className="rounded-l-ful md:bg-transparent">
                 <div className="flex items-center space-x-2">
                   <h3 className="text-base font-semibold md:mb-4 md:hidden">
-                    Can I follow my lectures remotely?
+                    Et si j&apos;ai un emploi ou un autre engagement ?
                   </h3>
                 </div>
               </div>
               <div>
                 <h3 className="hidden mb-4 text-lg font-bold md:block">
-                  Can I follow my lectures remotely?
+                  Et si j&apos;ai un emploi ou un autre engagement ?
                 </h3>
                 <p className="text-main">
-                  Yes. We’ll live stream classes. However, we must say that the current bootcamp is a
-                  physical one. We do not yet have in place the necessary structure to offer a standard
-                  online bootcamp. Nonetheless, we’re doing our best to make sure that online classes
-                  are possible, with the best experience.
+                  Comme nos programmes sont hybrides, nous avons deux sessions de cours par jour. Il y a une session en personne et une session en ligne. Vous pouvez assister à l&apos;une ou l&apos;autre l&apos;une ou l&apos;autre vous convient le mieux. De plus, chaque cours sera enregistré et les liens vidéos enregistrées seront partagés afin que chacun puisse rattraper les cours manqués.
                 </p>
               </div>
             </motion.div>
             <motion.div
-            initial='hidden'
-            animate={control}
-            variants={featurePointsVariant[5]}
-            className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
-<div className="rounded-l-ful md:bg-transparent">
+              initial='hidden'
+              animate={control}
+              variants={featurePointsVariant[4]}
+              className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+              <div className="rounded-l-ful md:bg-transparent">
                 <div className="flex items-center space-x-2">
                   <h3 className="text-base font-semibold md:mb-4 md:hidden">
-                    Will I get a certificate at the end of my training?
+                    Puis-je assister à mes cours à distance ?
                   </h3>
                 </div>
               </div>
               <div>
                 <h3 className="hidden mb-4 text-lg font-bold md:block">
-                  Will I get a certificate at the end of my training?
+                  Puis-je assister à mes cours à distance ?
                 </h3>
                 <p className="text-main">
-                  Yes. There are certificates and badges to get during and at the end of the training
-                  period
+                  Oui, bien sûr! Nos cours en ligne sont diffusés en direct. De plus, chaque cours sera enregistré et les liens vers les vidéos enregistrées seront partagés afin que chacun puisse rattraper les cours manqués.
+                </p>
+              </div>
+            </motion.div>
+            <motion.div
+              initial='hidden'
+              animate={control}
+              variants={featurePointsVariant[5]}
+              className="flex flex-col space-y-3 md:space-y-0 md:space-x-6 md:flex-row">
+              <div className="rounded-l-ful md:bg-transparent">
+                <div className="flex items-center space-x-2">
+                  <h3 className="text-base font-semibold md:mb-4 md:hidden">
+                    Recevrai-je un certificat à la fin de ma formation ?
+                  </h3>
+                </div>
+              </div>
+              <div>
+                <h3 className="hidden mb-4 text-lg font-bold md:block">
+                  Recevrai-je un certificat à la fin de ma formation ?
+                </h3>
+                <p className="text-main">
+                  Oui, pour sur ! Il y a des certificats et des badges à obtenir pendant et à la fin de la période de formation.
                 </p>
               </div>
             </motion.div>

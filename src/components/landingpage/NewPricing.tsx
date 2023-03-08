@@ -22,12 +22,12 @@ const NewPricing = () => {
                     Programmes abordables pour tous
                 </h2>
                 <p onClick={onSwitch} className=" text-center md:w-1/2">
-                    Choisissez l'un de nos programmes prestigieux pour lancer votre carrière de développeur.
+                    Choisissez l&apos;un de nos programmes prestigieux pour lancer votre carrière de développeur.
                 </p>
 
             </div>
             <div className='justify-center my-10 flex items-center gap-3' >
-                <p className={!onToggle ? `font-semibold  ` : `font-semibold text-gray-400 `}>Versement d'avance</p>
+                <p className={!onToggle ? `font-semibold  ` : `font-semibold text-gray-400 `}>Versement d&apos;avance</p>
                 <label className="relative inline-flex items-center cursor-pointer">
                     <input onClick={onSwitch} type="checkbox" value="" className="sr-only peer" />
                     <div className="w-[72px] h-10 bg-[#66CEE8] peer-focus:outline-none peer-focus:ring-1 peer-focus:ring-black
@@ -335,7 +335,7 @@ const NewPricing = () => {
 
                                     <TickCircle w="18" h="16" />
                                     <p className='text-xs text-gray-500'>
-                                        Bases de Données (MySQL, MongoDB, Prisma…)
+                                        Outils de Bases de Données
                                     </p>
 
                                 </div>

@@ -73,7 +73,7 @@ const Home: NextPage = () => {
       {/* <Pricing /> */}
       <div className="flex justify-center">
         <div className="w-full md:w-1/2 md:p-10 p-20">
-        <Image src={logos} layout="responsive"/>
+        <Image src={logos} layout="responsive" alt="companies"/>
         </div>
       </div>
       <NewPricing />

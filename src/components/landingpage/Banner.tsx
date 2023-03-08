@@ -45,14 +45,14 @@ function Banner() {
                     animate={controls}
                     className="text-white max-w-lg text-4xl md:text-5xl font-bold text-center md:text-left"
                 >
-                    Kickstart your developer journey now!
+                    Commencez dès maintenant votre parcours de développeur !
                 </motion.h2>
                 <motion.p 
                 initial='hidden'
                 variants={headerCaptionVariants}
                 animate={controls}
                 className="text-white text-lg md:text-xl font-medium text-center md:text-left">
-                    Let us help you get started in 6 weeks! Join our entry-level developer bootcamp, and you are good to go!
+                    Laissez-nous vous aider à démarrer votre parcours pour devenir un ingénieur logiciel de classe mondiale !
                 </motion.p>
             </div>
             <div className="flex justify-center md:justify-end items-center text-center space-y-12 md:w-1/2">
@@ -62,8 +62,8 @@ function Banner() {
                  variants={headerButtonVariants}
                  animate={controls}
                 >
-                    <Link href='/programs' passHref>
-                        <a href='' className=' rounded-lg p-4 px-8 font-regular text-m text-black bg-white baseline hover:scale-105 transition'>Start now!</a>
+                    <Link href='/register' passHref>
+                        <a href='' className=' rounded-lg p-4 px-8 font-regular text-m text-black bg-white baseline hover:scale-105 transition'>Inscrivez-vous!</a>
                     </Link>
                 </motion.div>
             </div>

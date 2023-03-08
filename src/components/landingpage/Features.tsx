@@ -90,6 +90,7 @@ function Features() {
                 <Image
                   priority
                   src={workout}
+                  alt="workout-icon"
                 />
               </div>
               <h3 className="text-base font-bold md:mb-4 md:hidden">
@@ -118,6 +119,7 @@ function Features() {
                 <Image
                   priority
                   src={workout}
+                  alt="workout-icon"
                 />
               </div>
               <h3 className="text-base font-bold md:mb-4 md:hidden">
@@ -146,6 +148,7 @@ function Features() {
                 <Image
                   priority
                   src={workout}
+                  alt="workout-icon"
                 />
               </div>
               <h3 className="text-base font-bold md:mb-4 md:hidden">
@@ -158,7 +161,7 @@ function Features() {
               Career support beyond the bootcamp
             </h3>
             <p className="text-main">
-              We're dedicated to helping you achieve your career goals as a software engineer. We offer career guidance, job placement assistance, and mentorship opportunities to help you succeed in the tech industry. Our support doesn't end with the bootcamp - we're committed to your long-term success.
+              We&apos;re dedicated to helping you achieve your career goals as a software engineer. We offer career guidance, job placement assistance, and mentorship opportunities to help you succeed in the tech industry. Our support doesn&apos;t end with the bootcamp - we&apos;re committed to your long-term success.
             </p>
           </div>
         </motion.div>
@@ -174,6 +177,7 @@ function Features() {
                 <Image
                   priority
                   src={workout}
+                  alt="workout-icon"
                 />
               </div>
               <h3 className="text-base font-bold md:mb-4 md:hidden">

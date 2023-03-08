@@ -24,7 +24,7 @@ const NewFeatures = () => {
                 </div> */}
             <h2 className='font-semibold'>Libérez votre potentiel et bâtissez-vous une carrière florissante en Tech.</h2>
             <p className='text-xs'>
-              Nos formations accélérées offrent une expérience complète qui vous permet d'acquérir les compétences et les connaissances requises pour réussir dans la Tech.
+              Nos formations accélérées offrent une expérience complète qui vous permet d&apos;acquérir les compétences et les connaissances requises pour réussir dans la Tech.
             </p>
           </div>
           <div className='rounded-lg shadow-md w-72 h-72 p-5 flex flex-col justify-center md:gap-10 bg-[#C9F4FF]'>
@@ -48,7 +48,7 @@ const NewFeatures = () => {
                 </div> */}
             <h2 className='font-semibold'>Soutien professionnel au-delà du bootcamp</h2>
             <p className='text-xs'>
-            Accédez à des orientations de carrière, à des offres d'emploi et à des occasions de mentorat pour vous aider à lancer une carrière réussie. Nous nous engageons à assurer votre réussite à long terme.
+            Accédez à des orientations de carrière, à des offres d&apos;emploi et à des occasions de mentorat pour vous aider à lancer une carrière réussie. Nous nous engageons à assurer votre réussite à long terme.
             </p>
           </div>
           <div className='rounded-lg shadow-md w-72 h-72 p-5 flex flex-col justify-center gap-5 bg-[#A5B2B5]'>
@@ -60,7 +60,7 @@ const NewFeatures = () => {
                 </div> */}
             <h2 className='font-semibold'>Nous bâtissons une communauté</h2>
             <p className='text-xs'>
-            Qu'y a-t-il de plus intéressant qu'une communauté de développeurs ? Obtenez de l'aide et apprenez des autres. Partagez votre travail, collaborez avec les autres. Profitez de la convivialité !
+            Qu&apos;y a-t-il de plus intéressant qu&apos;une communauté de développeurs ? Obtenez de l&apos;aide et apprenez des autres. Partagez votre travail, collaborez avec les autres. Profitez de la convivialité !
             </p>
           </div>
         </div>

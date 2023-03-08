@@ -45,7 +45,7 @@ function Hero() {
             //className="md:max-w-sm text-white text-center md:text-left"
             className="md:max-w-2xl text-[1.15rem] text-white text-center md:text-left"
           >
-            Rejoignez-nous aujourd'hui et accédez à un monde d'opportunités en tant qu'ingénieur logiciel. Ensemble, bâtissons votre avenir !
+            Rejoignez-nous aujourd&apos;hui et accédez à un monde d&apos;opportunités en tant qu&apos;ingénieur logiciel. Ensemble, bâtissons votre avenir !
           </motion.p>
           <div className="flex justify-center md:justify-start">
         <motion.div
@@ -65,7 +65,7 @@ function Hero() {
           <div className='z-[1000] absolute -left-[60px] -top-[20px] w-20 h-20 rounded-t-3xl rounded-bl-3xl bg-[#FF4F4F] '></div>
           <div className='relative overflow-hidden border rounded-bl-[25%]  w-96 h-[20rem]'>
             <div className='absolute -right-[45px]  overflow-hidden w-[480px] '>
-              <Image layout='responsive' priority src={newHeroImg}/>
+              <Image layout='responsive' priority src={newHeroImg} alt="hero-image"/>
             </div>
           </div>
           <div className='absolute -right-[60px] -bottom-[30px] w-32 h-32 rounded-t-3xl rounded-bl-3xl bg-[#66CEE8] '></div>

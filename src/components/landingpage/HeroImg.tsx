@@ -12,6 +12,7 @@ const HeroImg = ({src}) => {
               src={src}
               objectFit='cover'
               objectPosition='left bottom'
+              alt="image-on-h ero"
               />
             </div>
         </div>

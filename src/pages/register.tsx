@@ -182,6 +182,7 @@ const Register = () => {
                   layout="fill"
                   src={hero}
                   objectFit="contain"
+                  alt="hero-image"
                 />
               </div>
             </div>
