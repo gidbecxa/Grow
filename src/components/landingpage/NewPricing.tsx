@@ -27,7 +27,7 @@ const NewPricing = () => {
 
             </div>
             <div className='justify-center my-10 flex items-center gap-3' >
-                <p className={!onToggle ? `font-semibold  ` : `font-semibold text-gray-400 `}>Versement d&apos;avance</p>
+                <p className={!onToggle ? `font-semibold  text-center` : `font-semibold text-gray-400 text-center`}>Versement unique</p>
                 <label className="relative inline-flex items-center cursor-pointer">
                     <input onClick={onSwitch} type="checkbox" value="" className="sr-only peer" />
                     <div className="w-[72px] h-10 bg-[#66CEE8] peer-focus:outline-none peer-focus:ring-1 peer-focus:ring-black
@@ -35,7 +35,7 @@ const NewPricing = () => {
                     peer peer-checked:after:translate-x-full peer-checked:after:border-white
                     peer-checked:after:bg-white after:content-[''] after:absolute after:top-[4px] after:left-[3px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-8 after:w-8 after:transition-all dark:border-gray-600 peer-checked:bg-[#FF4F4F]"></div>
                 </label>
-                <p className={onToggle ? `font-semibold  ` : `font-semibold text-gray-400 `}>Versement échelonné</p>
+                <p className={onToggle ? `font-semibold  text-center` : `font-semibold text-gray-400 text-center`}>Versement partiel</p>
 
             </div>
             <div className='flex items-center flex-col md:flex-row justify-center gap-10'>
