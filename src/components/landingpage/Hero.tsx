@@ -53,7 +53,7 @@ function Hero() {
         animate={{ opacity: 1, x: 0 }}
         transition={{ delay: .8, duration: .7 }}
         >
-          <Link href='/programs' passHref>
+          <Link href='/register' passHref>
             <a href="" className="text-white bg-[#66cee8] border-none startedBtn">Rejoignez-nous!</a>
           </Link>
         </motion.div>
