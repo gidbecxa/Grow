@@ -62,7 +62,7 @@ const Community = () => {
 
   return (
     <>
-      <section id="community" className="bg-[#448a9c]">
+      <section id="community" className="bg-[#FFDD00]">
         <Modal isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
@@ -120,14 +120,14 @@ const Community = () => {
             </div>
           </div>
           </div> */}
-        <div className="container relative flex flex-col py-28 px-12 mx-auto mt-10 space-y-12 md:space-y-0 md:flex-row ">
+        <div className="container relative flex flex-col py-28 px-12 mx-auto mt-10 md:mt-32 space-y-12 md:space-y-0 md:flex-row ">
           <div className="flex flex-col space-y-12 md:w-1/2">
             <motion.h2
               ref={ref}
               initial='hidden'
               variants={CommunityHeaderVariants}
               animate={controls}
-              className="text-white max-w-lg text-4xl md:text-5xl font-bold text-center md:text-left"
+              className="text-[#222222] max-w-lg text-4xl md:text-5xl font-bold text-center md:text-left"
             >
               Rejoignez la communauté Grow
             </motion.h2>
@@ -135,7 +135,7 @@ const Community = () => {
               initial='hidden'
               variants={headerCaptionVariants}
               animate={controls}
-              className="text-white text-lg md:text-lg font-medium text-center md:text-left">
+              className="text-[#222222] text-lg md:text-lg font-medium text-center md:text-left">
               Rejoignez notre communauté aujourd&apos;hui et ouvrez<br />  votre potentiel pour faire partie de la prochaine génération<br /> de responsables technologiques africains !
             </motion.p>
           </div>
@@ -150,7 +150,7 @@ const Community = () => {
                 <button
                   onClick={SendAutofill}
                   // onClick={onOpen}
-                  className='bg-white startedBtn text-main border-none mr-2' >
+                  className='bg-[#0D3B66] startedBtn text-[#FBFBFF] border-none mr-2' >
                  Rejoignez nous
                 </button>
               </Link>

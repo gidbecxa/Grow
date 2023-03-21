@@ -175,8 +175,8 @@ const Register = () => {
         </div>
         <div className="">
           <div className="flex  mx-auto md:p-10">
-            <div className=" relative mr-7 w-1/2 md:flex hidden bg-[#448a9c] g-main">
-              <div className="bg-white  w-full h-full absolute -left-5 border-[#448a9c] border-3 -bottom-5">
+            <div className=" relative mr-7 w-1/2 md:flex hidden bg-[#01BAEF] g-main">
+              <div className="bg-white  w-full h-full absolute -left-5 border-[#01BAEF] border-3 -bottom-5">
                 <Image
                   priority
                   layout="fill"

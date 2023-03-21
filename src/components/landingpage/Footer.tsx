@@ -7,7 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
 function Footer() {
     return (
-        <footer className='bg-[#1c1c1c]'>
+        <footer className='bg-[#222222]'>
             <div className="container flex flex-col justify-between relative px-6 py-20 mx-auto ">
                 <div className="flex-col flex md:jusify-start md:gap-10 justify-start w-[100%]">
                     <div className=''>
@@ -63,10 +63,10 @@ function Footer() {
 
                 </div>
                 <div className='h-full mt-10 text-xs '>
-                    <div className="te text-gray-600 md:block text-center">
+                    <div className="te text-[#FBFBFF] md:block text-center">
                         Created by <span className="font-semibold"><Link href='https://twitter.com/gbecsen/status/1579800852122177536'>Aisely</Link></span>
                     </div>
-                    <div className="te text-gray-600 md:block text-center">
+                    <div className="te text-[#FBFBFF] md:block text-center">
                         &copy; 2022 Aisely, All Rights Reserved
                     </div>
                 </div>

@@ -43,7 +43,7 @@ function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
     setDesktop(window.innerWidth > 917);
   };
 
-  const classNames = (...classes) => {
+  const classNames = (...classes: string[]) => { //I did a quick fix here, by adding type string
     return classes.filter(Boolean).join(' ')
   }
 
@@ -169,7 +169,7 @@ function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
         </nav>
       ) : (
         // <nav className={classNames(scrollPosition > 0 ? 'sticky bg-main shadow' : 'shadow-none', " transition-shadow  mx-auto p-6 top-0 z-10")}>
-        <nav className={"sticky bg-main   mx-auto py-4 px-20 top-0 z-10"}>
+        <nav className={"sticky bg-main mx-auto py-3 px-20 top-0 z-[1000]"}>
           <div className=" flex items-center justify-between">
             <div className="pt-2">
               <div className="md:w-[150px] w-[100px] cursor-pointer ml-2">
@@ -226,7 +226,7 @@ function Navbar({ containerRef, navTextColor, logoColor }: NavbarProps) {
                   </Link>
                   :
                   <Link href="/register">
-                    <div className=" md:block text-white border-none bg-[#66cee8] startedBtn">Rejoignez-nous</div>
+                    <div className=" md:block text-white border-none bg-[#20BF55] startedBtn">Rejoignez-nous</div>
                   </Link>
                 }
 

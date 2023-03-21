@@ -21,7 +21,7 @@ const OurStory = () => {
       <Navbar navTextColor={navTextColor} />
       <div className="max-w-6xl px-5 mx-auto mt-32 text-center flex flex-col md:flex-row mb-32">
         <div className="md:w-1/2 mt-16">
-          <h2 className="text-6xl font-bold text-center">
+          <h2 className="text-6xl font-bold text-center text-[#222222]">
             Our Story
           </h2>
         </div>

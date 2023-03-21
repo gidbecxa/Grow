@@ -11,7 +11,7 @@ const Companies = () => {
     <section id='companies' className="z-20 bg-white">
         <div className="container mx-auto py-20">
             <div className="flex p-5 justify-center pb-10 mt-10 text-center">
-                <p>Notre formation vous permettra d&apos;acquérir les compétences de pointe requises pour obtenir un emploi dans les grandes entreprises.</p>
+                <p className='text-[#222222]'>Notre formation vous permettra d&apos;acquérir les compétences de pointe requises pour obtenir un emploi dans les grandes entreprises.</p>
             </div>
             <div className="flex p-5 items-center space-x-6 justify-center">
                 <div className="w-[150px]">

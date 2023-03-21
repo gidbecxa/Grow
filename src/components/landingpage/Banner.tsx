@@ -35,7 +35,7 @@ function Banner() {
 
 
   return (
-    <section  id='banner' className='bg-[#66cee8]'>
+    <section  id='banner' className='bg-[#01BAEF]'>
         <div  className="container relative flex flex-col py-28 px-4 mx-auto  space-y-12 md:space-y-0 md:flex-row ">
             <div className="flex flex-col space-y-12 md:w-1/2">
                 <motion.h2
@@ -63,7 +63,7 @@ function Banner() {
                  animate={controls}
                 >
                     <Link href='/register' passHref>
-                        <a href='' className=' rounded-lg p-4 px-8 font-regular text-m text-black bg-white baseline hover:scale-105 transition'>Inscrivez-vous!</a>
+                        <a href='' className='rounded-lg p-4 px-8 font-regular text-m text-black bg-white baseline mr-10  hover:scale-105 transition'>Inscrivez-vous!</a>
                     </Link>
                 </motion.div>
             </div>

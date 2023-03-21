@@ -30,16 +30,17 @@ const NewPricing = () => {
                 <p className={!onToggle ? `font-semibold  text-center` : `font-semibold text-gray-400 text-center`}>Versement unique</p>
                 <label className="relative inline-flex items-center cursor-pointer">
                     <input onClick={onSwitch} type="checkbox" value="" className="sr-only peer" />
-                    <div className="w-[72px] h-10 bg-[#66CEE8] peer-focus:outline-none peer-focus:ring-1 peer-focus:ring-black
+                    <div className="w-[72px] h-10 bg-[#20BF55] peer-focus:outline-none peer-focus:ring-1 peer-focus:ring-black
                     dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 
                     peer peer-checked:after:translate-x-full peer-checked:after:border-white
-                    peer-checked:after:bg-white after:content-[''] after:absolute after:top-[4px] after:left-[3px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-8 after:w-8 after:transition-all dark:border-gray-600 peer-checked:bg-[#FF4F4F]"></div>
+                    peer-checked:after:bg-white after:content-[''] after:absolute after:top-[4px] after:left-[3px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-8 after:w-8 after:transition-all dark:border-gray-600 peer-checked:bg-[#FF1F1F]"></div>
                 </label>
                 <p className={onToggle ? `font-semibold  text-center` : `font-semibold text-gray-400 text-center`}>Versement partiel</p>
 
             </div>
+
             <div className='flex items-center flex-col md:flex-row justify-center gap-10'>
-                <div className={['px-6 flex gap-10 items-center  flex-col  border w-72 h-[40rem] rounded-t-3xl rounded-br-3xl', !onToggle ? 'border-[#66CEE8]' : 'border-[#FF4F4F]'].join(' ')}>
+                <div className={['px-6 flex gap-10 items-center  flex-col  border w-72 h-[41.5rem] rounded-t-3xl rounded-br-3xl', !onToggle ? 'border-[#20BF55]' : 'border-[#FF1F1F]'].join(' ')}>
                     <div className='mt-10 flex items-center flex-col'>
                         <h2 className='mb-3 text-3xl text-center'>Frontend</h2>
                         <p className='text-sm w-3/4 text-center text-gray-500'>Nous vous aiderons à entamer une carrière réussie en tant que développeur front-end.</p>
@@ -51,10 +52,15 @@ const NewPricing = () => {
                                 !onToggle ? <>394</> : <>440</>
                             }
                         </p>
-                        <p className={[' font-semibold text-xs  -right-[48px] bottom-2', !onToggle ? 'absolute' : ''].join(" ")}>
+                        {/* <p className={[' font-semibold text-xs  -right-[48px] bottom-2', !onToggle ? 'absolute' : ''].join(" ")}>
                             {
                                 !onToggle ? <>upfront</> : <>instalment</>
-                            }</p>
+                            }</p> */}
+                        <p className={['font-semibold text-sm -right-[48px] bottom-2', !onToggle ? '' : ''].join(" ")}>
+                            {
+                                !onToggle ? <>241.500 FCFA</> : <>269.500 FCFA</>
+                            }
+                        </p>
                     </div>
                     <div className='flex items-center flex-col'>
                         <ul className='flex gap-3 flex-col'>
@@ -141,10 +147,10 @@ const NewPricing = () => {
                         </ul>
                     </div>
                     <Link href='/contact' passHref>
-                        <a href="" className="text-white bg-[#66cee8] border-none startedBtn">En Savoir plus</a>
+                        <a href="" className="mb-5 text-white bg-[#01BAEF] border-none startedBtn">En Savoir plus</a>
                     </Link>
                 </div>
-                <div className={['px-6 flex gap-10 items-center  flex-col border-[#66CEE8] w-80 h-[44rem] border-[2px] rounded-3xl', !onToggle ? 'border-[#66CEE8]' : 'border-[#FF4F4F]'].join(" ")}>
+                <div className={['px-6 flex gap-10 items-center  flex-col border-[#01BAEF] w-80 h-[44rem] border-[2px] rounded-3xl', !onToggle ? 'border-[#20BF55]' : 'border-[#FF1F1F]'].join(" ")}>
                     <div className='mt-10 flex items-center flex-col'>
                         <h2 className='mb-3 text-3xl text-center'>FullStack</h2>
                         <p className='text-sm w-3/4 text-center text-gray-500'>Nous vous aiderons à entamer une carrière réussie en tant que développeur fullstack</p>
@@ -155,9 +161,14 @@ const NewPricing = () => {
                             {
                                 !onToggle ? <>459</> : <>490</>
                             }</p>
-                        <p className={[' font-semibold text-xs  -right-[48px] bottom-2', !onToggle ? 'absolute' : ''].join(" ")}>
+                        {/* <p className={[' font-semibold text-xs  -right-[48px] bottom-2', !onToggle ? 'absolute' : ''].join(" ")}>
                             {
                                 !onToggle ? <>upfront</> : <>instalment</>
+                            }
+                        </p> */}
+                        <p className={[' font-semibold text-sm  -right-[48px] bottom-2', !onToggle ? '' : ''].join(" ")}>
+                            {
+                                !onToggle ? <>281.000 FCFA</> : <>300.000 FCFA</>
                             }
                         </p>
                     </div>
@@ -246,10 +257,10 @@ const NewPricing = () => {
                         </ul>
                     </div>
                     <Link href='/contact' passHref>
-                        <a href="" className="text-white bg-[#FF4F4F] border-none startedBtn">En Savoir Plus</a>
+                        <a href="" className="mb-5 text-white bg-[#FF1F1F] border-none startedBtn">En Savoir Plus</a>
                     </Link>
                 </div>
-                <div className={['px-6 flex gap-10 items-center  flex-col  border w-72 h-[40rem] rounded-t-3xl rounded-bl-3xl', !onToggle ? 'border-[#66CEE8]' : 'border-[#FF4F4F]'].join(' ')}>
+                <div className={['px-6 flex gap-10 items-center flex-col  border w-72 h-[41.5rem] rounded-t-3xl rounded-bl-3xl', !onToggle ? 'border-[#20BF55]' : 'border-[#FF1F1F]'].join(' ')}>
                     <div className='mt-10 flex items-center flex-col'>
                         <h2 className='mb-3 text-3xl text-center'>Backend</h2>
                         <p className='text-sm w-3/4 text-center text-gray-500'>Nous vous aiderons à entamer une carrière réussie en tant que développeur backend</p>
@@ -262,11 +273,15 @@ const NewPricing = () => {
                             }
 
                         </p>
-                        <p className={[' font-semibold text-xs  -right-[48px] bottom-2', !onToggle ? 'absolute' : ''].join(" ")}>
+                        {/* <p className={[' font-semibold text-xs  -right-[48px] bottom-2', !onToggle ? 'absolute' : ''].join(" ")}>
                             {
                                 !onToggle ? <>upfront</> : <>instalment</>
-                            }</p>
-
+                            }</p> */}
+                        <p className={[' font-semibold text-sm  -right-[48px] bottom-2', !onToggle ? '' : ''].join(" ")}>
+                            {
+                                !onToggle ? <>241.500 FCFA</> : <>269.500 FCFA</>
+                            }
+                        </p>
                     </div>
                     <div className='flex items-center flex-col'>
                         <ul className='flex gap-3 flex-col'>
@@ -353,7 +368,7 @@ const NewPricing = () => {
                         </ul>
                     </div>
                     <Link href='/contact' passHref>
-                        <a href="" className="text-white bg-[#66cee8] border-none startedBtn">En Savoir Plus</a>
+                        <a href="" className="mb-5 text-white bg-[#01BAEF] border-none startedBtn">En Savoir Plus</a>
                     </Link>
                 </div>
             </div>

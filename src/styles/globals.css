@@ -38,13 +38,13 @@
     /* Standard syntax */
 }
 .bg-main{
-    background-color: #23464f;
+    background-color: #0D3B66;
 }
 .bg-main-hover{
-    background-color:rgb(88, 122, 131)
+    background-color:#587a83
 }
 .text-main{
-    color: rgb(10, 20, 22);
+    color: #222222;
 }
 
 body{
